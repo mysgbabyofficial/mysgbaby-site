@@ -1,0 +1,28 @@
+name: verify-and-update
+
+# Detects candidate data changes and opens a REVIEW ISSUE. It never commits
+# medical or financial content automatically (see docs/RISK-AND-FEASIBILITY.md).
+
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 06:00 SGT daily (UTC+8)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write            # to open review-queue issues
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Run double-verification gate
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/source-double-check.js
+      # No auto-commit step by design. Human approves queued changes via issue.

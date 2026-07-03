@@ -1,0 +1,16 @@
+{
+  "_meta": { "description": "Authoritative source registry. Every medical/financial claim on the site should reference a source id here." },
+  "sources": [
+    { "id": "mom-paternity", "org": "Ministry of Manpower", "topic": "Paternity leave", "url": "https://www.mom.gov.sg/employment-practices/leave/paternity-leave", "tier": "official" },
+    { "id": "mom-spl", "org": "Ministry of Manpower", "topic": "Shared Parental Leave", "url": "https://www.mom.gov.sg/employment-practices/leave/shared-parental-leave", "tier": "official" },
+    { "id": "msf-profamilyleave", "org": "MSF", "topic": "Government-Paid Leave schemes", "url": "https://www.profamilyleave.msf.gov.sg", "tier": "official" },
+    { "id": "healthhub-mp", "org": "MOH / HealthHub", "topic": "Marriage & Parenthood schemes, MediSave", "url": "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme", "tier": "official" },
+    { "id": "madeforfamilies", "org": "MSF / Made for Families", "topic": "Baby Bonus, Large Families Scheme, MMP", "url": "https://www.madeforfamilies.gov.sg", "tier": "official" },
+    { "id": "lifesg-lfs", "org": "LifeSG", "topic": "Large Families Scheme", "url": "https://www.life.gov.sg/family-parenting/benefits-support/large-families-scheme", "tier": "official" },
+    { "id": "cpfb", "org": "CPF Board", "topic": "MediSave maternity withdrawal limits", "url": "https://www.cpf.gov.sg", "tier": "official" },
+    { "id": "moh-billsize", "org": "MOH", "topic": "Hospital Bill Size benchmarks", "url": "https://www.moh.gov.sg/managing-expenses/cost-financing/healthcare-schemes-subsidies", "tier": "official", "note": "Confirm exact URL; used for hospital price benchmarks" },
+    { "id": "acog", "org": "ACOG", "topic": "Prenatal exercise & vaccination guidance", "url": "https://www.acog.org", "tier": "medical-body" },
+    { "id": "who", "org": "WHO", "topic": "Supplement guidance", "url": "https://www.who.int", "tier": "medical-body" },
+    { "id": "hpb", "org": "Health Promotion Board (SG)", "topic": "Exercise & nutrition", "url": "https://www.hpb.gov.sg", "tier": "official" }
+  ]
+}

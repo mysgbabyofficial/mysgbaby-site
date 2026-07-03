@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "description": "Image-generation prompts per section (prompt §17). Generate OFFLINE, store as WebP/AVIF ≤200KB. Ensure ethnic diversity (SG multiracial).",
+    "styleAnchor": "soft watercolour, calming lavender/sage/peach palette, rounded friendly forms, gentle lighting"
+  },
+  "prompts": {
+    "homepageTrimester": "Soft watercolour illustration of a pregnancy stage, calming lavender and sage palette, hopeful and warm, no text",
+    "hospitalsSketch": "Watercolour architectural sketch of a modern hospital exterior, soft light, welcoming",
+    "benefitsIcons": "Cute flat infographic icons — piggy bank, coins, family — pastel palette, rounded",
+    "exercise": "Diverse pregnant women doing gentle prenatal exercise, inclusive, warm, watercolour",
+    "music": "Whimsical illustration of a baby in the womb surrounded by soft musical notes",
+    "fathersGuide": "Fathers in caregiving roles — holding a newborn, preparing a nursery — warm and diverse",
+    "multiples": "Twin/triplet themed warm illustration, cots and small strollers, gentle",
+    "lossSupport": "Gentle, muted, abstract comfort imagery — soft shapes, no babies, desaturated",
+    "mascotBase": "Friendly baby elephant mascot, simple rounded shapes, soft lavender, kind expression"
+  }
+}

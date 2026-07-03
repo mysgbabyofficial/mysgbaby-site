@@ -1,0 +1,40 @@
+{
+  "brand": {
+    "name": "MySGBaby",
+    "voice": "friendly expert — warm, supportive, never clinical or condescending",
+    "tagline": "Trusted by Singapore parents. Sources cited. Dates shown."
+  },
+  "colors": {
+    "note": "OKLCH; neutrals tinted toward primary. Defined as CSS vars in app/globals.css.",
+    "primary": "oklch(0.86 0.05 300)",
+    "secondary": "oklch(0.85 0.06 150)",
+    "accent": "oklch(0.88 0.08 60)",
+    "trust": "oklch(0.80 0.07 250)",
+    "lossThemeMuted": "desaturated variants via .theme-muted"
+  },
+  "typography": {
+    "heading": "Nunito",
+    "body": "Inter",
+    "accent": "Caveat",
+    "minBodyPx": 16,
+    "fontDisplay": "swap"
+  },
+  "mascot": {
+    "character": "gentle baby elephant (alternative: stork)",
+    "poses": ["happy", "thoughtful", "supportive"],
+    "consistency": "same character across all 4 languages",
+    "note": "Never appears on loss-support pages."
+  },
+  "imagery": {
+    "format": "WebP with AVIF fallback",
+    "maxKB": 200,
+    "diversity": "reflect Singapore's multiracial society",
+    "seasonalVariants": ["CNY", "Hari Raya", "Deepavali"],
+    "generatedOffline": true
+  },
+  "motion": {
+    "library": "Framer Motion",
+    "respectPrefersReducedMotion": true,
+    "targetFps": 60
+  }
+}

@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OKLCH palette (prompt §18). Neutrals tinted toward primary, never pure black/white. */
+:root {
+  --color-primary: oklch(0.82 0.07 300);    /* lavender — matched to the logo badge */
+  --color-secondary: oklch(0.85 0.06 150);  /* sage green */
+  --color-accent: oklch(0.88 0.08 60);      /* warm peach */
+  --color-gold: oklch(0.86 0.09 85);        /* crescent-moon gold */
+  --color-trust: oklch(0.80 0.07 250);      /* soft blue — medical citations */
+  --color-brand-red: #ef3340;               /* Singapore flag red — the mysgbaby wordmark */
+  --color-surface: oklch(0.98 0.01 300);
+  --color-ink: oklch(0.30 0.02 300);
+}
+.dark {
+  --color-surface: oklch(0.22 0.02 300);
+  --color-ink: oklch(0.94 0.01 300);
+}
+/* Loss-support pages opt into a muted, desaturated palette (prompt §15). */
+.theme-muted {
+  --color-primary: oklch(0.80 0.010 300);
+  --color-secondary: oklch(0.82 0.010 200);
+  --color-accent: oklch(0.85 0.015 60);
+}
+
+html { color-scheme: light dark; }
+body {
+  background:
+    radial-gradient(42% 52% at 12% 16%, #efe3ff 0%, transparent 62%),
+    radial-gradient(46% 55% at 88% 10%, #ffe8d6 0%, transparent 62%),
+    radial-gradient(52% 60% at 84% 90%, #ffdcec 0%, transparent 62%),
+    radial-gradient(46% 55% at 6% 94%, #e4eeff 0%, transparent 62%),
+    linear-gradient(180deg, #faf6ff, #fdf6fb);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Dynamic floating background blobs — replaces the flat white background. */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: blobfloat 22s ease-in-out infinite;
+}
+body::before { width: 420px; height: 420px; background: #d7bcff; top: -90px; left: -70px; }
+body::after { width: 360px; height: 360px; background: #ffd79a; bottom: -90px; right: -60px; animation-delay: -9s; }
+@keyframes blobfloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.08); }
+}
+h1, h2, h3 { font-family: var(--font-heading), system-ui, sans-serif; line-height: 1.2; }
+
+/* Accessibility: respect user motion preference (prompt §18). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

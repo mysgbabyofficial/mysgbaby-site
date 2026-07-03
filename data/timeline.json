@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "description": "Pregnancy timeline stages and typical Singapore milestones. Clinical content — REQUIRES review by a Singapore-registered doctor before publishing. Weeks are typical, not prescriptive.",
+    "clinicalReviewStatus": "pending",
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "stages": [
+    {
+      "id": "pre-conception",
+      "title": "Pre-conception & Pregnancy Testing",
+      "weekRange": null,
+      "milestones": ["Folic acid (start pre-conception)", "Pregnancy test", "Choose GP/gynae"],
+      "adviseMe": true
+    },
+    {
+      "id": "first-trimester",
+      "title": "First Trimester (Weeks 1–12)",
+      "weekRange": [1, 12],
+      "milestones": ["First gynae visit", "Dating scan", "OSCAR / NIPT screening", "Folic acid to ~Wk 12"],
+      "adviseMeWeeks": [6, 8, 12]
+    },
+    {
+      "id": "second-trimester",
+      "title": "Second Trimester (Weeks 13–27)",
+      "weekRange": [13, 27],
+      "milestones": ["Anomaly scan (~Wk 18–22)", "Glucose tolerance test", "Start kick tracking", "Tdap (Wk 27–36)"],
+      "adviseMeWeeks": [20, 24]
+    },
+    {
+      "id": "third-trimester",
+      "title": "Third Trimester (Weeks 28–40)",
+      "weekRange": [28, 40],
+      "milestones": ["Growth scans", "GBS swab (~Wk 35–37)", "Hospital bag", "Birth plan"],
+      "adviseMeWeeks": [28, 36]
+    },
+    {
+      "id": "labour-delivery",
+      "title": "Labour & Delivery",
+      "weekRange": [40, 42],
+      "milestones": ["Signs of labour", "Admission", "Delivery", "Postnatal & lactation"],
+      "adviseMeWeeks": [40]
+    }
+  ]
+}

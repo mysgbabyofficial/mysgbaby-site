@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "description": "Singapore parenthood benefits — 2026. Figures VERIFIED against official government sources on 2026-07-01. Re-verify before each release; several figures changed on 1 Apr 2025 and 1 Apr 2026.",
+    "lastVerified": "2026-07-01",
+    "verifiedBy": "manual (human review required before publishing any change)",
+    "authoritativeSources": [
+      "https://www.mom.gov.sg/employment-practices/leave/paternity-leave",
+      "https://www.mom.gov.sg/employment-practices/leave/shared-parental-leave",
+      "https://www.profamilyleave.msf.gov.sg",
+      "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme",
+      "https://www.madeforfamilies.gov.sg",
+      "https://www.life.gov.sg/family-parenting/benefits-support/large-families-scheme",
+      "https://www.cpf.gov.sg"
+    ],
+    "warning": "Do NOT auto-publish changes to this file. Financial guidance to parents must pass human review. See docs/RISK-AND-FEASIBILITY.md."
+  },
+  "babyBonusCashGift": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 11000, "2": 11000, "3plus": 13000 },
+    "confidence": "high",
+    "source": "MSF Baby Bonus Scheme (confirm exact current schedule on official MSF page before release)",
+    "note": "Prompt figure ($11K / $13K) matches."
+  },
+  "cdaFirstStepGrant": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 5000, "3plus": 10000 },
+    "confidence": "high",
+    "source": "Large Families Scheme — Made for Families / LifeSG",
+    "note": "3rd+ raised to $10,000 for children born on/after 18 Feb 2025 (Large Families Scheme)."
+  },
+  "cdaCoMatchingCap": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 6000, "2": 6000, "3-4": 12000, "5plus": 18000 },
+    "confidence": "medium",
+    "source": "Secondary aggregators consistent with post-2023 enhancement; CONFIRM on official MSF Baby Bonus page before publishing",
+    "correctionFromPrompt": "Prompt stated $4K/$7K/$9K/$15K — outdated. Current schedule is $6K/$12K/$18K."
+  },
+  "medisaveGrantForNewborns": {
+    "currency": "SGD",
+    "amount": 5000,
+    "priorAmount": 4000,
+    "effectiveFrom": "2025-04-01",
+    "confidence": "high",
+    "source": "HealthHub — Marriage and Parenthood Schemes (official)",
+    "correctionFromPrompt": "Prompt stated $4,000 — outdated. Enhanced to $5,000 for births on/after 1 Apr 2025."
+  },
+  "largeFamiliesScheme": {
+    "appliesTo": "3rd or subsequent Singapore Citizen child born on/after 2025-02-18",
+    "totalUpTo": 16000,
+    "currency": "SGD",
+    "components": {
+      "cdaFirstStepGrantIncrease": 5000,
+      "largeFamilyMedisaveGrant": 5000,
+      "largeFamilyLifeSgCredits": { "perYear": 1000, "years": "child age 1 to 6", "total": 6000 }
+    },
+    "confidence": "high",
+    "source": "Made for Families / LifeSG / CNA Budget 2025 (official)"
+  },
+  "leave": {
+    "maternityLeaveWeeks": { "value": 16, "confidence": "high", "source": "GPML — MOM" },
+    "paternityLeaveWeeks": {
+      "value": 4,
+      "confidence": "high",
+      "source": "GPPL — MOM (official)",
+      "correctionFromPrompt": "Prompt stated 2 weeks — outdated. Government-Paid Paternity Leave is 4 weeks."
+    },
+    "sharedParentalLeaveWeeks": {
+      "byChildDob": {
+        "2025-04-01_to_2026-03-31": 6,
+        "on_or_after_2026-04-01": 10
+      },
+      "govPayCapPerWeek": 2500,
+      "confidence": "high",
+      "source": "MOM + MSF ProFamilyLeave (official)",
+      "correctionFromPrompt": "Prompt stated 6 weeks (2025). Current entitlement is 10 weeks for children born on/after 1 Apr 2026."
+    },
+    "childcareLeaveDaysPerYear": { "value": 6, "condition": "child under 7", "confidence": "medium", "source": "Confirm on MOM before release" }
+  },
+  "medisaveMaternityPackage": {
+    "effectiveFrom": "2025-04-01",
+    "currency": "SGD",
+    "preDeliveryLimit": 900,
+    "hospitalisationPerDay": { "days1to2": 1130, "day3plus": 400 },
+    "deliveryProcedureSurgicalLimitRange": [1120, 2770],
+    "deliveryExamples": {
+      "normalVaginal": 750,
+      "assistedVaginal": 1250,
+      "caesareanStandard": 2150,
+      "caesareanWithTubalLigation": 2600,
+      "caesareanWithHysterectomy": 3950
+    },
+    "confidence": "high",
+    "source": "HealthHub / CPFB / Made for Families (official)",
+    "correctionFromPrompt": "Prompt muddled labels: it called $2,150 'assisted' (it is standard C-section) and $3,950 'C-section' (it is C-section WITH hysterectomy). Assisted vaginal delivery is $1,250."
+  },
+  "parenthoodTaxRebate": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 10000, "3plus": 20000 },
+    "confidence": "medium",
+    "source": "IRAS — CONFIRM current schedule before release"
+  },
+  "workingMothersChildRelief": {
+    "note": "WMCR moved to a FIXED-DOLLAR basis for children born/adopted on/after 1 Jan 2024 (was % of income). CONFIRM current amounts on IRAS before release — the prompt's 15%/20%/25% applies only to older children.",
+    "confidence": "low",
+    "source": "IRAS"
+  }
+}

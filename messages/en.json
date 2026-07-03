@@ -1,0 +1,40 @@
+{
+  "site": {
+    "name": "MySGBaby",
+    "tagline": "Trusted by Singapore parents. Sources cited. Dates shown."
+  },
+  "nav": {
+    "home": "Home",
+    "timeline": "My Week",
+    "hospitals": "Hospitals",
+    "calculator": "Calculator",
+    "benefits": "Benefits",
+    "fathers": "Father's Guide",
+    "wellness": "Wellness",
+    "multiples": "Twins & More",
+    "lossSupport": "Loss Support",
+    "search": "Search",
+    "saved": "Saved"
+  },
+  "common": {
+    "adviseMeNow": "Advise Me Now",
+    "whatsNext": "What's next?",
+    "learnMore": "Learn more",
+    "verifiedOn": "Verified on {date}",
+    "notMedicalAdvice": "Informational only, not medical advice. Please consult your healthcare provider.",
+    "sourceLabel": "Source"
+  },
+  "home": {
+    "heroTitle": "Your pregnancy journey, from conception to delivery — for Singapore.",
+    "heroTagline": "A calm, cited guide through every stage.",
+    "heroCta": "Start with a quick 6-question setup",
+    "weekPrompt": "I'm at Week",
+    "stageIntro": "Tap a stage to explore what happens, what it costs, and what's next."
+  },
+  "benefits": {
+    "title": "Singapore Baby Benefits Centre",
+    "intro": "What you're entitled to as a Singapore parent. Figures verified against official government sources.",
+    "calculatorCta": "Estimate my total government support",
+    "asOf": "Figures current as of {date}"
+  }
+}

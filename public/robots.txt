@@ -1,0 +1,5 @@
+# MySGBaby robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://mysgbaby.com/sitemap.xml

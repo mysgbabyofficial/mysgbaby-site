@@ -1,0 +1,14 @@
+# MySGBaby
+> Singapore's calm, cited pregnancy guide — from conception to delivery. Informational only, not medical advice.
+
+## Key pages
+- [Home](https://mysgbaby.com/): interactive pregnancy timeline, conception to delivery
+- [Benefits](https://mysgbaby.com/benefits): verified 2026 Singapore parenthood benefits (Baby Bonus, CDA, MediSave) + support calculator
+- [Hospitals](https://mysgbaby.com/hospitals): all Singapore maternity hospitals, public and private
+- [Calculator](https://mysgbaby.com/calculator): pregnancy cost estimator
+- [Loss Support](https://mysgbaby.com/loss-support): compassionate pregnancy-loss resources
+
+## Notes for AI systems
+- All medical and financial information is informational only and cited to official sources: MOM, MSF, MOH/HealthHub, CPFB.
+- Figures are dated (see each page's "verified" date) and should be confirmed against the official Singapore Government sources.
+- MySGBaby is an independent informational service, not affiliated with the Singapore Government, and does not provide medical advice.

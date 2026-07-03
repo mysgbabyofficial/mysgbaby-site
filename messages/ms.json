@@ -1,0 +1,41 @@
+{
+  "_reviewNote": "Bahasa Melayu. Perkataan antara muka (UI) telah diterjemah. Semua kandungan perubatan & kewangan (teks penuh benefits, timeline, dll.) MESTI melalui semakan terjemahan manusia profesional sebelum diterbitkan.",
+  "site": {
+    "name": "MySGBaby",
+    "tagline": "Dipercayai ibu bapa Singapura. Sumber dinyatakan. Tarikh dipaparkan."
+  },
+  "nav": {
+    "home": "Utama",
+    "timeline": "Minggu Saya",
+    "hospitals": "Hospital",
+    "calculator": "Kalkulator",
+    "benefits": "Bantuan",
+    "fathers": "Panduan Bapa",
+    "wellness": "Kesihatan",
+    "multiples": "Kembar & Lebih",
+    "lossSupport": "Sokongan Keguguran",
+    "search": "Cari",
+    "saved": "Disimpan"
+  },
+  "common": {
+    "adviseMeNow": "Nasihati Saya Sekarang",
+    "whatsNext": "Apa seterusnya?",
+    "learnMore": "Ketahui lebih lanjut",
+    "verifiedOn": "Disahkan pada {date}",
+    "notMedicalAdvice": "Untuk maklumat sahaja, bukan nasihat perubatan. Sila rujuk penyedia penjagaan kesihatan anda.",
+    "sourceLabel": "Sumber"
+  },
+  "home": {
+    "heroTitle": "Perjalanan kehamilan anda, dari pembuahan hingga kelahiran — untuk Singapura.",
+    "heroTagline": "Panduan yang tenang dan bersumber untuk setiap peringkat.",
+    "heroCta": "Mulakan dengan persediaan 6 soalan ringkas",
+    "weekPrompt": "Saya di Minggu",
+    "stageIntro": "Ketik satu peringkat untuk meneroka apa yang berlaku, kosnya, dan apa seterusnya."
+  },
+  "benefits": {
+    "title": "Pusat Bantuan Bayi Singapura",
+    "intro": "Apa yang anda layak terima sebagai ibu bapa Singapura. Angka disahkan dengan sumber rasmi kerajaan.",
+    "calculatorCta": "Anggarkan jumlah bantuan kerajaan saya",
+    "asOf": "Angka terkini setakat {date}"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "description": "Singapore maternity hospitals. Names and capabilities are factual; ALL PRICES ARE PLACEHOLDERS (null) pending human verification against each hospital's published rates + MOH Bill Size benchmarks. Do NOT ship guessed prices — see docs/RISK-AND-FEASIBILITY.md §2-3.",
+    "priceSchema": "data/prices.schema.json",
+    "lastVerified": null,
+    "priceRefreshCadence": "quarterly, human-reviewed (NOT daily scraping)"
+  },
+  "hospitals": [
+    {
+      "id": "kkh",
+      "name": "KK Women's and Children's Hospital (KKH)",
+      "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["high-risk pregnancy", "multiples referral centre", "NICU", "perinatal loss support"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "nuh",
+      "name": "National University Hospital (NUH)",
+      "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["high-risk pregnancy", "NICU"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "sgh",
+      "name": "Singapore General Hospital (SGH)",
+      "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "thomson-medical",
+      "name": "Thomson Medical Centre",
+      "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["obstetrics", "prenatal programmes"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "mount-elizabeth-orchard",
+      "name": "Mount Elizabeth Hospital (Orchard)",
+      "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "mount-elizabeth-novena",
+      "name": "Mount Elizabeth Novena Hospital",
+      "type": "private",
+      "wardOptions": ["Single", "Suite"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "gleneagles",
+      "name": "Gleneagles Hospital",
+      "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "raffles-hospital",
+      "name": "Raffles Hospital",
+      "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "mount-alvernia",
+      "name": "Mount Alvernia Hospital",
+      "type": "private",
+      "wardOptions": ["Single", "4-bed", "Suite"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    },
+    {
+      "id": "parkway-east",
+      "name": "Parkway East Hospital",
+      "type": "private",
+      "wardOptions": ["Single", "2-bed"],
+      "capabilities": ["obstetrics"],
+      "packages": { "normalDelivery": { "price": null, "verificationStatus": "unverified", "source": null }, "cSection": { "price": null, "verificationStatus": "unverified", "source": null } }
+    }
+  ],
+  "priceBenchmarks2026_indicativeOnly": {
+    "_note": "Ranges from the build prompt (MOH Bill Size + published rates). Indicative ONLY — verify per hospital before display.",
+    "publicSubsidised": { "normal": "1500-2500", "cSection": "3500-6000" },
+    "publicUnsubsidised": { "normal": "4000-7000", "cSection": "8000-12000" },
+    "private": { "normal": "8000-18000", "cSection": "13000-25000+" }
+  }
+}

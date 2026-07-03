@@ -1,0 +1,25 @@
+name: security-scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 19 * * 0'   # Sundays 03:00 SGT
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: npm audit (high severity)
+        run: npm audit --audit-level=high
+      - name: Type check
+        run: npm run typecheck
