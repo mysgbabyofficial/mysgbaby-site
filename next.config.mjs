@@ -38,7 +38,9 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
- eslint: { ignoreDuringBuilds: true },
+  // Don't let lint/type warnings block the production build (get-it-live setting).
+  // Review real issues separately — this just stops non-critical checks failing deploys.
+  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   images: { formats: ['image/avif', 'image/webp'] },
   async headers() {

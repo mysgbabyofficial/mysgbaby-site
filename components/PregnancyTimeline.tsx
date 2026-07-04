@@ -7,7 +7,7 @@ import AdviseMeButton from './AdviseMeButton';
 type Stage = {
   id: string;
   title: string;
-  weekRange: [number, number] | null;
+  weekRange: number[] | null;
   milestones: string[];
   adviseMe?: boolean;
   adviseMeWeeks?: number[];
