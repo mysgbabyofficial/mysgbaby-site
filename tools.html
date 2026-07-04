@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- PARENT TOOLS — kick counter + contraction timer demo. Helpers, not medical devices. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mysgbaby — Parent tools (demo)</title>
+  <link rel="icon" href="public/illustrations/emblem.webp" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#38314f;--brand:#ef3340;--lav:#9a7be4;--lav7:#6a49bd;--muted:#6c6488;--surface:#fbf8ff;--sage:#a9d6be}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);min-height:100vh;
+      background:radial-gradient(45% 55% at 12% 12%,#efe3ff 0,transparent 62%),radial-gradient(50% 55% at 90% 8%,#ffe8d6 0,transparent 60%),linear-gradient(180deg,#faf6ff,#fdf6fb);background-attachment:fixed}
+    h1,h2{font-family:Nunito;margin:0}
+    header{display:flex;align-items:center;gap:10px;padding:16px 22px}
+    header img{width:42px;height:42px}.word{font-family:Nunito;font-weight:900;font-size:23px;color:var(--brand)}
+    .tag{margin-left:auto;font-family:Caveat;font-size:19px;color:var(--lav7)}
+    main{max-width:860px;margin:0 auto;padding:6px 20px 44px}
+    .lead{font-family:Caveat;font-size:22px;color:var(--lav7)}
+    h1{font-size:clamp(24px,3.6vw,34px);margin:2px 0 18px}
+    .grid{display:grid;gap:20px;grid-template-columns:1fr 1fr}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--surface);border:1px solid rgba(154,123,228,.3);border-radius:22px;padding:22px;text-align:center;box-shadow:0 16px 40px -22px rgba(80,50,140,.4)}
+    .card h2{font-size:18px;margin-bottom:6px}
+    .hint{font-size:13.5px;color:var(--muted)}
+    .big{font-family:Nunito;font-weight:900;color:var(--lav7);margin:12px 0}
+    .kbig{font-size:52px}.kbig small{font-size:24px;color:#b3aac9}
+    .cbig{font-size:30px}
+    .press{width:100%;border:0;border-radius:18px;padding:20px;font-family:inherit;font-weight:800;font-size:17px;color:#fff;cursor:pointer;
+      background:linear-gradient(135deg,var(--lav),var(--lav7));box-shadow:0 12px 26px -10px rgba(106,73,189,.7);transition:.1s}
+    .press:active{transform:scale(.97)}
+    .press.stop{background:var(--brand)}
+    .link{margin-top:12px;background:none;border:0;color:var(--lav7);font-weight:700;text-decoration:underline;cursor:pointer;font-size:14px}
+    .lb{border:1px solid rgba(154,123,228,.3);background:#fff;border-radius:16px;padding:12px 6px;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer;transition:.1s}
+    .lb:active{transform:scale(.96)}.lb:hover{border-color:var(--lav)}
+    table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+    th{font-size:11px;text-transform:uppercase;color:var(--muted);text-align:left}
+    td{padding:6px 0;border-top:1px solid rgba(154,123,228,.12)}td.r{text-align:right}
+    .done{background:rgba(169,214,190,.35);border-radius:12px;padding:12px;font-weight:700;font-size:14px}
+    .guide{background:#eaf1fb;border:1px solid #a7c0e6;border-radius:12px;padding:10px;font-size:12.5px;margin-top:14px}
+    .disc{font-size:12px;color:var(--muted);margin-top:12px}
+  </style>
+</head>
+<body>
+  <header><img src="public/illustrations/emblem.webp" alt="mysgbaby"/><span class="word">mysgbaby</span><span class="tag">Parent tools · demo</span></header>
+  <main>
+    <p class="lead">For the everyday moments</p>
+    <h1>Parent tools</h1>
+    <div class="grid">
+      <div class="card">
+        <h2>🦶 Kick counter</h2>
+        <p class="hint">Tap each movement. Aim for <b>10 in 2 hours</b>.</p>
+        <div class="big kbig" id="kc"><span id="kn">0</span><small>/10</small></div>
+        <div class="hint" id="kel" style="margin-bottom:12px"></div>
+        <div id="kbtnwrap"><button class="press" id="kbtn">👣 I felt a kick</button></div>
+        <button class="link" id="kreset">Reset</button>
+        <p class="disc">If your baby's movements clearly reduce, contact your provider right away. A helper, not a medical device.</p>
+      </div>
+
+      <div class="card">
+        <h2>⏱️ Contraction timer</h2>
+        <p class="hint">Tap <b>Start</b> when one begins, <b>Stop</b> when it ends.</p>
+        <div class="big cbig" id="cdisp">—</div>
+        <button class="press" id="cbtn">▶ Start contraction</button>
+        <div id="ctable"></div>
+        <button class="link" id="cclear" style="display:none">Clear</button>
+        <div class="guide"><b>5-1-1 guide:</b> contractions ~5 min apart, lasting ~1 min, for 1 hour → usually time to head in. When unsure, call your hospital.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h2>👶 Newborn daily log</h2>
+      <p class="hint">One tap to log feeds, sleep and diapers.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px">
+        <button class="lb" data-t="Feed" data-e="🍼"><span style="font-size:26px">🍼</span><br>Feed</button>
+        <button class="lb" data-t="Sleep" data-e="😴"><span style="font-size:26px">😴</span><br>Sleep</button>
+        <button class="lb" data-t="Wet" data-e="💧"><span style="font-size:26px">💧</span><br>Wet</button>
+        <button class="lb" data-t="Dirty" data-e="💩"><span style="font-size:26px">💩</span><br>Dirty</button>
+      </div>
+      <div class="hint" id="logtoday" style="margin-top:12px"></div>
+      <div id="loglist"></div>
+      <button class="link" id="logclear" style="display:none">Clear log</button>
+      <p class="disc">Saved to this device only. A handy log, not medical monitoring.</p>
+    </div>
+  </main>
+
+  <script>
+    // Kick counter
+    let kicks=0, kstart=null, kend=null, ktimer=null;
+    const kn=document.getElementById('kn'), kel=document.getElementById('kel'), kbtnwrap=document.getElementById('kbtnwrap');
+    function kfmt(ms){const s=Math.max(0,Math.floor(ms/1000));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+    function krender(){ kn.textContent=kicks; kel.textContent = kstart? 'Elapsed '+kfmt((kend??Date.now())-kstart):''; }
+    function feltKick(){
+      const t=Date.now(); if(kicks===0){kstart=t; ktimer=setInterval(krender,1000);} kicks++;
+      if(kicks>=10){ kend=t; clearInterval(ktimer); const min=Math.max(1,Math.round((t-kstart)/60000));
+        kbtnwrap.innerHTML='<div class="done">🎉 10 movements in ~'+min+' min — nice!</div>'; }
+      krender();
+    }
+    function mountKickBtn(){ kbtnwrap.innerHTML='<button class="press" id="kbtn">👣 I felt a kick</button>'; document.getElementById('kbtn').onclick=feltKick; }
+    document.getElementById('kreset').onclick=()=>{ kicks=0;kstart=null;kend=null;clearInterval(ktimer); mountKickBtn(); krender(); };
+    mountKickBtn();
+
+    // Contraction timer
+    let list=[], current=null, ctimer=null;
+    const cdisp=document.getElementById('cdisp'), cbtn=document.getElementById('cbtn'), ctable=document.getElementById('ctable'), cclear=document.getElementById('cclear');
+    function cfmt(ms){const s=Math.max(0,Math.floor(ms/1000));return Math.floor(s/60)+'m '+String(s%60).padStart(2,'0')+'s';}
+    function crender(){
+      cdisp.textContent = current!==null ? cfmt(Date.now()-current) : (list.length?'Ready':'—');
+      const recent=list.slice(-6).reverse();
+      ctable.innerHTML = recent.length? '<table><tr><th>Length</th><th style="text-align:right">Apart</th></tr>'+
+        recent.map((c,i)=>{const idx=list.length-1-i;const prev=list[idx-1];const apart=prev?c.s-prev.s:null;
+          return '<tr><td>'+cfmt(c.e-c.s)+'</td><td class="r">'+(apart?cfmt(apart):'—')+'</td></tr>';}).join('')+'</table>' : '';
+      cclear.style.display = list.length? 'inline':'none';
+    }
+    cbtn.onclick=()=>{
+      if(current===null){ current=Date.now(); cbtn.textContent='■ Stop'; cbtn.classList.add('stop'); ctimer=setInterval(crender,500); }
+      else { list.push({s:current,e:Date.now()}); current=null; clearInterval(ctimer); cbtn.textContent='▶ Start contraction'; cbtn.classList.remove('stop'); crender(); }
+    };
+    cclear.onclick=()=>{ list=[]; current=null; clearInterval(ctimer); cbtn.textContent='▶ Start contraction'; cbtn.classList.remove('stop'); crender(); };
+    crender();
+
+    // Newborn daily log
+    let blog=[];
+    const fmtT=ms=>new Date(ms).toLocaleTimeString('en-SG',{hour:'2-digit',minute:'2-digit'});
+    function blrender(){
+      const sod=new Date(); sod.setHours(0,0,0,0);
+      const today=blog.filter(e=>e.t>=sod.getTime());
+      const c=t=>today.filter(e=>e.type===t).length;
+      document.getElementById('logtoday').textContent = blog.length? `Today: 🍼 ${c('Feed')}   😴 ${c('Sleep')}   💧 ${c('Wet')}   💩 ${c('Dirty')}`:'';
+      const recent=blog.slice(-8).reverse();
+      document.getElementById('loglist').innerHTML = recent.length? '<table>'+recent.map(e=>`<tr><td>${e.emoji} ${e.type}</td><td class="r">${fmtT(e.t)}</td></tr>`).join('')+'</table>':'';
+      document.getElementById('logclear').style.display = blog.length?'inline':'none';
+    }
+    document.querySelectorAll('.lb').forEach(b=>b.onclick=()=>{ blog.push({t:Date.now(),type:b.dataset.t,emoji:b.dataset.e}); blrender(); });
+    document.getElementById('logclear').onclick=()=>{ blog=[]; blrender(); };
+    blrender();
+  </script>
+</body>
+</html>

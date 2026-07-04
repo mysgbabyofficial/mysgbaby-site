@@ -92,7 +92,8 @@
     @media(max-width:720px){.stats{grid-template-columns:1fr 1fr}}
 
     /* journey */
-    .journey{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .stage img{width:100%;height:130px;object-fit:cover;display:block}
     .stage{background:var(--card);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);
       border:1px solid rgba(154,123,228,.12);transition:.25s;cursor:pointer;display:flex;flex-direction:column}
     .stage:hover{transform:translateY(-8px);box-shadow:0 26px 44px -18px rgba(106,73,189,.5)}
@@ -229,15 +230,18 @@
       <div class="center reveal">
         <p class="eyebrow">Every step, together</p>
         <h2>Your journey, week by week</h2>
-        <p>Tap any stage to see what happens, what it costs, and what's next.</p>
-        <a href="explorer.html" class="btn btn-primary" style="margin-top:14px;display:inline-block">Open the interactive guide →</a>
+        <p>Tap any stage to open the interactive guide at that point.</p>
+        <a href="timeline-animated.html" class="btn btn-gold" style="margin-top:12px;display:inline-block">✨ Watch baby grow week by week →</a>
+        <a href="confinement-calc.html" class="btn btn-glass" style="margin-top:12px;margin-left:8px;display:inline-block">🍲 Plan your confinement budget →</a>
+        <a href="tools.html" class="btn btn-glass" style="margin-top:12px;margin-left:8px;display:inline-block">🦶 Parent tools →</a>
       </div>
       <div class="journey">
-        <div class="stage s1 reveal"><div class="top">🌱</div><div class="body"><span class="wk">Get ready</span><h3>Pre-conception</h3><p>Testing, folic acid and choosing your gynae.</p><span class="go">Explore →</span></div></div>
-        <div class="stage s2 reveal"><div class="top">🌙</div><div class="body"><span class="wk">Weeks 1–12</span><h3>First Trimester</h3><p>First scan, OSCAR/NIPT and early care.</p><span class="go">Explore →</span></div></div>
-        <div class="stage s3 reveal"><div class="top">🎧</div><div class="body"><span class="wk">Weeks 13–27</span><h3>Second Trimester</h3><p>Anomaly scan, kicks and glucose test.</p><span class="go">Explore →</span></div></div>
-        <div class="stage s4 reveal"><div class="top">🧸</div><div class="body"><span class="wk">Weeks 28–40</span><h3>Third Trimester</h3><p>Growth scans, hospital bag and birth plan.</p><span class="go">Explore →</span></div></div>
-        <div class="stage s5 reveal"><div class="top">🍼</div><div class="body"><span class="wk">The big day</span><h3>Labour &amp; Delivery</h3><p>Signs of labour, delivery and postnatal.</p><span class="go">Explore →</span></div></div>
+        <a class="stage reveal" href="explorer.html?start=preconception"><img src="public/illustrations/n-preconception.webp" alt=""><div class="body"><span class="wk">Getting ready</span><h3>Pre-conception</h3><span class="go">Explore →</span></div></a>
+        <a class="stage reveal" href="explorer.html?start=first-tri"><img src="public/illustrations/n-first-tri.webp" alt=""><div class="body"><span class="wk">Weeks 1–12</span><h3>First Trimester</h3><span class="go">Explore →</span></div></a>
+        <a class="stage reveal" href="explorer.html?start=second-tri"><img src="public/illustrations/n-second-tri.webp" alt=""><div class="body"><span class="wk">Weeks 13–27</span><h3>Second Trimester</h3><span class="go">Explore →</span></div></a>
+        <a class="stage reveal" href="explorer.html?start=third-tri"><img src="public/illustrations/n-third-tri.webp" alt=""><div class="body"><span class="wk">Weeks 28–40</span><h3>Third Trimester</h3><span class="go">Explore →</span></div></a>
+        <a class="stage reveal" href="explorer.html?start=labour"><img src="public/illustrations/n-labour.webp" alt=""><div class="body"><span class="wk">The big day</span><h3>Labour &amp; Delivery</h3><span class="go">Explore →</span></div></a>
+        <a class="stage reveal" href="explorer.html?start=first-year"><img src="public/illustrations/n-first-year.webp" alt=""><div class="body"><span class="wk">Life after birth</span><h3>First Year</h3><span class="go">Explore →</span></div></a>
       </div>
     </section>
 

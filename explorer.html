@@ -92,6 +92,7 @@
         {to:'second-tri', em:'🎧', label:'Second Trimester', hint:'Weeks 13–27'},
         {to:'third-tri', em:'🧸', label:'Third Trimester', hint:'Weeks 28–40'},
         {to:'labour', em:'🍼', label:'Labour & Delivery', hint:'The big day'},
+        {to:'first-year', em:'👶', label:'First Year & Newborn', hint:'Life after birth'},
       ]
     },
     preconception: {
@@ -328,6 +329,82 @@
     'after-birth': { illustration:"public/illustrations/n-after-birth.webp", title:"Right after birth", intro:"The first golden hours.",
       body:["Skin-to-skin contact, the first feed, and initial checks for your baby. Lactation support is available at most Singapore hospitals if you'd like help."],
       options:[{to:'labour', em:'↩️', label:'Back to Labour & Delivery', hint:''}] },
+    'first-year': { illustration:"public/illustrations/n-first-year.webp", celebrate:"🎉 Congratulations — welcome to parenthood!",
+      title:"First Year & Newborn", intro:"The first year is a joyful, tiring adjustment. Here's what to look after.",
+      options:[
+        {to:'admin-checklist', em:'📋', label:'After baby arrives: the admin', hint:'Registration, Baby Bonus, grants'},
+        {to:'confinement', em:'🍲', label:'Confinement — planning & costs', hint:'Nanny, centre or DIY'},
+        {to:'newborn-care', em:'🌙', label:'Newborn care basics', hint:'Feeding, sleep, when to call'},
+        {to:'vaccinations', em:'💉', label:'Childhood vaccinations', hint:'The NCIS schedule'},
+        {to:'postnatal-support', em:'💜', label:'Recovery & support', hint:'Your health matters too'},
+        {to:'childcare', em:'🧸', label:'Infant care & subsidies', hint:'Plan early — waitlists'},
+      ] },
+    'admin-checklist': { illustration:"public/illustrations/n-admin-checklist.webp", title:"After baby arrives: the admin", intro:"A few important tasks in the first weeks.",
+      body:[
+        "Register the birth within 14 days (at the hospital or via LifeSG / ICA) — this gives you the birth certificate.",
+        "Enrol in the Baby Bonus Scheme to receive the Cash Gift and open the Child Development Account (CDA).",
+        "The $5,000 MediSave Grant for Newborns is credited automatically at birth, and your baby is covered by MediShield Life from day one.",
+        "Applying for your newborn's first passport? The application fee is waived."
+      ],
+      sources:[{label:"LifeSG — Welcoming your newborn", url:"https://www.life.gov.sg/family-parenting/when-your-child-is-born"}],
+      options:[{to:'first-year', em:'↩️', label:'Back to First Year', hint:''}] },
+    'confinement': { illustration:"public/illustrations/n-confinement.webp", title:"Confinement — planning & costs", intro:"The traditional 28–40 day recovery period, and what it costs.",
+      body:[
+        "Confinement is a rest-and-recovery period after birth, focused on healing, feeding and adjusting. Families choose different levels of support — a stay-in nanny, a confinement centre, meal delivery, or help from relatives.",
+        "It's one of the biggest post-birth costs, and MediSave does not cover it — so budget for it separately."
+      ],
+      priceTable:{ caption:"Confinement costs in Singapore (2026, indicative)",
+        rows:[
+          {item:"Confinement nanny (28 days)", where:"MOM-licensed agencies", price:"$3,500–$5,500", notes:"$6,000+ over CNY; ang bao extra"},
+          {item:"Confinement centre", where:"Hotel-style centres", price:"$8,000–$20,000+", notes:"Accommodation + care"},
+          {item:"Confinement meal delivery", where:"Various caterers", price:"$1,500–$3,000", notes:"About 28 days"},
+          {item:"Postnatal massage", where:"Home / studios", price:"$300–$800", notes:"Package of sessions"},
+          {item:"Lactation consultant", where:"Private IBCLC", price:"$150–$400", notes:"Per visit"},
+        ],
+        note:"Indicative 2026 ranges — MediSave does NOT cover confinement. Confirm with providers." },
+      sources:[
+        {label:"Confinement cost guide (2026)", url:"https://www.bankingcredit.com.sg/confinement-cost-singapore/"},
+        {label:"Confinement nanny prices (2026)", url:"https://newbubs.sg/blog/confinement-nanny-price-singapore-2026-full-cost-breakdown/"}
+      ],
+      options:[{to:'first-year', em:'↩️', label:'Back to First Year', hint:''}] },
+    'newborn-care': { illustration:"public/illustrations/n-newborn-care.webp", title:"Newborn care basics", intro:"The first weeks — feeding, sleep, and what's normal.",
+      body:[
+        "Newborns feed often (roughly every 2–3 hours), sleep in short stretches, and go through many nappies — all normal in the early weeks.",
+        "Mild jaundice is common in the first days; your hospital or doctor will check for it.",
+        "Call your doctor promptly if your baby has a fever, feeds poorly, is very sleepy or hard to wake, or you're worried about their breathing."
+      ],
+      tip:"Trust your instincts — when in doubt about your baby, it's always OK to call your paediatrician or the hospital.",
+      sources:[{label:"HealthHub — Newborn care", url:"https://www.healthhub.sg"}],
+      options:[{to:'first-year', em:'↩️', label:'Back to First Year', hint:''}] },
+    'vaccinations': { illustration:"public/illustrations/n-vaccinations.webp", title:"Childhood vaccinations", intro:"Singapore's National Childhood Immunisation Schedule (NCIS).",
+      body:[
+        "At birth: BCG and the first Hepatitis B jab, usually given in hospital.",
+        "Through the first 18 months: the 6-in-1 (diphtheria, tetanus, whooping cough, polio, Hib, Hep B), pneumococcal (PCV), MMR and chickenpox, across several visits.",
+        "Diphtheria and Measles vaccinations are legally required in Singapore.",
+        "Most vaccines cost about $10–$30 at polyclinics for citizens after subsidy, and can be paid from the baby's MediSave grant."
+      ],
+      sources:[{label:"HealthHub — Childhood vaccination", url:"https://www.healthhub.sg"},{label:"HPB", url:"https://www.hpb.gov.sg"}],
+      options:[{to:'first-year', em:'↩️', label:'Back to First Year', hint:''}] },
+    'postnatal-support': { illustration:"public/illustrations/n-postnatal-support.webp", title:"Recovery & support", intro:"Your wellbeing matters just as much. You're not alone.",
+      body:[
+        "Your body needs time to recover, and the early weeks can be emotionally intense. Feeling low, anxious or overwhelmed is common — and support is available.",
+        "Community nurses from KKH/NUH can visit you at home in the first weeks; lactation consultants can help with feeding; and hospital social workers can connect you with further support."
+      ],
+      tip:"If you feel persistently sad, anxious or unable to cope, please reach out — these lines are free and confidential.",
+      sources:[
+        {label:"AWARE Women's Helpline — 1800-777-5555", url:"https://www.aware.org.sg"},
+        {label:"IMH Helpline — 6389 2222", url:"https://www.imh.com.sg"},
+        {label:"Samaritans of Singapore (SOS) — 1767", url:"https://www.sos.org.sg"}
+      ],
+      options:[{to:'first-year', em:'↩️', label:'Back to First Year', hint:''}] },
+    'childcare': { illustration:"public/illustrations/n-childcare.webp", title:"Infant care & subsidies", intro:"Plan early — good centres have waitlists.",
+      body:[
+        "Infant care (2–18 months) and childcare places fill up early, so it's worth registering interest well before you return to work.",
+        "Working mothers can receive subsidies of up to about $1,710/month for infant care (tiered by income), which significantly reduces the fee.",
+        "Lower-income families may also qualify for additional support such as KidSTART."
+      ],
+      sources:[{label:"LifeSG — Preschool & childcare", url:"https://www.life.gov.sg/family-parenting"}],
+      options:[{to:'first-year', em:'↩️', label:'Back to First Year', hint:''}] },
   };
 
   // ---- engine ----
@@ -377,6 +454,8 @@
     const bb = document.getElementById('backBtn'); if(bb) bb.onclick=()=>{ stack.pop(); render(); };
     v.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ stack.push(b.dataset.to); render(); window.scrollTo({top:0,behavior:'smooth'}); });
   }
+  const _sp = new URLSearchParams(location.search).get('start');
+  if(_sp && NODES[_sp]) stack = ['home', _sp];
   render();
   </script>
 </body>

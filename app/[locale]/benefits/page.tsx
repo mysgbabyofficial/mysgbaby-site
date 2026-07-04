@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import BenefitsCalculator from '@/components/BenefitsCalculator';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 import PageHeader from '@/components/PageHeader';
+import FirstYearsSupport from '@/components/FirstYearsSupport';
 import benefits from '@/data/benefits.json';
 
 export default async function BenefitsPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -22,6 +23,8 @@ export default async function BenefitsPage({ params }: { params: Promise<{ local
       <MedicalDisclaimer lastChecked={asOf} />
 
       <BenefitsCalculator ctaLabel={t('calculatorCta')} disclaimer={tc('notMedicalAdvice')} />
+
+      <FirstYearsSupport />
 
       <section className="rounded-xl border border-trust/30 bg-trust/5 p-4 text-sm text-ink/70">
         <p className="font-medium">{tc('sourceLabel')}</p>

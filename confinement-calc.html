@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- CONFINEMENT BUDGET PLANNER — interactive demo. 2026 indicative ranges; MediSave doesn't cover confinement. Not financial advice. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mysgbaby — Confinement budget planner (demo)</title>
+  <link rel="icon" href="public/illustrations/emblem.webp" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#38314f;--brand:#ef3340;--lav:#9a7be4;--lav7:#6a49bd;--muted:#6c6488;--surface:#fbf8ff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);min-height:100vh;
+      background:radial-gradient(45% 55% at 12% 12%,#efe3ff 0,transparent 62%),radial-gradient(50% 55% at 90% 8%,#ffe8d6 0,transparent 60%),linear-gradient(180deg,#faf6ff,#fdf6fb);background-attachment:fixed}
+    h1,h2{font-family:Nunito;margin:0}
+    header{display:flex;align-items:center;gap:10px;padding:16px 22px}
+    header img{width:42px;height:42px}.word{font-family:Nunito;font-weight:900;font-size:23px;color:var(--brand)}
+    .tag{margin-left:auto;font-family:Caveat;font-size:19px;color:var(--lav7)}
+    main{max-width:680px;margin:0 auto;padding:6px 20px 44px}
+    .lead{font-family:Caveat;font-size:22px;color:var(--lav7)}
+    h1{font-size:clamp(24px,3.6vw,34px);margin:2px 0 6px}
+    .sub{color:var(--muted);margin:0 0 18px}
+    .card{background:var(--surface);border:1px solid rgba(154,123,228,.3);border-radius:22px;padding:22px;box-shadow:0 16px 40px -22px rgba(80,50,140,.4)}
+    .lbl{font-size:13px;font-weight:700;color:var(--muted);margin:16px 0 8px}
+    .grid{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}}
+    .opt{border:1px solid rgba(154,123,228,.3);background:#fff;border-radius:14px;padding:12px;text-align:left;cursor:pointer;font-family:inherit;transition:.15s}
+    .opt:hover{border-color:var(--lav)}
+    .opt.on{border-color:var(--lav);background:rgba(154,123,228,.14);box-shadow:0 0 0 1px var(--lav) inset}
+    .opt b{display:block;font-size:14.5px}.opt span{font-size:12.5px;color:var(--muted)}
+    .cny{display:flex;align-items:center;gap:8px;font-size:14px;margin-top:10px}
+    .step{display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(154,123,228,.3);border-radius:14px;padding:12px 14px;margin-top:16px;font-size:14px}
+    .step .ctrl{display:flex;align-items:center;gap:12px}
+    .step button{width:30px;height:30px;border:0;border-radius:50%;background:rgba(154,123,228,.16);font-weight:800;cursor:pointer;font-size:16px}
+    table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}
+    td{padding:8px 0;border-bottom:1px solid rgba(154,123,228,.12)}
+    td.r{text-align:right;font-weight:600}
+    .total{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;background:rgba(154,123,228,.16);border-radius:14px;padding:14px 16px;margin-top:16px;font-weight:800}
+    .total .amt{font-size:20px;color:var(--lav7)}
+    .note{background:#eaf1fb;border:1px solid #a7c0e6;border-radius:12px;padding:11px 13px;font-size:12.5px;margin-top:14px}
+    .src{font-size:12px;color:var(--muted);margin-top:8px}
+  </style>
+</head>
+<body>
+  <header><img src="public/illustrations/emblem.webp" alt="mysgbaby"/><span class="word">mysgbaby</span><span class="tag">Confinement planner · demo</span></header>
+  <main>
+    <p class="lead">Plan ahead with confidence</p>
+    <h1>Confinement budget planner</h1>
+    <p class="sub">The biggest post-birth cost — and MediSave doesn't cover it. Pick your options to estimate a realistic budget.</p>
+    <div class="card">
+      <div class="lbl">Who's supporting your recovery?</div>
+      <div class="grid" id="support">
+        <button class="opt" data-v="none"><b>Family / DIY</b><span>$0</span></button>
+        <button class="opt on" data-v="nanny"><b>Confinement nanny</b><span>$3,500–$5,500</span></button>
+        <button class="opt" data-v="centre"><b>Confinement centre</b><span>$8,000–$20,000</span></button>
+      </div>
+      <label class="cny" id="cnyWrap"><input type="checkbox" id="cny"/> Due around Chinese New Year (nanny surcharge +$500–$1,000)</label>
+
+      <div class="lbl">Add-ons</div>
+      <div class="grid" id="addons">
+        <button class="opt on" data-k="meals"><b>Meal delivery</b><span>$1,500–$3,000</span></button>
+        <button class="opt" data-k="massage"><b>Postnatal massage</b><span>$300–$800</span></button>
+        <button class="opt" data-k="essentials"><b>Baby essentials</b><span>$1,000–$3,000</span></button>
+      </div>
+
+      <div class="step"><span><b>Lactation consultant</b> sessions ($150–$400 each)</span>
+        <span class="ctrl"><button id="minus">−</button><b id="lac">0</b><button id="plus">+</button></span></div>
+
+      <table id="breakdown"></table>
+      <div class="total"><span>Estimated confinement budget</span><span class="amt" id="amt"></span></div>
+      <div class="note"><b>MediSave does not cover confinement</b> — budget for it separately. 2026 indicative ranges; prices rise over festive periods and vary by provider.</div>
+      <p class="src">Sources: confinement cost guides (bankingcredit.com.sg, newbubs.sg, 2026).</p>
+    </div>
+  </main>
+
+  <script>
+    const R={nanny:[3500,5500],cny:[500,1000],centre:[8000,20000],meals:[1500,3000],massage:[300,800],lactation:[150,400],essentials:[1000,3000]};
+    const st={support:'nanny',cny:false,meals:true,massage:false,essentials:false,lac:0};
+    const fmt=n=>'$'+n.toLocaleString('en-SG');
+
+    document.querySelectorAll('#support .opt').forEach(b=>b.onclick=()=>{st.support=b.dataset.v;
+      document.querySelectorAll('#support .opt').forEach(x=>x.classList.toggle('on',x===b));
+      document.getElementById('cnyWrap').style.display = st.support==='nanny' ? 'flex':'none'; render();});
+    document.querySelectorAll('#addons .opt').forEach(b=>b.onclick=()=>{const k=b.dataset.k; st[k]=!st[k]; b.classList.toggle('on',st[k]); render();});
+    document.getElementById('cny').onchange=e=>{st.cny=e.target.checked; render();};
+    document.getElementById('minus').onclick=()=>{st.lac=Math.max(0,st.lac-1);render();};
+    document.getElementById('plus').onclick=()=>{st.lac=Math.min(6,st.lac+1);render();};
+
+    function render(){
+      document.getElementById('lac').textContent=st.lac;
+      const lines=[];
+      if(st.support==='nanny'){ lines.push(['Confinement nanny (28 days)',R.nanny]); if(st.cny) lines.push(['Festive (CNY) surcharge',R.cny]); }
+      if(st.support==='centre') lines.push(['Confinement centre',R.centre]);
+      if(st.meals) lines.push(['Confinement meal delivery',R.meals]);
+      if(st.massage) lines.push(['Postnatal massage',R.massage]);
+      if(st.lac>0) lines.push([`Lactation consultant × ${st.lac}`,[R.lactation[0]*st.lac,R.lactation[1]*st.lac]]);
+      if(st.essentials) lines.push(['Baby essentials',R.essentials]);
+      let lo=0,hi=0; lines.forEach(l=>{lo+=l[1][0];hi+=l[1][1];});
+      document.getElementById('breakdown').innerHTML = lines.map(l=>`<tr><td>${l[0]}</td><td class="r">${fmt(l[1][0])}–${fmt(l[1][1])}</td></tr>`).join('');
+      document.getElementById('amt').textContent = fmt(lo)+' – '+fmt(hi);
+    }
+    render();
+  </script>
+</body>
+</html>

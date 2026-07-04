@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/routing';
 import CostCalculator from '@/components/CostCalculator';
+import ConfinementCalculator from '@/components/ConfinementCalculator';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 import PageHeader from '@/components/PageHeader';
 
@@ -15,6 +16,15 @@ export default function CalculatorPage() {
 
       <MedicalDisclaimer lastChecked="2026-07-01" />
       <CostCalculator />
+
+      <div>
+        <h2 className="mb-1 mt-4 text-2xl font-extrabold">Confinement budget planner</h2>
+        <p className="mb-3 text-ink/70">
+          The biggest post-birth cost — and MediSave doesn&apos;t cover it. Pick your options to
+          estimate a realistic budget.
+        </p>
+        <ConfinementCalculator />
+      </div>
 
       <p className="text-sm text-ink/70">
         Looking for delivery-package prices? See the{' '}

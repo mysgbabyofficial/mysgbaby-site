@@ -40,6 +40,9 @@ export default function StageExplorer() {
         const w = Number(JSON.parse(raw)?.week);
         if (w > 0) setWeek(w);
       }
+      // Deep-link: /explore?start=<node> opens straight to that stage.
+      const start = new URLSearchParams(window.location.search).get('start');
+      if (start && NODES[start]) setStack(['home', start]);
     } catch {}
   }, []);
 

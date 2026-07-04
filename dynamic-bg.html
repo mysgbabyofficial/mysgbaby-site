@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+  DYNAMIC STAGE BACKGROUND — interactive demo. Open in any browser.
+  Slide through the journey (or press Play): the background is a dreamy in-the-womb
+  world while baby grows, and transforms into a joyful newborn world the moment
+  they're born. This prototypes the "living background" for the live site.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mysgbaby — Living background (demo)</title>
+  <link rel="icon" href="public/illustrations/emblem.webp" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --ink:#38314f; --brand:#ef3340; --lav:#9a7be4; --lav7:#6a49bd; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);overflow:hidden}
+    h1,h2{font-family:Nunito,sans-serif;margin:0}
+
+    .bg{position:fixed;inset:0;background-size:cover;background-position:center;transition:opacity 1.4s ease, filter 1.4s ease;z-index:-3}
+    .bg.womb{background-image:url('public/illustrations/bg-womb.webp')}
+    .bg.newborn{background-image:url('public/illustrations/bg-newborn.webp');opacity:0}
+    .scrim{position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.55))}
+    #particles{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+    .bubble{position:absolute;bottom:-8%;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(215,188,255,.35));
+      opacity:.6;animation:rise linear infinite}
+    @keyframes rise{0%{transform:translateY(0) translateX(0)}100%{transform:translateY(-115vh) translateX(30px)}}
+    .confetti{position:absolute;top:-5%;width:10px;height:14px;opacity:.9;animation:fall linear forwards}
+    @keyframes fall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(115vh) rotate(540deg)}}
+
+    header{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;gap:10px;padding:16px 22px;z-index:5}
+    header img{width:44px;height:44px;filter:drop-shadow(0 4px 10px rgba(154,123,228,.5))}
+    header .word{font-family:Nunito;font-weight:900;font-size:24px;color:var(--brand)}
+    header .tag{margin-left:auto;font-family:Caveat;font-size:19px;color:var(--lav7)}
+
+    main{position:relative;z-index:4;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:20px;text-align:center}
+    .card{background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border:1px solid rgba(154,123,228,.3);
+      border-radius:26px;padding:26px 34px;box-shadow:0 20px 50px -20px rgba(80,50,140,.5);max-width:560px}
+    .stagelabel{display:inline-block;font-family:Caveat;font-size:22px;color:var(--lav7)}
+    #message{font-size:clamp(28px,4.4vw,46px);font-weight:900;margin:2px 0 6px}
+    #sub{color:#5a5372;font-size:16px;margin:0}
+    .controls{width:min(640px,92vw);background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border-radius:22px;padding:18px 22px;box-shadow:0 16px 40px -20px rgba(80,50,140,.45)}
+    input[type=range]{width:100%;accent-color:var(--lav)}
+    .ticks{display:flex;justify-content:space-between;font-size:12px;color:#7a7192;margin-top:4px}
+    .row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px}
+    .btn{border:0;border-radius:14px;padding:11px 20px;font-weight:700;font-family:inherit;cursor:pointer;font-size:15px;
+      background:linear-gradient(135deg,var(--lav),var(--lav7));color:#fff;box-shadow:0 10px 24px -8px rgba(106,73,189,.7)}
+    @media(prefers-reduced-motion:reduce){.bubble,.confetti{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="bg womb" id="bgWomb"></div>
+  <div class="bg newborn" id="bgNewborn"></div>
+  <div class="scrim"></div>
+  <div id="particles"></div>
+
+  <header>
+    <img src="public/illustrations/emblem.webp" alt="mysgbaby" />
+    <span class="word">mysgbaby</span>
+    <span class="tag">Living background · demo</span>
+  </header>
+
+  <main>
+    <div class="card">
+      <span class="stagelabel" id="stagelabel"></span>
+      <h1 id="message"></h1>
+      <p id="sub"></p>
+    </div>
+    <div class="controls">
+      <input type="range" id="slider" min="1" max="52" value="8" />
+      <div class="ticks"><span>Week 1</span><span>Birth (wk 40)</span><span>1 year old</span></div>
+      <div class="row">
+        <button class="btn" id="play">▶ Play the journey</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const bgWomb = document.getElementById('bgWomb');
+    const bgNewborn = document.getElementById('bgNewborn');
+    const parts = document.getElementById('particles');
+    const slider = document.getElementById('slider');
+    const stagelabel = document.getElementById('stagelabel');
+    const message = document.getElementById('message');
+    const sub = document.getElementById('sub');
+    let prevBorn = false;
+
+    // gentle floating bubbles for the womb phase
+    function makeBubbles(){
+      for(let i=0;i<16;i++){
+        const b=document.createElement('div'); b.className='bubble';
+        const s=12+Math.floor(Math.random()*46);
+        b.style.width=s+'px'; b.style.height=s+'px';
+        b.style.left=Math.floor(Math.random()*100)+'%';
+        b.style.animationDuration=(10+Math.random()*14)+'s';
+        b.style.animationDelay=(-Math.random()*20)+'s';
+        parts.appendChild(b);
+      }
+    }
+    function confettiBurst(){
+      const colors=['#ffd98a','#f7a8c6','#9a7be4','#a9d6be','#ef3340'];
+      for(let i=0;i<48;i++){
+        const c=document.createElement('div'); c.className='confetti';
+        c.style.left=Math.floor(Math.random()*100)+'%';
+        c.style.background=colors[i%colors.length];
+        c.style.animationDuration=(2.4+Math.random()*2.2)+'s';
+        c.style.animationDelay=(Math.random()*0.6)+'s';
+        parts.appendChild(c);
+        setTimeout(()=>c.remove(), 5200);
+      }
+    }
+
+    function render(week){
+      const born = week > 40;
+      bgWomb.style.opacity = born ? 0 : 1;
+      bgNewborn.style.opacity = born ? 1 : 0;
+      // particle mood
+      parts.querySelectorAll('.bubble').forEach(b=> b.style.opacity = born ? 0 : .6);
+
+      if(born){
+        const wksOld = week - 40;
+        stagelabel.textContent = "Baby is here! 🍼";
+        message.textContent = "🎉 Welcome to the world!";
+        sub.textContent = wksOld <= 1 ? "Your newborn has arrived — congratulations!" :
+          `Your little one is about ${wksOld} week${wksOld>1?'s':''} old.`;
+      } else {
+        const stage = week<=12 ? "First Trimester" : week<=27 ? "Second Trimester" : "Third Trimester";
+        stagelabel.textContent = "🌙 " + stage;
+        message.textContent = `Your baby is growing — Week ${week}`;
+        sub.textContent = "A calm, dreamy world while your little one develops.";
+      }
+      if(born && !prevBorn) confettiBurst();
+      prevBorn = born;
+    }
+
+    makeBubbles();
+    slider.addEventListener('input', ()=> render(+slider.value));
+    render(+slider.value);
+
+    // "Play the journey" — animate to just past birth so the transformation plays
+    document.getElementById('play').addEventListener('click', ()=>{
+      let w = 4; slider.value = w; render(w);
+      const id = setInterval(()=>{
+        w += 1; if(w>44){ clearInterval(id); return; }
+        slider.value = w; render(w);
+      }, 90);
+    });
+  </script>
+</body>
+</html>

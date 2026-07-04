@@ -8,6 +8,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import SiteFooter from '@/components/SiteFooter';
 import ConsentBanner from '@/components/ConsentBanner';
 import Analytics from '@/components/Analytics';
+import DynamicBackground from '@/components/DynamicBackground';
 import '../globals.css';
 
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
@@ -73,6 +74,7 @@ export default async function LocaleLayout({
     ['/benefits', t('benefits')],
     ['/hospitals', t('hospitals')],
     ['/calculator', t('calculator')],
+    ['/tools', 'Tools'],
     ['/loss-support', t('lossSupport')],
   ];
 
@@ -80,6 +82,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${nunito.variable} ${inter.variable} ${caveat.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <DynamicBackground />
         <Analytics />
         <NextIntlClientProvider messages={messages}>
           <header className="sticky top-0 z-20 border-b border-primary/30 bg-surface/80 backdrop-blur">

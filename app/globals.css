@@ -57,6 +57,10 @@ body::after { width: 360px; height: 360px; background: #ffd79a; bottom: -90px; r
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(40px, 30px) scale(1.08); }
 }
+@keyframes mysg-confetti {
+  0% { transform: translateY(-10vh) rotate(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(540deg); opacity: 0.9; }
+}
 h1, h2, h3 { font-family: var(--font-heading), system-ui, sans-serif; line-height: 1.2; }
 
 /* Accessibility: respect user motion preference (prompt §18). */

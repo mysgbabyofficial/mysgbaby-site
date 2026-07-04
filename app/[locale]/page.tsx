@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import PregnancyTimeline from '@/components/PregnancyTimeline';
-import timeline from '@/data/timeline.json';
+import StageJourney from '@/components/StageJourney';
+import BabyDevelopment from '@/components/BabyDevelopment';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -41,14 +41,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       <section>
-        <p className="mb-4 text-ink/70">{t('stageIntro')}</p>
-        <Link
-          href="/explore"
-          className="mb-6 inline-block rounded-xl bg-primary px-6 py-3 font-semibold text-ink shadow transition hover:brightness-105"
-        >
-          Open the interactive guide →
-        </Link>
-        <PregnancyTimeline stages={timeline.stages} weekPromptLabel={t('weekPrompt')} />
+        <div className="mb-6 max-w-2xl">
+          <p className="font-accent text-lg text-primary">Something to smile about</p>
+          <h2 className="text-2xl font-extrabold md:text-3xl">Watch your baby grow, week by week</h2>
+        </div>
+        <BabyDevelopment />
+      </section>
+
+      <section>
+        <div className="mb-6 max-w-2xl">
+          <p className="font-accent text-lg text-primary">Your journey, stage by stage</p>
+          <h2 className="text-2xl font-extrabold md:text-3xl">Tap a stage to explore</h2>
+          <p className="mt-1 text-ink/70">{t('stageIntro')}</p>
+        </div>
+        <StageJourney />
       </section>
     </div>
   );

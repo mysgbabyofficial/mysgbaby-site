@@ -100,8 +100,35 @@
     "source": "IRAS — CONFIRM current schedule before release"
   },
   "workingMothersChildRelief": {
-    "note": "WMCR moved to a FIXED-DOLLAR basis for children born/adopted on/after 1 Jan 2024 (was % of income). CONFIRM current amounts on IRAS before release — the prompt's 15%/20%/25% applies only to older children.",
-    "confidence": "low",
-    "source": "IRAS"
+    "basis": "Fixed-dollar for children born/adopted on/after 1 Jan 2024 (was % of income for older children).",
+    "byBirthOrder": { "1": 8000, "2": 10000, "3plus": 12000 },
+    "confidence": "high",
+    "source": "IRAS (verified 2026-07)"
+  },
+  "firstYearsSupport": {
+    "_note": "Ongoing support beyond birth. Verified 2026 against IRAS + Made for Families. Tax reliefs use fixed-dollar amounts for children born/adopted on/after 1 Jan 2024.",
+    "taxReliefs": [
+      { "name": "Working Mother's Child Relief (WMCR)", "amount": "$8,000 / $10,000 / $12,000", "who": "Working mothers · 1st / 2nd / 3rd+ child (born ≥ 1 Jan 2024)" },
+      { "name": "Qualifying Child Relief (QCR)", "amount": "$4,000 / year", "who": "Either parent, per child ($7,500 if disabled)" },
+      { "name": "Parenthood Tax Rebate (PTR)", "amount": "$5,000 / $10,000 / $20,000", "who": "One-off · 1st / 2nd / 3rd+ · carry forward unused" },
+      { "name": "Grandparent Caregiver Relief (GCR)", "amount": "$3,000 / year", "who": "Working mother · grandparent cares for child ≤ 12" },
+      { "name": "Foreign Domestic Worker Levy Relief", "amount": "~$7,200 / year", "who": "Working mother employing a helper (2× the levy)" }
+    ],
+    "childcare": [
+      { "name": "Infant care subsidy (2–18 mo)", "amount": "Up to ~$1,710/mo", "who": "Working mothers (income-tiered); basic $600" },
+      { "name": "Childcare subsidy (18 mo–P1)", "amount": "Tiered by income", "who": "Basic subsidy for all; more if working" },
+      { "name": "Child LifeSG Credits", "amount": "$1,000 / year (ages 1–6)", "who": "3rd+ child (Large Families Scheme)" },
+      { "name": "KidSTART", "amount": "Home visits + support", "who": "Lower-income families" }
+    ],
+    "notes": [
+      "Baby Bonus Cash Gift is paid in instalments until your child is 6.5 years old.",
+      "The CDA closes at age 12; unused funds move to the Post-Secondary Education Account (PSEA).",
+      "Combined QCR + WMCR is capped at $50,000 per child; total tax reliefs cap at $80,000 per year."
+    ],
+    "sources": [
+      { "label": "IRAS — tax reliefs", "url": "https://www.iras.gov.sg" },
+      { "label": "Made for Families — tax reliefs & rebates", "url": "https://www.madeforfamilies.gov.sg/support-measures/child-raising/financial-support/tax-relief-and-rebates" },
+      { "label": "LifeSG — preschool & childcare", "url": "https://www.life.gov.sg/family-parenting" }
+    ]
   }
 }
