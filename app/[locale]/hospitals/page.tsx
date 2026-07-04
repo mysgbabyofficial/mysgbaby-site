@@ -15,7 +15,7 @@ export default async function HospitalsPage({ params }: { params: Promise<{ loca
       <PageHeader
         eyebrow="Compare & choose"
         title={t('hospitals')}
-        subtitle="Every Singapore maternity hospital. Delivery-package prices are shown as pending verification — curated quarterly against each hospital's published rates and MOH Bill Size benchmarks, not scraped daily."
+        subtitle="Every Singapore maternity hospital. Delivery costs are 2026 reference figures from MOH Bill Benchmarks and published hospital rates (last reviewed June 2026) — guides, not quotes. Confirm with each hospital's bill estimator."
       />
 
       <section>

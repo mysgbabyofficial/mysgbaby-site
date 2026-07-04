@@ -42,6 +42,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section>
         <p className="mb-4 text-ink/70">{t('stageIntro')}</p>
+        <Link
+          href="/explore"
+          className="mb-6 inline-block rounded-xl bg-primary px-6 py-3 font-semibold text-ink shadow transition hover:brightness-105"
+        >
+          Open the interactive guide →
+        </Link>
         <PregnancyTimeline stages={timeline.stages} weekPromptLabel={t('weekPrompt')} />
       </section>
     </div>

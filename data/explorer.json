@@ -1,0 +1,312 @@
+{
+  "_meta": {
+    "description": "Interactive Stage Explorer content tree. Informational only, not medical advice; prices are 2026 reference figures, confirm with providers.",
+    "start": "home"
+  },
+  "nodes": {
+    "home": {
+      "title": "Where are you in your journey?",
+      "intro": "Tap a stage to explore. Each step opens up more detail, prices and guidance — and you can always go back.",
+      "options": [
+        { "to": "preconception", "em": "🌱", "label": "Pre-conception & Testing", "hint": "Trying, or think you might be pregnant?" },
+        { "to": "first-tri", "em": "🌙", "label": "First Trimester", "hint": "Weeks 1–12" },
+        { "to": "second-tri", "em": "🎧", "label": "Second Trimester", "hint": "Weeks 13–27" },
+        { "to": "third-tri", "em": "🧸", "label": "Third Trimester", "hint": "Weeks 28–40" },
+        { "to": "labour", "em": "🍼", "label": "Labour & Delivery", "hint": "The big day" }
+      ]
+    },
+    "preconception": {
+      "title": "Pre-conception & Testing",
+      "intro": "Just starting out, or think you might be pregnant? Begin here.",
+      "illustration": "/illustrations/n-preconception.webp",
+      "body": ["Whether you're planning ahead or waiting to test, a few simple steps set you up well for a healthy start."],
+      "options": [
+        { "to": "test-kits", "em": "🧪", "label": "Pregnancy test kits", "hint": "Where to buy, prices & how to compare" },
+        { "to": "folic-acid", "em": "🌿", "label": "Start folic acid", "hint": "What, when and where to get it" },
+        { "to": "choose-gynae", "em": "🩺", "label": "Choosing a doctor / hospital", "hint": "GP vs O&G, public vs private" }
+      ]
+    },
+    "test-kits": {
+      "title": "Home pregnancy test kits",
+      "intro": "How they work, when to test, and what they cost in Singapore.",
+      "illustration": "/illustrations/illus-test-kit.webp",
+      "body": [
+        "A home pregnancy test checks your urine for the hormone hCG, which rises after a fertilised egg implants.",
+        "Most kits are most reliable from the first day of your missed period; some 'early' kits detect a few days sooner."
+      ],
+      "priceTable": {
+        "caption": "Common test kits in Singapore (indicative)",
+        "rows": [
+          { "item": "Watsons / Guardian house brand", "where": "Watsons, Guardian", "price": "$8–$15", "notes": "Budget strip or midstream" },
+          { "item": "Clearblue (line test)", "where": "Guardian, Watsons, NTUC, Shopee", "price": "$15–$25", "notes": "Popular, easy to read" },
+          { "item": "Clearblue Digital", "where": "Guardian, Watsons, Shopee", "price": "$22–$35", "notes": "Shows 'Pregnant'; some show weeks" },
+          { "item": "First Response Early Result", "where": "Guardian, Shopee, iHerb", "price": "$18–$30", "notes": "Early detection" }
+        ],
+        "note": "Indicative ranges — confirm current prices at Watsons, Guardian, NTUC FairPrice, Shopee.sg or Lazada.sg."
+      },
+      "tip": "For best accuracy, test with your <b>first-morning urine</b>, when hCG is most concentrated.",
+      "sources": [{ "label": "HealthHub — Pregnancy", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "how-to-test", "em": "📋", "label": "How to use a test kit", "hint": "Step-by-step" },
+        { "to": "test-results", "em": "🔎", "label": "Understanding your result", "hint": "Positive, negative or unclear" }
+      ]
+    },
+    "how-to-test": {
+      "title": "How to use a test kit",
+      "intro": "A few simple steps for a reliable result.",
+      "illustration": "/illustrations/n-how-to-test.webp",
+      "body": [
+        "1. Read the leaflet that comes with your kit — brands differ slightly.",
+        "2. Use your first-morning urine for best accuracy.",
+        "3. Either hold the stick in your urine stream or dip it, as the kit instructs.",
+        "4. Lay it flat and wait the stated time (often 3–5 minutes).",
+        "5. Read the result within the time window — lines that appear much later can be misleading."
+      ],
+      "tip": "Two lines (or 'Pregnant') = positive; one line (or 'Not Pregnant') = negative — even a <b>faint</b> second line usually counts as positive.",
+      "options": [{ "to": "test-results", "em": "🔎", "label": "Now check your result", "hint": "What did it show?" }]
+    },
+    "test-results": {
+      "title": "Understanding your result",
+      "intro": "What does your test show? Tap the one that matches.",
+      "options": [
+        { "to": "result-positive", "em": "➕", "label": "Positive (pregnant)", "hint": "Two lines / 'Pregnant'" },
+        { "to": "result-negative", "em": "➖", "label": "Negative (not pregnant)", "hint": "One line / 'Not Pregnant'" },
+        { "to": "result-unclear", "em": "❓", "label": "Faint line or unclear", "hint": "Not sure what I'm seeing" }
+      ]
+    },
+    "result-positive": {
+      "celebrate": "🎉 Congratulations! A positive result is the start of an incredible journey.",
+      "illustration": "/illustrations/illus-positive.webp",
+      "title": "You're pregnant — what now?",
+      "intro": "Here are your first, gentle next steps.",
+      "body": ["A positive home test is usually accurate. The next move is to confirm it and begin early care so you and your baby get the best start."],
+      "tip": "Book your <b>first appointment with a GP or O&G</b> — they'll confirm the pregnancy and guide you from here.",
+      "sources": [
+        { "label": "HealthHub — Early pregnancy", "url": "https://www.healthhub.sg" },
+        { "label": "KK Women's & Children's Hospital", "url": "https://www.kkh.com.sg" }
+      ],
+      "options": [
+        { "to": "first-visit", "em": "🩺", "label": "Book your first prenatal visit", "hint": "Usually around 6–8 weeks" },
+        { "to": "folic-acid", "em": "🌿", "label": "Start (or continue) folic acid", "hint": "Supports healthy early development" },
+        { "to": "dating-scan", "em": "📅", "label": "What to expect at the dating scan", "hint": "Confirms your due date" },
+        { "to": "first-tri", "em": "🌙", "label": "Continue to First Trimester", "hint": "Everything for weeks 1–12", "cta": true }
+      ]
+    },
+    "result-negative": {
+      "title": "A negative result",
+      "intro": "Not the end of the road — timing matters.",
+      "illustration": "/illustrations/n-result-negative.webp",
+      "body": [
+        "A negative can simply mean it's too early and hCG isn't high enough to detect yet.",
+        "If your period doesn't arrive, retest in 2–3 days with first-morning urine.",
+        "If your cycles are irregular, or you've been trying for a while, it's worth speaking to a doctor."
+      ],
+      "options": [
+        { "to": "test-kits", "em": "🧪", "label": "Back to test kits", "hint": "Retest or try a more sensitive kit" },
+        { "to": "choose-gynae", "em": "🩺", "label": "Speak to a doctor", "hint": "GP or fertility clinic" }
+      ]
+    },
+    "result-unclear": {
+      "title": "Faint line or unclear result",
+      "intro": "Very common — here's what it usually means.",
+      "illustration": "/illustrations/n-result-unclear.webp",
+      "body": [
+        "A faint second line is often an early positive, when hCG is still low.",
+        "Retest in 48 hours with first-morning urine — the line usually gets clearer if you're pregnant.",
+        "For certainty, a clinic can do a blood test, which detects pregnancy earlier and more precisely."
+      ],
+      "options": [
+        { "to": "how-to-test", "em": "📋", "label": "Re-check how to test", "hint": "Make sure timing is right" },
+        { "to": "choose-gynae", "em": "🩺", "label": "See a clinic for a blood test", "hint": "Most accurate" }
+      ]
+    },
+    "first-visit": {
+      "title": "Your first prenatal visit",
+      "intro": "What happens, and what to bring.",
+      "illustration": "/illustrations/n-first-visit.webp",
+      "body": [
+        "Usually around 6–8 weeks. The doctor confirms the pregnancy, reviews your health history, may do a urine test and an early scan, and estimates your due date.",
+        "Bring your NRIC/ID and a list of any medications or supplements you take."
+      ],
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "dating-scan", "em": "📅", "label": "The dating scan", "hint": "What it checks" },
+        { "to": "choose-gynae", "em": "🏥", "label": "Where to go", "hint": "Compare hospitals & clinics" }
+      ]
+    },
+    "dating-scan": {
+      "title": "The dating scan",
+      "intro": "Your first look at your baby.",
+      "illustration": "/illustrations/n-dating-scan.webp",
+      "body": ["Usually 6–10 weeks. It confirms the pregnancy is in the womb and developing, checks the heartbeat, and gives an accurate due date based on the baby's size."],
+      "options": [{ "to": "first-tri", "em": "🌙", "label": "Continue to First Trimester", "hint": "Weeks 1–12", "cta": true }]
+    },
+    "folic-acid": {
+      "title": "Folic acid",
+      "intro": "A small daily step with a big effect.",
+      "illustration": "/illustrations/n-folic-acid.webp",
+      "body": ["The WHO and Singapore's Health Promotion Board recommend folic acid from pre-conception through about week 12 to support healthy neural development. Prenatal multivitamins usually include it."],
+      "priceTable": {
+        "caption": "Where to get it (indicative)",
+        "rows": [
+          { "item": "Folic acid tablets", "where": "Watsons, Guardian, Unity, clinics", "price": "$5–$15", "notes": "Basic supplement" },
+          { "item": "Prenatal multivitamin (with folate)", "where": "Pharmacies, Shopee", "price": "$20–$45", "notes": "Folate + iron, DHA etc." }
+        ],
+        "note": "Indicative — ask your doctor or pharmacist what's right for you."
+      },
+      "sources": [
+        { "label": "HPB Singapore", "url": "https://www.hpb.gov.sg" },
+        { "label": "WHO", "url": "https://www.who.int" }
+      ],
+      "options": [{ "to": "choose-gynae", "em": "🩺", "label": "Talk to a doctor", "hint": "Personalised advice" }]
+    },
+    "choose-gynae": {
+      "title": "Choosing a doctor or hospital",
+      "intro": "Public or private, GP or O&G — here's the gist.",
+      "illustration": "/illustrations/n-choose-gynae.webp",
+      "body": [
+        "You can start with a GP, or go straight to an O&G (obstetrician-gynaecologist).",
+        "Public hospitals (KKH, NUH, SGH) generally cost less and can handle higher-risk care; private care offers continuity with one doctor and more flexible timings.",
+        "The full comparison — packages and estimated costs — lives on the Hospitals page of the site."
+      ],
+      "options": [{ "to": "preconception", "em": "↩️", "label": "Back to the start", "hint": "Explore other options" }]
+    },
+    "first-tri": {
+      "celebrate": "Congratulations on your little one! 🌙",
+      "title": "First Trimester (Weeks 1–12)",
+      "intro": "Here's what to look out for in these early weeks.",
+      "illustration": "/illustrations/n-first-tri.webp",
+      "body": ["Big things are happening even though there's little to see yet. These are the key milestones and checks."],
+      "options": [
+        { "to": "first-visit", "em": "🩺", "label": "First prenatal visit", "hint": "~6–8 weeks" },
+        { "to": "screening", "em": "🧬", "label": "Screening (OSCAR / NIPT)", "hint": "~11–14 weeks" },
+        { "to": "symptoms", "em": "🤢", "label": "Common early symptoms", "hint": "What's normal, when to call" },
+        { "to": "folic-acid", "em": "🌿", "label": "Supplements", "hint": "Folic acid & prenatals" }
+      ]
+    },
+    "screening": {
+      "title": "First-trimester screening",
+      "intro": "OSCAR and NIPT — what they are.",
+      "illustration": "/illustrations/n-screening.webp",
+      "body": [
+        "OSCAR (~11–14 weeks) combines an ultrasound with a blood test to assess the chance of certain conditions.",
+        "NIPT is a newer, more accurate blood test that can be done from about 10 weeks. Your doctor will help you decide which suits you."
+      ],
+      "priceTable": {
+        "caption": "Reference screening costs (2026)",
+        "rows": [
+          { "item": "OSCAR", "where": "Most hospitals/clinics", "price": "$300–$400", "notes": "Scan + blood test" },
+          { "item": "NIPT", "where": "Hospitals/clinics", "price": "$1,200–$1,400", "notes": "More accurate blood test" }
+        ],
+        "note": "2026 reference (MOH benchmarks / provider rates) — some costs MediSave-claimable. Confirm with your provider."
+      },
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "first-tri", "em": "↩️", "label": "Back to First Trimester", "hint": "" }]
+    },
+    "symptoms": {
+      "title": "Common early symptoms",
+      "intro": "Mostly normal — but know the red flags.",
+      "illustration": "/illustrations/n-symptoms.webp",
+      "body": [
+        "Nausea, tiredness, tender breasts and needing to pee often are all common and usually settle.",
+        "Contact your doctor promptly if you have heavy bleeding, severe or constant pain, or vomiting so bad you can't keep fluids down."
+      ],
+      "tip": "Trust your instincts — if something feels wrong, it's always OK to call your provider.",
+      "options": [{ "to": "first-tri", "em": "↩️", "label": "Back to First Trimester", "hint": "" }]
+    },
+    "second-tri": {
+      "title": "Second Trimester (Weeks 13–27)",
+      "intro": "Often the most comfortable stretch.",
+      "illustration": "/illustrations/n-second-tri.webp",
+      "options": [
+        { "to": "anomaly-scan", "em": "🩻", "label": "The anomaly scan", "hint": "~18–22 weeks" },
+        { "to": "glucose-test", "em": "🩸", "label": "Glucose tolerance test", "hint": "~24–28 weeks" },
+        { "to": "kicks", "em": "👣", "label": "Feeling kicks", "hint": "When and what to notice" }
+      ]
+    },
+    "anomaly-scan": {
+      "title": "The anomaly scan",
+      "intro": "A detailed check of your baby's development.",
+      "illustration": "/illustrations/n-anomaly-scan.webp",
+      "body": ["Around 18–22 weeks, this scan checks the baby's organs and growth. If you'd like, you can usually find out the sex."],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "Back to Second Trimester", "hint": "" }]
+    },
+    "glucose-test": {
+      "title": "Glucose tolerance test (GTT)",
+      "intro": "Screening for gestational diabetes.",
+      "illustration": "/illustrations/n-glucose-test.webp",
+      "body": ["Around 24–28 weeks, you drink a sugary solution and have blood taken to check how your body handles glucose."],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "Back to Second Trimester", "hint": "" }]
+    },
+    "kicks": {
+      "title": "Feeling kicks",
+      "intro": "One of the loveliest milestones.",
+      "illustration": "/illustrations/n-kicks.webp",
+      "body": ["Many first feel movement around 18–24 weeks. Later on, getting to know your baby's pattern helps you notice changes."],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "Back to Second Trimester", "hint": "" }]
+    },
+    "third-tri": {
+      "title": "Third Trimester (Weeks 28–40)",
+      "intro": "The home stretch — time to prepare.",
+      "illustration": "/illustrations/n-third-tri.webp",
+      "options": [
+        { "to": "hospital-bag", "em": "🎒", "label": "Hospital bag checklist", "hint": "What to pack" },
+        { "to": "birth-plan", "em": "📝", "label": "Your birth plan", "hint": "Your preferences" },
+        { "to": "gbs", "em": "🧫", "label": "GBS swab", "hint": "~35–37 weeks" }
+      ]
+    },
+    "hospital-bag": {
+      "title": "Hospital bag checklist",
+      "intro": "Pack from around week 36.",
+      "illustration": "/illustrations/n-hospital-bag.webp",
+      "body": ["For you: ID & documents, comfy clothes, toiletries, phone charger, snacks. For baby: going-home outfit, mittens, swaddle. Your hospital provides most essentials — check its list too."],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "Back to Third Trimester", "hint": "" }]
+    },
+    "birth-plan": {
+      "title": "Your birth plan",
+      "intro": "A guide to your preferences — kept flexible.",
+      "illustration": "/illustrations/n-birth-plan.webp",
+      "body": ["Jot down preferences for pain relief, who's with you, and after-birth care, then talk them through with your provider. Plans can change on the day, and that's OK."],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "Back to Third Trimester", "hint": "" }]
+    },
+    "gbs": {
+      "title": "GBS swab",
+      "intro": "A quick, routine check.",
+      "illustration": "/illustrations/n-gbs.webp",
+      "body": ["Around 35–37 weeks, a simple swab checks for Group B Strep, a common bacteria that can be managed easily during labour if present."],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "Back to Third Trimester", "hint": "" }]
+    },
+    "labour": {
+      "title": "Labour & Delivery",
+      "intro": "Knowing the signs helps you feel ready.",
+      "illustration": "/illustrations/n-labour.webp",
+      "options": [
+        { "to": "signs", "em": "⏰", "label": "Signs of labour", "hint": "When to go in" },
+        { "to": "admission", "em": "🏥", "label": "Getting admitted", "hint": "What happens" },
+        { "to": "after-birth", "em": "🍼", "label": "Right after birth", "hint": "First hours" }
+      ]
+    },
+    "signs": {
+      "title": "Signs of labour",
+      "intro": "Call your hospital or doctor when these start.",
+      "illustration": "/illustrations/n-signs.webp",
+      "body": ["Regular, tightening contractions that get closer together; your waters breaking; or a 'show' (a small mucus plug). If contractions are strong and regular, or your waters break, contact your hospital."],
+      "tip": "If you have heavy bleeding or reduced baby movements, call your provider <b>immediately</b>.",
+      "options": [{ "to": "labour", "em": "↩️", "label": "Back to Labour & Delivery", "hint": "" }]
+    },
+    "admission": {
+      "title": "Getting admitted",
+      "intro": "What to expect at the hospital.",
+      "illustration": "/illustrations/n-admission.webp",
+      "body": ["Staff check your contractions and the baby, may examine how far labour has progressed, and settle you into the delivery ward. Bring your hospital bag and documents."],
+      "options": [{ "to": "labour", "em": "↩️", "label": "Back to Labour & Delivery", "hint": "" }]
+    },
+    "after-birth": {
+      "title": "Right after birth",
+      "intro": "The first golden hours.",
+      "illustration": "/illustrations/n-after-birth.webp",
+      "body": ["Skin-to-skin contact, the first feed, and initial checks for your baby. Lactation support is available at most Singapore hospitals if you'd like help."],
+      "options": [{ "to": "labour", "em": "↩️", "label": "Back to Labour & Delivery", "hint": "" }]
+    }
+  }
+}
