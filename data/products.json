@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "Curated baby essentials by stage. Prices are indicative (SGD, 2026) and vary by seller. Item links open a Shopee search by keyword; add your affiliate tag in site.config.ts to earn commission. Keep the affiliate disclosure visible.",
+    "affiliateDisclosure": "Some links are affiliate links — we may earn a small commission at no extra cost to you. It never changes what we recommend."
+  },
+  "categories": [
+    {
+      "id": "early", "title": "Trying & First Trimester", "emoji": "🌱",
+      "items": [
+        { "name": "Pregnancy test kit", "price": "$8–$35", "keyword": "pregnancy test kit clearblue" },
+        { "name": "Prenatal vitamins (with folate)", "price": "$20–$45", "keyword": "prenatal vitamins folate" },
+        { "name": "Maternity / pregnancy pillow", "price": "$40–$120", "keyword": "maternity pregnancy pillow" }
+      ]
+    },
+    {
+      "id": "mid", "title": "Second Trimester", "emoji": "🎧",
+      "items": [
+        { "name": "Maternity wear", "price": "$20–$80", "keyword": "maternity dress wear" },
+        { "name": "Stretch mark cream", "price": "$20–$60", "keyword": "stretch mark cream pregnancy" },
+        { "name": "Belly support band", "price": "$20–$50", "keyword": "pregnancy belly support band" }
+      ]
+    },
+    {
+      "id": "late", "title": "Third Trimester", "emoji": "🧸",
+      "items": [
+        { "name": "Hospital bag essentials", "price": "$50–$150", "keyword": "hospital bag maternity" },
+        { "name": "Breast pump", "price": "$150–$600", "keyword": "breast pump electric" },
+        { "name": "Nursing bras", "price": "$20–$60", "keyword": "nursing bra" },
+        { "name": "Infant car seat", "price": "$150–$800", "keyword": "infant car seat" }
+      ]
+    },
+    {
+      "id": "newborn", "title": "Newborn", "emoji": "🍼",
+      "items": [
+        { "name": "Newborn clothes & swaddles", "price": "$30–$120", "keyword": "newborn clothes swaddle" },
+        { "name": "Diapers (newborn)", "price": "$15–$40", "keyword": "newborn diapers" },
+        { "name": "Bottles & steriliser", "price": "$40–$200", "keyword": "baby bottle steriliser" },
+        { "name": "Baby cot / crib", "price": "$150–$800", "keyword": "baby cot crib" },
+        { "name": "Baby monitor", "price": "$60–$300", "keyword": "baby monitor" }
+      ]
+    }
+  ]
+}

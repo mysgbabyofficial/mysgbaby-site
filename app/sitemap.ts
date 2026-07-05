@@ -9,6 +9,7 @@ const routes = [
   '/hospitals',
   '/calculator',
   '/tools',
+  '/products',
   '/community',
   '/loss-support',
   '/privacy',

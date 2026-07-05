@@ -372,7 +372,60 @@
       ],
       "tip": "Trust your instincts — when in doubt about your baby, it's always OK to call your paediatrician or the hospital.",
       "sources": [{ "label": "HealthHub — Newborn care", "url": "https://www.healthhub.sg" }],
-      "options": [{ "to": "first-year", "em": "↩️", "label": "Back to First Year", "hint": "" }]
+      "options": [
+        { "to": "nc-feeding", "em": "🍼", "label": "Feeding", "hint": "Breast, bottle & how often" },
+        { "to": "nc-sleep", "em": "😴", "label": "Safe sleep", "hint": "Where & how baby sleeps" },
+        { "to": "nc-bathing", "em": "🛁", "label": "Bathing & cord care", "hint": "The basics" },
+        { "to": "nc-signs", "em": "🚨", "label": "When to call the doctor", "hint": "Red flags" },
+        { "to": "first-year", "em": "↩️", "label": "Back to First Year", "hint": "" }
+      ]
+    },
+    "nc-feeding": {
+      "title": "Feeding your newborn",
+      "intro": "Breast, bottle, and how often.",
+      "body": [
+        "Newborns feed little and often — roughly every 2–3 hours, or 8–12 times a day, on demand.",
+        "Breast milk is recommended where possible; formula is a safe alternative, and many families combine both.",
+        "Signs baby is getting enough: 6 or more wet nappies a day after the first week, steady weight gain, and settling after feeds."
+      ],
+      "tip": "Struggling with latching or supply? A lactation consultant or your hospital's clinic can help — see the Recovery & support screen.",
+      "sources": [{ "label": "HealthHub — Breastfeeding", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Back to newborn care", "hint": "" }]
+    },
+    "nc-sleep": {
+      "title": "Safe sleep",
+      "intro": "Simple rules that keep baby safe.",
+      "body": [
+        "Always place baby on their back to sleep, in their own cot or bassinet.",
+        "Keep the cot clear — no loose bedding, pillows, bumpers or soft toys — and don't let baby overheat.",
+        "Newborns sleep in short stretches, day and night; longer stretches come with time."
+      ],
+      "tip": "Room-sharing (baby's cot in your room) for the first months is recommended; bed-sharing is not advised.",
+      "sources": [{ "label": "HealthHub — Safe sleep", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Back to newborn care", "hint": "" }]
+    },
+    "nc-bathing": {
+      "title": "Bathing & cord care",
+      "intro": "Keeping baby clean in the early days.",
+      "body": [
+        "Until the umbilical cord stump falls off (usually 1–2 weeks), give sponge baths and keep the cord clean and dry.",
+        "A few baths a week is plenty for a newborn; top-and-tail (face, hands, bottom) in between.",
+        "Support the head and neck at all times, and never leave baby alone in water — even for a moment."
+      ],
+      "sources": [{ "label": "HealthHub — Newborn care", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Back to newborn care", "hint": "" }]
+    },
+    "nc-signs": {
+      "title": "When to call the doctor",
+      "intro": "Trust your instincts — these need prompt attention.",
+      "body": [
+        "Call your doctor or head to a children's emergency service if your newborn has a fever, is feeding poorly, is very sleepy or hard to wake, or you're worried about their breathing.",
+        "Also seek advice for fewer wet nappies than usual, worsening jaundice (yellowing spreading or deepening), or persistent vomiting.",
+        "When something feels wrong, it's always OK to call — you know your baby best."
+      ],
+      "tip": "KKH and other hospitals have 24-hour children's emergency services.",
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }, { "label": "KKH", "url": "https://www.kkh.com.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Back to newborn care", "hint": "" }]
     },
     "vaccinations": {
       "title": "Childhood vaccinations",

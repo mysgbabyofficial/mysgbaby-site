@@ -1,26 +1,34 @@
-# Automation scripts
+# Figures checker
 
-The build prompt (§19, §21, §24) lists 20+ autonomous scripts. This scaffold ships **two working reference implementations** plus a central config, and documents the rest with their honest status. The guiding rule (see `../docs/RISK-AND-FEASIBILITY.md`): **automation may detect and queue changes; it never auto-publishes medical or financial content.**
+Keeps the site's dated figures (grants, leave, tax reliefs, hospital costs) honest by
+checking them against official government sources **every month**.
 
-## Shipped in this scaffold
-| File | Status | Purpose |
-|---|---|---|
-| `config.js` | ✅ working | Central policy: publish rules, double-verification thresholds, sources, review queue |
-| `source-double-check.js` | ✅ logic working, fetch TODO | The gate: anomaly guard → re-check primary → confirm secondary → route by class (medical/financial → human) |
+## What runs
+- **`figures-manifest.json`** — the list of figures: current value, the official source URL, and a distinctive string that should still appear on that page.
+- **`check-figures.mjs`** — fetches each source, confirms the value is still there, and writes `figures-report.md` / `figures-report.json`.
+- **`.github/workflows/check-figures.yml`** — runs the script on the 1st of each month and, if anything drifted, **opens a pull request** with the report.
 
-## Planned (from the prompt) — status & guidance
-| Script | Verdict | Note |
-|---|---|---|
-| `verify-data.js`, `update-prices.js`, `cross-verify.js` | ⚠️ rework | Use **official affiliate APIs**, not daily scraping of Shopee/Lazada/hospitals (ToS + fragility). Feed the review queue. |
-| `content-freshness.js` | ⚠️ detect-only | Watch gov RSS → draft banner → **human approves**. |
-| `find-alternatives.js`, `discover-trends.js` | ⚠️ API-based | Product data via affiliate feeds. |
-| `store-and-archive.js`, `backup-and-restore.js` | ✅ safe to build | Snapshots, releases, retention. |
-| `search-intelligence.js`, `knowledge-verify.js` | ⚠️ | Re-index safe; fact-verify must not auto-publish. |
-| `wellness-verify.js` | ⚠️ | CrossRef retraction check is fine; recommendations reviewed by human. |
-| `tone-checker.js` | ✅ safe | Flags clinical/insensitive copy for review. |
-| `optimise-performance.js`, `link-checker.js`, `accessibility-audit.js`, `seo-monitor.js`, `security-updates.js`, `dependency-lifecycle.js`, `newsletter-generator.js` | ✅ safe to build | Genuinely automatable; no advice content published. |
-| `self-heal.js`, `ai-personalisation.js`, `community-pulse.js`, `legal-compliance.js` | ➖ scope carefully | "Auto-update privacy policy / self-maintain indefinitely" is not a compliance strategy — keep a human accountable. |
-| Right-click block, steganographic watermark, honeypots | ❌ cut | Security theatre — see risk review §5. |
+## How updates happen
+1. On the 1st of each month the Action checks every figure.
+2. If a value is no longer found on its official page (or a source is unreachable), it opens a PR titled *“Monthly figures check — review needed”* with a table of what to check.
+3. You open the source link, confirm the new number, update the data file in the PR, and **merge** → Vercel redeploys with the fresh data.
+4. If everything is still current, no PR is opened — nothing to do.
 
-## Cron (GitHub Actions)
-See `../.github/workflows/verify-and-update.yml`. All scheduled jobs open a **review issue** on change; none commit medical/financial content directly.
+> **Why a PR, not an automatic overwrite?** These figures sit on a site parents trust. Government pages change layout, and a mis-parsed number could publish a wrong benefit amount. The script therefore *flags* drift for a 1-click human review rather than silently rewriting values. (If you ever want fully-automatic edits for a specific simple figure, that can be added per-figure.)
+
+## Run it yourself
+```bash
+node scripts/check-figures.mjs          # check + write report (read-only on data)
+node scripts/check-figures.mjs --write  # also stamp lastChecked in the manifest
+npm run check:figures                   # same as the first command
+```
+Requires Node 20+ (uses built-in `fetch`). No dependencies to install.
+
+## Adding a figure
+Add an entry to `figures-manifest.json`:
+```json
+{ "id": "my-figure", "label": "Human name", "current": "$1,234",
+  "expect": ["1,234"], "source": "https://official.gov.sg/page", "area": "Benefits Centre",
+  "file": "data/benefits.json" }
+```
+`expect` can be a string or a list of strings that must all appear on the page.

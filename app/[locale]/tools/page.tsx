@@ -3,6 +3,7 @@ import KickCounter from '@/components/KickCounter';
 import ContractionTimer from '@/components/ContractionTimer';
 import BabyLog from '@/components/BabyLog';
 import MilestoneTracker from '@/components/MilestoneTracker';
+import DueDateCalculator from '@/components/DueDateCalculator';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 
 export const metadata = {
@@ -19,6 +20,10 @@ export default function ToolsPage() {
         subtitle="Simple trackers for the everyday moments — count your baby's kicks, and time contractions when the day comes. Saved to your device."
       />
       <MedicalDisclaimer lastChecked="2026-07-01" />
+      <div>
+        <h2 className="mb-2 text-xl font-extrabold">📅 Due date calculator</h2>
+        <DueDateCalculator />
+      </div>
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
           <h2 className="mb-2 text-xl font-extrabold">🦶 Kick counter</h2>

@@ -5,7 +5,8 @@ const FEATURES = [
   { href: '/benefits', emoji: '💰', title: 'Benefits Centre', desc: 'Every grant, subsidy & tax relief — from birth to age 7.' },
   { href: '/hospitals', emoji: '🏥', title: 'Compare hospitals', desc: 'All 10 SG maternity hospitals with 2026 reference costs.' },
   { href: '/calculator', emoji: '🧮', title: 'Cost & confinement', desc: 'Plan delivery and confinement budgets, with offsets.' },
-  { href: '/tools', emoji: '🦶', title: 'Parent tools', desc: 'Kick counter, contraction timer, newborn log.' },
+  { href: '/tools', emoji: '🦶', title: 'Parent tools', desc: 'Due date, kick counter, contraction timer, logs & more.' },
+  { href: '/products', emoji: '🛍️', title: 'Baby essentials', desc: 'A curated checklist by stage, with indicative prices.' },
   { href: '/community', emoji: '🤝', title: 'Community & support', desc: 'Trusted SG parent groups, helplines and common questions.' },
   { href: '/loss-support', emoji: '💜', title: 'Loss support', desc: 'Compassionate resources, whenever you need them.' },
 ];

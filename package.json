@@ -10,7 +10,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "data:verify": "node scripts/source-double-check.js",
-    "data:check-config": "node scripts/config.js"
+    "data:check-config": "node scripts/config.js",
+    "check:figures": "node scripts/check-figures.mjs"
   },
   "dependencies": {
     "next": "^15.1.6",

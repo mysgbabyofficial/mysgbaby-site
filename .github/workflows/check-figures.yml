@@ -1,0 +1,39 @@
+name: Monthly figures check
+
+# Runs on the 1st of every month (01:00 UTC) and can be triggered manually.
+# Verifies the site's dated figures against official sources and opens a PR
+# whenever one drifts, so a human confirms + merges before it goes live.
+on:
+  schedule:
+    - cron: '0 1 1 * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - id: check
+        name: Check figures against official sources
+        run: node scripts/check-figures.mjs --write
+
+      - name: Open PR if any figure needs review
+        if: steps.check.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/figures-update
+          title: 'Monthly figures check — review needed'
+          body-path: scripts/figures-report.md
+          commit-message: 'chore: monthly figures check'
+          labels: |
+            figures
+            automated

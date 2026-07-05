@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "description": "Machine-readable manifest of dated figures the monthly checker verifies against official sources. 'expect' is one or more distinctive strings that should still appear on the source page; if any is missing, the figure is flagged for review. A human reviews the opened PR before merging so no mis-parsed number is ever published automatically.",
+    "lastChecked": null
+  },
+  "figures": [
+    { "id": "baby-bonus", "label": "Baby Bonus Cash Gift (1st–2nd / 3rd+)", "current": "$11,000 / $13,000", "expect": ["11,000", "13,000"], "source": "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "cda-first-step", "label": "CDA First Step Grant", "current": "$5,000 / $10,000", "expect": ["5,000"], "source": "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "medisave-newborn", "label": "MediSave Grant for Newborns", "current": "$4,000", "expect": ["4,000"], "source": "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "large-families", "label": "Large Families Scheme", "current": "up to $16,000", "expect": ["16,000"], "source": "https://www.life.gov.sg/family-parenting/benefits-support/large-families-scheme", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "maternity-leave", "label": "Government-Paid Maternity Leave", "current": "16 weeks", "expect": ["16 week"], "source": "https://www.profamilyleave.msf.gov.sg", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "paternity-leave", "label": "Government-Paid Paternity Leave", "current": "4 weeks", "expect": ["4 week"], "source": "https://www.mom.gov.sg/employment-practices/leave/paternity-leave", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "shared-parental-leave", "label": "Shared Parental Leave (confirm current weeks)", "current": "phased 2026 rollout", "expect": ["shared parental leave"], "source": "https://www.mom.gov.sg/employment-practices/leave/shared-parental-leave", "area": "Benefits Centre", "file": "data/benefits.json" },
+    { "id": "wmcr", "label": "Working Mother's Child Relief", "current": "$8,000 / $10,000 / $12,000", "expect": ["8,000", "10,000", "12,000"], "source": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/working-mother%27s-child-relief-%28wmcr%29", "area": "Benefits Centre → first years", "file": "data/benefits.json" },
+    { "id": "qcr", "label": "Qualifying Child Relief", "current": "$4,000", "expect": ["4,000"], "source": "https://www.madeforfamilies.gov.sg/support-measures/child-raising/financial-support/tax-relief-and-rebates", "area": "Benefits Centre → first years", "file": "data/benefits.json" },
+    { "id": "ptr", "label": "Parenthood Tax Rebate", "current": "$5,000 / $10,000 / $20,000", "expect": ["5,000", "10,000", "20,000"], "source": "https://www.madeforfamilies.gov.sg/support-measures/child-raising/financial-support/tax-relief-and-rebates", "area": "Benefits Centre → first years", "file": "data/benefits.json" },
+    { "id": "gcr", "label": "Grandparent Caregiver Relief", "current": "$3,000", "expect": ["3,000"], "source": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions/tax-reliefs/grandparent-caregiver-relief", "area": "Benefits Centre → first years", "file": "data/benefits.json" },
+    { "id": "hospital-moh-median-wardc", "label": "MOH median delivery bill (Ward C, normal)", "current": "$1,346", "expect": ["1,346"], "source": "https://www.moh.gov.sg/managing-expenses/bills-and-fee-benchmarks/hospital-bills-and-fee-benchmarks/", "area": "Hospitals", "file": "data/hospitals.json" }
+  ]
+}
