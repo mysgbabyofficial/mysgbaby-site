@@ -1,0 +1,36 @@
+MySGBaby — Proprietary Software License
+Copyright (c) 2026 MySGBaby. All rights reserved.
+
+This software and its source code, design, content, illustrations, and
+associated materials (the "Work") are the exclusive property of the copyright
+holder. The Work is proprietary and confidential.
+
+NO LICENSE IS GRANTED. Except as expressly permitted in writing by the
+copyright holder, you may NOT, in whole or in part:
+
+  1. copy, reproduce, or duplicate the Work;
+  2. modify, adapt, translate, or create derivative works from the Work;
+  3. distribute, publish, sublicense, sell, rent, or lease the Work;
+  4. reverse-engineer, decompile, or disassemble any compiled portion beyond
+     what applicable law expressly permits;
+  5. remove or alter any copyright, trademark, or proprietary notice; or
+  6. use the Work, its design, or its content to build or train a competing
+     product or service.
+
+Viewing the publicly served website in a normal web browser is permitted for
+personal, non-commercial use. That permission does NOT grant any right to the
+source code, build artifacts, data files, illustrations, or design system.
+
+The names "MySGBaby", the mysgbaby wordmark, and the moon-cradle emblem are
+trademarks of the copyright holder and are not licensed for use by others.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL
+THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY
+ARISING FROM THE WORK OR ITS USE.
+
+To request permission, contact the address in site.config.ts.
+
+Note: replace "MySGBaby" above with your full legal name or registered entity
+if you want the strongest standing in an infringement claim. Have this reviewed
+by a Singapore-qualified lawyer before relying on it — see
+docs/RISK-AND-FEASIBILITY.md §1.

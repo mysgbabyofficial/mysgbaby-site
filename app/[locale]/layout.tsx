@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { Nunito, Inter, Caveat } from 'next/font/google';
 import { routing, Link } from '@/i18n/routing';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import LanguageGate from '@/components/LanguageGate';
 import SiteFooter from '@/components/SiteFooter';
 import ConsentBanner from '@/components/ConsentBanner';
 import Analytics from '@/components/Analytics';
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
         <DynamicBackground />
         <Analytics />
         <NextIntlClientProvider messages={messages}>
+          <LanguageGate />
           <header className="sticky top-0 z-20 border-b border-primary/30 bg-surface/80 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
               <Link href="/" className="flex items-center gap-2 font-heading text-2xl font-extrabold">

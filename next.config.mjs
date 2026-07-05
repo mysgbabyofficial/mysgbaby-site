@@ -43,6 +43,13 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   images: { formats: ['image/avif', 'image/webp'] },
+  // Source-protection: remove the "X-Powered-By: Next.js" fingerprint so the
+  // stack is less obvious to anyone probing the site.
+  poweredByHeader: false,
+  // Do NOT publish browser source maps in production. Source maps would hand a
+  // fully readable copy of the original TypeScript to anyone who opens devtools.
+  // Off by default, but pinned explicitly so a future change can't leak them.
+  productionBrowserSourceMaps: false,
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
   },

@@ -63,6 +63,47 @@ body::after { width: 360px; height: 360px; background: #ffd79a; bottom: -90px; r
 }
 h1, h2, h3 { font-family: var(--font-heading), system-ui, sans-serif; line-height: 1.2; }
 
+/* ---- LanguageGate: first-visit welcome + epic moon-launch transition ---- */
+@keyframes gate-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes gate-out { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
+@keyframes gate-card-in {
+  0% { opacity: 0; transform: translateY(18px) scale(.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes gate-twinkle {
+  0%, 100% { opacity: .2; transform: scale(.7); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+/* Gentle idle bob while the visitor is choosing. */
+@keyframes gate-moon-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+/* The epic: wind-up dip, then soar off the top of the screen, growing + glowing. */
+@keyframes gate-moon-launch {
+  0%   { transform: translateY(0) scale(1) rotate(0deg); }
+  18%  { transform: translateY(14px) scale(.9) rotate(-7deg); }
+  55%  { transform: translateY(-42vh) scale(1.55) rotate(9deg);
+         filter: drop-shadow(0 0 45px rgba(231,198,124,.9)); }
+  100% { transform: translateY(-105vh) scale(2.2) rotate(16deg); opacity: .85;
+         filter: drop-shadow(0 0 80px rgba(255,217,138,1)); }
+}
+@keyframes gate-halo {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.2); }
+  40% { opacity: .85; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(2.8); }
+}
+@keyframes gate-greet-rise {
+  0% { opacity: 0; transform: translateY(34px) scale(.9); }
+  35% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-26px) scale(1.18); letter-spacing: .06em; }
+}
+@keyframes gate-streak {
+  0% { transform: translateY(0); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(70vh); opacity: 0; }
+}
+
 /* Accessibility: respect user motion preference (prompt §18). */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
