@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import StageJourney from '@/components/StageJourney';
 import BabyDevelopment from '@/components/BabyDevelopment';
+import FeatureHub from '@/components/FeatureHub';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -55,6 +56,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="mt-1 text-ink/70">{t('stageIntro')}</p>
         </div>
         <StageJourney />
+      </section>
+
+      <section>
+        <div className="mb-6 max-w-2xl">
+          <p className="font-accent text-lg text-primary">All in one place</p>
+          <h2 className="text-2xl font-extrabold md:text-3xl">Everything MySGBaby offers</h2>
+        </div>
+        <FeatureHub />
       </section>
     </div>
   );

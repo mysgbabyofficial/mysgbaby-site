@@ -4,9 +4,12 @@ const base = 'https://mysgbaby.com';
 const routes = [
   '',
   '/onboarding',
+  '/explore',
   '/benefits',
   '/hospitals',
   '/calculator',
+  '/tools',
+  '/community',
   '/loss-support',
   '/privacy',
   '/terms',

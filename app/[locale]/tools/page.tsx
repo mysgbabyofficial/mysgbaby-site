@@ -2,6 +2,7 @@ import PageHeader from '@/components/PageHeader';
 import KickCounter from '@/components/KickCounter';
 import ContractionTimer from '@/components/ContractionTimer';
 import BabyLog from '@/components/BabyLog';
+import MilestoneTracker from '@/components/MilestoneTracker';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 
 export const metadata = {
@@ -29,9 +30,15 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      <div>
-        <h2 className="mb-2 text-xl font-extrabold">👶 After baby&apos;s here — daily log</h2>
-        <BabyLog />
+      <div className="grid gap-6 lg:grid-cols-2">
+        <div>
+          <h2 className="mb-2 text-xl font-extrabold">👶 After baby&apos;s here — daily log</h2>
+          <BabyLog />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-extrabold">🌟 Milestone tracker</h2>
+          <MilestoneTracker />
+        </div>
       </div>
     </div>
   );
