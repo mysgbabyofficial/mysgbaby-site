@@ -35,7 +35,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               href="/benefits"
               className="rounded-xl border border-white/50 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur transition hover:bg-white/20"
             >
-              See your benefits
+              {t('seeBenefits')}
             </Link>
           </div>
         </div>
@@ -43,16 +43,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section>
         <div className="mb-6 max-w-2xl">
-          <p className="font-accent text-lg text-primary">Something to smile about</p>
-          <h2 className="text-2xl font-extrabold md:text-3xl">Watch your baby grow, week by week</h2>
+          <p className="font-accent text-lg text-primary">{t('devEyebrow')}</p>
+          <h2 className="text-2xl font-extrabold md:text-3xl">{t('devTitle')}</h2>
         </div>
         <BabyDevelopment />
       </section>
 
       <section>
         <div className="mb-6 max-w-2xl">
-          <p className="font-accent text-lg text-primary">Your journey, stage by stage</p>
-          <h2 className="text-2xl font-extrabold md:text-3xl">Tap a stage to explore</h2>
+          <p className="font-accent text-lg text-primary">{t('journeyEyebrow')}</p>
+          <h2 className="text-2xl font-extrabold md:text-3xl">{t('journeyTitle')}</h2>
           <p className="mt-1 text-ink/70">{t('stageIntro')}</p>
         </div>
         <StageJourney />
@@ -60,8 +60,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section>
         <div className="mb-6 max-w-2xl">
-          <p className="font-accent text-lg text-primary">All in one place</p>
-          <h2 className="text-2xl font-extrabold md:text-3xl">Everything MySGBaby offers</h2>
+          <p className="font-accent text-lg text-primary">{t('hubEyebrow')}</p>
+          <h2 className="text-2xl font-extrabold md:text-3xl">{t('hubTitle')}</h2>
         </div>
         <FeatureHub />
       </section>

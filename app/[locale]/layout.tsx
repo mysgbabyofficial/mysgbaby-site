@@ -70,11 +70,11 @@ export default async function LocaleLayout({
 
   const navItems: Array<[string, string]> = [
     ['/', t('home')],
-    ['/explore', 'Guide'],
+    ['/explore', t('guide')],
     ['/benefits', t('benefits')],
     ['/hospitals', t('hospitals')],
     ['/calculator', t('calculator')],
-    ['/tools', 'Tools'],
+    ['/tools', t('tools')],
     ['/loss-support', t('lossSupport')],
   ];
 

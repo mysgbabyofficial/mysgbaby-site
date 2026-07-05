@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import AdviseMeButton from './AdviseMeButton';
 
 type Stage = {
@@ -20,6 +21,7 @@ export default function PregnancyTimeline({
   stages: Stage[];
   weekPromptLabel: string;
 }) {
+  const t = useTranslations('pregTimeline');
   const [week, setWeek] = useState<number | ''>('');
   const [openId, setOpenId] = useState<string | null>(null);
 
@@ -69,7 +71,7 @@ export default function PregnancyTimeline({
               >
                 <div className="mb-1 text-2xl">{EMOJI[i % EMOJI.length]}</div>
                 <h3 className="font-heading text-base font-bold">{stage.title}</h3>
-                {!open && <span className="mt-1 block text-xs font-semibold text-primary">Explore →</span>}
+                {!open && <span className="mt-1 block text-xs font-semibold text-primary">{t('explore')} →</span>}
               </button>
               {open && (
                 <div className="mt-3 space-y-2 text-sm">

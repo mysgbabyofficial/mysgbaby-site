@@ -1,21 +1,23 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const MILESTONES = [
-  { id: 'smile', emoji: '😊', name: 'Social smile', typical: '6–8 weeks' },
-  { id: 'head', emoji: '🙆', name: 'Holds head up', typical: '3–4 months' },
-  { id: 'roll', emoji: '🔄', name: 'Rolls over', typical: '4–6 months' },
-  { id: 'sit', emoji: '🪑', name: 'Sits without support', typical: '6–8 months' },
-  { id: 'name', emoji: '👂', name: 'Responds to name', typical: '6–9 months' },
-  { id: 'crawl', emoji: '🐛', name: 'Crawls', typical: '7–10 months' },
-  { id: 'stand', emoji: '🧍', name: 'Pulls to stand', typical: '9–12 months' },
-  { id: 'words', emoji: '🗣️', name: 'First words', typical: '10–14 months' },
-  { id: 'walk', emoji: '🚶', name: 'First steps', typical: '12–15 months' },
+  { id: 'smile', emoji: '😊' },
+  { id: 'head', emoji: '🙆' },
+  { id: 'roll', emoji: '🔄' },
+  { id: 'sit', emoji: '🪑' },
+  { id: 'name', emoji: '👂' },
+  { id: 'crawl', emoji: '🐛' },
+  { id: 'stand', emoji: '🧍' },
+  { id: 'words', emoji: '🗣️' },
+  { id: 'walk', emoji: '🚶' },
 ];
 const KEY = 'mysgbaby_milestones';
 
 export default function MilestoneTracker() {
+  const t = useTranslations('milestone');
   const [done, setDone] = useState<Record<string, boolean>>({});
   useEffect(() => {
     try {
@@ -33,7 +35,7 @@ export default function MilestoneTracker() {
   return (
     <section className="rounded-2xl border border-primary/30 bg-surface p-6">
       <p className="text-sm text-ink/70">
-        Tick each milestone as your little one reaches it. Ranges are typical — every baby is different.
+        {t('intro')}
       </p>
       <div className="my-3 h-2 rounded-full bg-primary/15">
         <div
@@ -42,7 +44,7 @@ export default function MilestoneTracker() {
         />
       </div>
       <p className="mb-3 text-center text-sm font-semibold text-primary">
-        {count} of {MILESTONES.length} reached {count > 0 && '🎉'}
+        {t('progress', { count, total: MILESTONES.length })} {count > 0 && '🎉'}
       </p>
       <ul className="space-y-2">
         {MILESTONES.map((m) => (
@@ -55,8 +57,8 @@ export default function MilestoneTracker() {
             >
               <span className="text-2xl">{m.emoji}</span>
               <span className="flex-1">
-                <span className={`font-semibold ${done[m.id] ? 'line-through opacity-60' : ''}`}>{m.name}</span>
-                <span className="block text-xs text-ink/50">Typically {m.typical}</span>
+                <span className={`font-semibold ${done[m.id] ? 'line-through opacity-60' : ''}`}>{t(`${m.id}_name`)}</span>
+                <span className="block text-xs text-ink/50">{t('typically', { range: t(`${m.id}_typical`) })}</span>
               </span>
               <span
                 className={`flex h-6 w-6 items-center justify-center rounded-full border-2 text-sm ${
@@ -70,8 +72,7 @@ export default function MilestoneTracker() {
         ))}
       </ul>
       <p className="mt-3 text-xs text-ink/50">
-        Ranges are a general guide (HealthHub). If you&apos;re ever concerned about your baby&apos;s
-        development, speak to your doctor. Saved to this device.
+        {t('footnote')}
       </p>
     </section>
   );

@@ -1,13 +1,15 @@
+import { getTranslations } from 'next-intl/server';
 import OnboardingQuiz from '@/components/OnboardingQuiz';
 
-export default function OnboardingPage() {
+export default async function OnboardingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'onboardingPage' });
   return (
     <div className="space-y-6">
       <header>
-        <h1 className="text-3xl font-extrabold">Let&apos;s personalise your guide</h1>
+        <h1 className="text-3xl font-extrabold">{t('title')}</h1>
         <p className="mt-2 max-w-2xl text-ink/80">
-          Six quick questions. Your answers stay on your device and help us show the right stage,
-          costs and support for you.
+          {t('subtitle')}
         </p>
       </header>
       <OnboardingQuiz />

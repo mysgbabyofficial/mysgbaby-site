@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "description": "Faedah keibubapaan Singapura — 2026. Angka DISAHKAN berbanding sumber rasmi kerajaan pada 2026-07-01. Sahkan semula sebelum setiap keluaran; beberapa angka berubah pada 1 Apr 2025 dan 1 Apr 2026.",
+    "lastVerified": "2026-07-01",
+    "verifiedBy": "manual (semakan manusia diperlukan sebelum menerbitkan sebarang perubahan)",
+    "authoritativeSources": [
+      "https://www.mom.gov.sg/employment-practices/leave/paternity-leave",
+      "https://www.mom.gov.sg/employment-practices/leave/shared-parental-leave",
+      "https://www.profamilyleave.msf.gov.sg",
+      "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme",
+      "https://www.madeforfamilies.gov.sg",
+      "https://www.life.gov.sg/family-parenting/benefits-support/large-families-scheme",
+      "https://www.cpf.gov.sg"
+    ],
+    "warning": "JANGAN terbitkan perubahan pada fail ini secara automatik. Panduan kewangan kepada ibu bapa mesti melalui semakan manusia. Lihat docs/RISK-AND-FEASIBILITY.md."
+  },
+  "babyBonusCashGift": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 11000, "2": 11000, "3plus": 13000 },
+    "confidence": "high",
+    "source": "MSF Baby Bonus Scheme (sahkan jadual semasa yang tepat di halaman rasmi MSF sebelum keluaran)",
+    "note": "Angka gesaan ($11K / $13K) sepadan."
+  },
+  "cdaFirstStepGrant": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 5000, "3plus": 10000 },
+    "confidence": "high",
+    "source": "Large Families Scheme — Made for Families / LifeSG",
+    "note": "Anak ke-3 dan seterusnya dinaikkan kepada $10,000 untuk yang lahir pada/selepas 18 Feb 2025 (Large Families Scheme)."
+  },
+  "cdaCoMatchingCap": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 6000, "2": 6000, "3-4": 12000, "5plus": 18000 },
+    "confidence": "medium",
+    "source": "Sumber agregat sekunder selaras dengan peningkatan selepas 2023; SAHKAN di halaman rasmi MSF Baby Bonus sebelum menerbitkan",
+    "correctionFromPrompt": "Gesaan menyatakan $4K/$7K/$9K/$15K — sudah lapuk. Jadual semasa ialah $6K/$12K/$18K."
+  },
+  "medisaveGrantForNewborns": {
+    "currency": "SGD",
+    "amount": 5000,
+    "priorAmount": 4000,
+    "effectiveFrom": "2025-04-01",
+    "confidence": "high",
+    "source": "HealthHub — Marriage and Parenthood Schemes (rasmi)",
+    "correctionFromPrompt": "Gesaan menyatakan $4,000 — sudah lapuk. Dinaikkan kepada $5,000 untuk kelahiran pada/selepas 1 Apr 2025."
+  },
+  "largeFamiliesScheme": {
+    "appliesTo": "Anak warganegara Singapura ke-3 atau seterusnya yang lahir pada/selepas 2025-02-18",
+    "totalUpTo": 16000,
+    "currency": "SGD",
+    "components": {
+      "cdaFirstStepGrantIncrease": 5000,
+      "largeFamilyMedisaveGrant": 5000,
+      "largeFamilyLifeSgCredits": { "perYear": 1000, "years": "anak berumur 1 hingga 6 tahun", "total": 6000 }
+    },
+    "confidence": "high",
+    "source": "Made for Families / LifeSG / CNA Budget 2025 (rasmi)"
+  },
+  "leave": {
+    "maternityLeaveWeeks": { "value": 16, "confidence": "high", "source": "GPML — MOM" },
+    "paternityLeaveWeeks": {
+      "value": 4,
+      "confidence": "high",
+      "source": "GPPL — MOM (rasmi)",
+      "correctionFromPrompt": "Gesaan menyatakan 2 minggu — sudah lapuk. Government-Paid Paternity Leave ialah 4 minggu."
+    },
+    "sharedParentalLeaveWeeks": {
+      "byChildDob": {
+        "2025-04-01_to_2026-03-31": 6,
+        "on_or_after_2026-04-01": 10
+      },
+      "govPayCapPerWeek": 2500,
+      "confidence": "high",
+      "source": "MOM + MSF ProFamilyLeave (rasmi)",
+      "correctionFromPrompt": "Gesaan menyatakan 6 minggu (2025). Kelayakan semasa ialah 10 minggu untuk anak yang lahir pada/selepas 1 Apr 2026."
+    },
+    "childcareLeaveDaysPerYear": { "value": 6, "condition": "anak di bawah 7 tahun", "confidence": "medium", "source": "Sahkan di MOM sebelum keluaran" }
+  },
+  "medisaveMaternityPackage": {
+    "effectiveFrom": "2025-04-01",
+    "currency": "SGD",
+    "preDeliveryLimit": 900,
+    "hospitalisationPerDay": { "days1to2": 1130, "day3plus": 400 },
+    "deliveryProcedureSurgicalLimitRange": [1120, 2770],
+    "deliveryExamples": {
+      "normalVaginal": 750,
+      "assistedVaginal": 1250,
+      "caesareanStandard": 2150,
+      "caesareanWithTubalLigation": 2600,
+      "caesareanWithHysterectomy": 3950
+    },
+    "confidence": "high",
+    "source": "HealthHub / CPFB / Made for Families (rasmi)",
+    "correctionFromPrompt": "Gesaan mengelirukan label: ia memanggil $2,150 'assisted' (sebenarnya pembedahan Caesarean standard) dan $3,950 'C-section' (sebenarnya Caesarean DENGAN histerektomi). Kelahiran faraj berbantu ialah $1,250."
+  },
+  "parenthoodTaxRebate": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 10000, "3plus": 20000 },
+    "confidence": "medium",
+    "source": "IRAS — SAHKAN jadual semasa sebelum keluaran"
+  },
+  "workingMothersChildRelief": {
+    "basis": "Amaun tetap untuk anak yang lahir/diambil sebagai anak angkat pada/selepas 1 Jan 2024 (dahulunya % daripada pendapatan untuk anak yang lebih tua).",
+    "byBirthOrder": { "1": 8000, "2": 10000, "3plus": 12000 },
+    "confidence": "high",
+    "source": "IRAS (disahkan 2026-07)"
+  },
+  "firstYearsSupport": {
+    "_note": "Sokongan berterusan selepas kelahiran. Disahkan 2026 berbanding IRAS + Made for Families. Pelepasan cukai menggunakan amaun tetap untuk anak yang lahir/diambil sebagai anak angkat pada/selepas 1 Jan 2024.",
+    "taxReliefs": [
+      { "name": "Working Mother's Child Relief (WMCR)", "amount": "$8,000 / $10,000 / $12,000", "who": "Ibu yang bekerja · anak ke-1 / ke-2 / ke-3+ (lahir ≥ 1 Jan 2024)" },
+      { "name": "Qualifying Child Relief (QCR)", "amount": "$4,000 / tahun", "who": "Mana-mana ibu bapa, setiap anak ($7,500 jika kurang upaya)" },
+      { "name": "Parenthood Tax Rebate (PTR)", "amount": "$5,000 / $10,000 / $20,000", "who": "Sekali sahaja · ke-1 / ke-2 / ke-3+ · baki tidak digunakan boleh dibawa ke hadapan" },
+      { "name": "Grandparent Caregiver Relief (GCR)", "amount": "$3,000 / tahun", "who": "Ibu yang bekerja · datuk/nenek menjaga anak ≤ 12 tahun" },
+      { "name": "Foreign Domestic Worker Levy Relief", "amount": "~$7,200 / tahun", "who": "Ibu yang bekerja yang mengambil pembantu rumah (2× levi)" }
+    ],
+    "childcare": [
+      { "name": "Subsidi jagaan bayi (2–18 bulan)", "amount": "Sehingga ~$1,710/bulan", "who": "Ibu yang bekerja (berperingkat pendapatan); asas $600" },
+      { "name": "Subsidi jagaan kanak-kanak (18 bulan–Darjah 1)", "amount": "Berperingkat mengikut pendapatan", "who": "Subsidi asas untuk semua; lebih jika bekerja" },
+      { "name": "Child LifeSG Credits", "amount": "$1,000 / tahun (umur 1–6)", "who": "Anak ke-3+ (Large Families Scheme)" },
+      { "name": "KidSTART", "amount": "Lawatan ke rumah + sokongan", "who": "Keluarga berpendapatan rendah" }
+    ],
+    "notes": [
+      "Baby Bonus Cash Gift dibayar secara ansuran sehingga anak anda berumur 6.5 tahun.",
+      "CDA ditutup pada umur 12; dana yang tidak digunakan dipindahkan ke Post-Secondary Education Account (PSEA).",
+      "Gabungan QCR + WMCR dihadkan pada $50,000 setiap anak; jumlah pelepasan cukai dihadkan pada $80,000 setahun."
+    ],
+    "sources": [
+      { "label": "IRAS — pelepasan cukai", "url": "https://www.iras.gov.sg" },
+      { "label": "Made for Families — pelepasan cukai & rebat", "url": "https://www.madeforfamilies.gov.sg/support-measures/child-raising/financial-support/tax-relief-and-rebates" },
+      { "label": "LifeSG — prasekolah & jagaan kanak-kanak", "url": "https://www.life.gov.sg/family-parenting" }
+    ]
+  }
+}

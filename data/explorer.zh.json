@@ -1,0 +1,475 @@
+{
+  "_meta": {
+    "description": "互动式阶段探索内容树。仅供参考，并非医疗建议；价格为2026年参考数字，请向服务提供者确认。",
+    "start": "home"
+  },
+  "nodes": {
+    "home": {
+      "title": "您正处于旅程的哪个阶段？",
+      "intro": "点按任一阶段即可探索。每一步都会展开更多细节、价格与指引——您随时可以返回。",
+      "options": [
+        { "to": "preconception", "em": "🌱", "label": "备孕与验孕", "hint": "正在备孕，或怀疑自己可能怀孕了？" },
+        { "to": "first-tri", "em": "🌙", "label": "孕早期", "hint": "第1–12周" },
+        { "to": "second-tri", "em": "🎧", "label": "孕中期", "hint": "第13–27周" },
+        { "to": "third-tri", "em": "🧸", "label": "孕晚期", "hint": "第28–40周" },
+        { "to": "labour", "em": "🍼", "label": "分娩与生产", "hint": "重要的日子" },
+        { "to": "first-year", "em": "👶", "label": "第一年与新生儿", "hint": "宝宝出生后的生活" }
+      ]
+    },
+    "preconception": {
+      "title": "备孕与验孕",
+      "intro": "刚刚开始，或怀疑自己可能怀孕了？从这里开始。",
+      "illustration": "/illustrations/n-preconception.webp",
+      "body": ["无论您是提前规划还是在等待验孕，几个简单的步骤都能为健康的开始打下良好基础。"],
+      "options": [
+        { "to": "test-kits", "em": "🧪", "label": "验孕试剂", "hint": "在哪里购买、价格以及如何比较" },
+        { "to": "folic-acid", "em": "🌿", "label": "开始补充叶酸", "hint": "补什么、何时补以及在哪里获取" },
+        { "to": "choose-gynae", "em": "🩺", "label": "选择医生／医院", "hint": "全科医生与妇产科医生、公立与私立" }
+      ]
+    },
+    "test-kits": {
+      "title": "家用验孕试剂",
+      "intro": "它们的原理、何时验孕，以及在新加坡的价格。",
+      "illustration": "/illustrations/illus-test-kit.webp",
+      "body": [
+        "家用验孕试剂通过检测尿液中的hCG激素来判断，受精卵着床后这种激素会升高。",
+        "大多数试剂在月经推迟的第一天开始最为可靠；有些'早孕'试剂能提前几天检测出来。"
+      ],
+      "priceTable": {
+        "caption": "新加坡常见验孕试剂（仅供参考）",
+        "rows": [
+          { "item": "Watsons／Guardian自有品牌", "where": "Watsons、Guardian", "price": "$8–$15", "notes": "经济型试纸或中段尿型" },
+          { "item": "Clearblue（验孕线型）", "where": "Guardian、Watsons、NTUC、Shopee", "price": "$15–$25", "notes": "热门，易于判读" },
+          { "item": "Clearblue数字型", "where": "Guardian、Watsons、Shopee", "price": "$22–$35", "notes": "显示'已怀孕'；部分显示周数" },
+          { "item": "First Response Early Result", "where": "Guardian、Shopee、iHerb", "price": "$18–$30", "notes": "可早期检测" }
+        ],
+        "note": "价格区间仅供参考——请在Watsons、Guardian、NTUC FairPrice、Shopee.sg或Lazada.sg确认当前价格。"
+      },
+      "tip": "为获得最佳准确度，请使用<b>晨起第一次尿液</b>检测，此时hCG浓度最高。",
+      "sources": [{ "label": "HealthHub — 怀孕", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "how-to-test", "em": "📋", "label": "如何使用验孕试剂", "hint": "分步说明" },
+        { "to": "test-results", "em": "🔎", "label": "读懂您的检测结果", "hint": "阳性、阴性或不明确" }
+      ]
+    },
+    "how-to-test": {
+      "title": "如何使用验孕试剂",
+      "intro": "几个简单步骤，获得可靠结果。",
+      "illustration": "/illustrations/n-how-to-test.webp",
+      "body": [
+        "1. 阅读试剂附带的说明书——不同品牌略有差异。",
+        "2. 使用晨起第一次尿液以获得最佳准确度。",
+        "3. 按照试剂说明，将试纸置于尿流中或浸入尿液中。",
+        "4. 将其平放，等待规定的时间（通常为3–5分钟）。",
+        "5. 在规定时间内判读结果——过后很久才出现的线条可能造成误导。"
+      ],
+      "tip": "两条线（或'已怀孕'）＝阳性；一条线（或'未怀孕'）＝阴性——即使第二条线很<b>淡</b>，通常也算阳性。",
+      "options": [{ "to": "test-results", "em": "🔎", "label": "现在查看您的结果", "hint": "结果显示了什么？" }]
+    },
+    "test-results": {
+      "title": "读懂您的检测结果",
+      "intro": "您的检测结果显示什么？点按与之相符的选项。",
+      "options": [
+        { "to": "result-positive", "em": "➕", "label": "阳性（已怀孕）", "hint": "两条线／'已怀孕'" },
+        { "to": "result-negative", "em": "➖", "label": "阴性（未怀孕）", "hint": "一条线／'未怀孕'" },
+        { "to": "result-unclear", "em": "❓", "label": "淡线或不明确", "hint": "不确定看到的是什么" }
+      ]
+    },
+    "result-positive": {
+      "celebrate": "🎉 恭喜！阳性结果是一段美妙旅程的开始。",
+      "illustration": "/illustrations/illus-positive.webp",
+      "title": "您怀孕了——接下来该怎么做？",
+      "intro": "以下是您温和的第一步。",
+      "body": ["家用验孕呈阳性通常是准确的。下一步是确认结果并开始早期护理，让您和宝宝都有最好的开始。"],
+      "tip": "预约您<b>与全科医生（GP）或妇产科医生（O&G）的首次就诊</b>——他们会确认怀孕并从这里开始指导您。",
+      "sources": [
+        { "label": "HealthHub — 孕早期", "url": "https://www.healthhub.sg" },
+        { "label": "KK Women's & Children's Hospital", "url": "https://www.kkh.com.sg" }
+      ],
+      "options": [
+        { "to": "first-visit", "em": "🩺", "label": "预约首次产检", "hint": "通常在第6–8周左右" },
+        { "to": "folic-acid", "em": "🌿", "label": "开始（或继续）补充叶酸", "hint": "支持早期健康发育" },
+        { "to": "dating-scan", "em": "📅", "label": "孕早期超声检查的预期内容", "hint": "确认您的预产期" },
+        { "to": "first-tri", "em": "🌙", "label": "继续前往孕早期", "hint": "第1–12周的全部内容", "cta": true }
+      ]
+    },
+    "result-negative": {
+      "title": "阴性结果",
+      "intro": "这并非终点——时机很重要。",
+      "illustration": "/illustrations/n-result-negative.webp",
+      "body": [
+        "阴性可能只是意味着时间过早，hCG尚未高到足以被检测出来。",
+        "如果月经仍未到来，请在2–3天后用晨起第一次尿液重新检测。",
+        "如果您的月经周期不规律，或已经备孕一段时间，值得咨询医生。"
+      ],
+      "options": [
+        { "to": "test-kits", "em": "🧪", "label": "返回验孕试剂", "hint": "重新检测或尝试更灵敏的试剂" },
+        { "to": "choose-gynae", "em": "🩺", "label": "咨询医生", "hint": "全科医生或生育诊所" }
+      ]
+    },
+    "result-unclear": {
+      "title": "淡线或不明确的结果",
+      "intro": "非常常见——以下是它通常代表的含义。",
+      "illustration": "/illustrations/n-result-unclear.webp",
+      "body": [
+        "淡淡的第二条线通常是早期阳性，此时hCG仍然较低。",
+        "48小时后用晨起第一次尿液重新检测——如果您怀孕了，线条通常会变得更清晰。",
+        "若想确定，诊所可以进行血液检测，它能更早、更精确地检测出怀孕。"
+      ],
+      "options": [
+        { "to": "how-to-test", "em": "📋", "label": "重新查看如何检测", "hint": "确保时机正确" },
+        { "to": "choose-gynae", "em": "🩺", "label": "到诊所进行血液检测", "hint": "最准确" }
+      ]
+    },
+    "first-visit": {
+      "title": "您的首次产检",
+      "intro": "会做什么，以及需要带什么。",
+      "illustration": "/illustrations/n-first-visit.webp",
+      "body": [
+        "通常在第6–8周左右。医生会确认怀孕、回顾您的健康史，可能进行尿液检测和早期超声检查，并估算您的预产期。",
+        "请带上您的NRIC／身份证件，以及您正在服用的任何药物或补充剂清单。"
+      ],
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "dating-scan", "em": "📅", "label": "孕早期超声检查", "hint": "它检查什么" },
+        { "to": "choose-gynae", "em": "🏥", "label": "该去哪里", "hint": "比较医院与诊所" }
+      ]
+    },
+    "dating-scan": {
+      "title": "孕早期超声检查",
+      "intro": "第一次看到您的宝宝。",
+      "illustration": "/illustrations/n-dating-scan.webp",
+      "body": ["通常在第6–10周。它确认怀孕位于子宫内并正常发育、检查心跳，并根据宝宝的大小给出准确的预产期。"],
+      "options": [{ "to": "first-tri", "em": "🌙", "label": "继续前往孕早期", "hint": "第1–12周", "cta": true }]
+    },
+    "folic-acid": {
+      "title": "叶酸",
+      "intro": "每天一个小步骤，却有大作用。",
+      "illustration": "/illustrations/n-folic-acid.webp",
+      "body": ["世界卫生组织（WHO）与新加坡的Health Promotion Board（保健促进局，HPB）建议，从备孕开始直到约第12周补充叶酸，以支持健康的神经发育。孕期综合维生素通常都含有叶酸。"],
+      "priceTable": {
+        "caption": "在哪里获取（仅供参考）",
+        "rows": [
+          { "item": "叶酸片", "where": "Watsons、Guardian、Unity、诊所", "price": "$5–$15", "notes": "基础补充剂" },
+          { "item": "孕期综合维生素（含叶酸）", "where": "药房、Shopee", "price": "$20–$45", "notes": "叶酸＋铁、DHA等" }
+        ],
+        "note": "仅供参考——请咨询您的医生或药剂师，了解适合您的选择。"
+      },
+      "sources": [
+        { "label": "HPB Singapore", "url": "https://www.hpb.gov.sg" },
+        { "label": "WHO", "url": "https://www.who.int" }
+      ],
+      "options": [{ "to": "choose-gynae", "em": "🩺", "label": "咨询医生", "hint": "个性化建议" }]
+    },
+    "choose-gynae": {
+      "title": "选择医生或医院",
+      "intro": "公立还是私立、全科医生还是妇产科医生——这里是要点。",
+      "illustration": "/illustrations/n-choose-gynae.webp",
+      "body": [
+        "您可以先看全科医生（GP），也可以直接看妇产科医生（O&G，产科兼妇科医生）。",
+        "公立医院（KKH、NUH、SGH）通常费用较低，且能处理较高风险的护理；私立护理则可由同一位医生持续跟进，时间安排也更灵活。",
+        "完整的比较——套餐与预估费用——可在本网站的“医院”页面查看。"
+      ],
+      "options": [{ "to": "preconception", "em": "↩️", "label": "返回起点", "hint": "探索其他选项" }]
+    },
+    "first-tri": {
+      "celebrate": "恭喜您迎来小宝宝！🌙",
+      "title": "孕早期（第1–12周）",
+      "intro": "以下是这些早期周数中需要留意的内容。",
+      "illustration": "/illustrations/n-first-tri.webp",
+      "body": ["尽管目前还看不出太多，但重大的变化正在发生。以下是关键的里程碑与检查。"],
+      "options": [
+        { "to": "first-visit", "em": "🩺", "label": "首次产检", "hint": "约第6–8周" },
+        { "to": "screening", "em": "🧬", "label": "筛查（OSCAR／NIPT）", "hint": "约第11–14周" },
+        { "to": "symptoms", "em": "🤢", "label": "常见的早期症状", "hint": "什么属于正常、何时该就医" },
+        { "to": "folic-acid", "em": "🌿", "label": "补充剂", "hint": "叶酸与孕期维生素" }
+      ]
+    },
+    "screening": {
+      "title": "孕早期筛查",
+      "intro": "OSCAR与NIPT——它们是什么。",
+      "illustration": "/illustrations/n-screening.webp",
+      "body": [
+        "OSCAR（约第11–14周）结合超声检查与血液检测，评估某些疾病的可能性。",
+        "NIPT是一种更新、更准确的血液检测，最早可从约第10周开始进行。您的医生会帮助您决定哪种更适合您。"
+      ],
+      "priceTable": {
+        "caption": "筛查费用参考（2026）",
+        "rows": [
+          { "item": "OSCAR", "where": "大多数医院／诊所", "price": "$300–$400", "notes": "超声＋血液检测" },
+          { "item": "NIPT", "where": "医院／诊所", "price": "$1,200–$1,400", "notes": "更准确的血液检测" }
+        ],
+        "note": "2026年参考（MOH基准／服务提供者费率）——部分费用可用MediSave支付。请向您的服务提供者确认。"
+      },
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "first-tri", "em": "↩️", "label": "返回孕早期", "hint": "" }]
+    },
+    "symptoms": {
+      "title": "常见的早期症状",
+      "intro": "大多属于正常——但要了解危险信号。",
+      "illustration": "/illustrations/n-symptoms.webp",
+      "body": [
+        "恶心、疲倦、乳房胀痛以及频繁排尿都很常见，通常会逐渐缓解。",
+        "如果出现大量出血、剧烈或持续的疼痛，或呕吐严重到无法摄入水分，请及时联系医生。"
+      ],
+      "tip": "相信您的直觉——如果感觉不对劲，随时联系您的医护人员都是可以的。",
+      "options": [{ "to": "first-tri", "em": "↩️", "label": "返回孕早期", "hint": "" }]
+    },
+    "second-tri": {
+      "title": "孕中期（第13–27周）",
+      "intro": "通常是最舒适的一段时期。",
+      "illustration": "/illustrations/n-second-tri.webp",
+      "options": [
+        { "to": "anomaly-scan", "em": "🩻", "label": "胎儿畸形排查超声（大排畸）", "hint": "约第18–22周" },
+        { "to": "glucose-test", "em": "🩸", "label": "葡萄糖耐量测试", "hint": "约第24–28周" },
+        { "to": "kicks", "em": "👣", "label": "感受胎动", "hint": "何时以及需要留意什么" }
+      ]
+    },
+    "anomaly-scan": {
+      "title": "胎儿畸形排查超声（大排畸）",
+      "intro": "对宝宝发育的详细检查。",
+      "illustration": "/illustrations/n-anomaly-scan.webp",
+      "body": ["在约第18–22周，这项超声检查会查看宝宝的器官与生长情况。如果您愿意，通常还可以得知宝宝的性别。"],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "返回孕中期", "hint": "" }]
+    },
+    "glucose-test": {
+      "title": "葡萄糖耐量测试（GTT）",
+      "intro": "妊娠糖尿病筛查。",
+      "illustration": "/illustrations/n-glucose-test.webp",
+      "body": ["在约第24–28周，您会喝下含糖溶液并抽血，以检查身体处理葡萄糖的情况。"],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "返回孕中期", "hint": "" }]
+    },
+    "kicks": {
+      "title": "感受胎动",
+      "intro": "最美好的里程碑之一。",
+      "illustration": "/illustrations/n-kicks.webp",
+      "body": ["许多人在约第18–24周首次感觉到胎动。随着孕期推进，熟悉宝宝的胎动规律有助于您留意变化。"],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "返回孕中期", "hint": "" }]
+    },
+    "third-tri": {
+      "title": "孕晚期（第28–40周）",
+      "intro": "最后冲刺阶段——是时候做准备了。",
+      "illustration": "/illustrations/n-third-tri.webp",
+      "options": [
+        { "to": "hospital-bag", "em": "🎒", "label": "待产包清单", "hint": "需要准备什么" },
+        { "to": "birth-plan", "em": "📝", "label": "您的分娩计划", "hint": "您的偏好" },
+        { "to": "gbs", "em": "🧫", "label": "GBS拭子检查", "hint": "约第35–37周" }
+      ]
+    },
+    "hospital-bag": {
+      "title": "待产包清单",
+      "intro": "从约第36周开始收拾。",
+      "illustration": "/illustrations/n-hospital-bag.webp",
+      "body": ["给您自己：证件与文件、舒适的衣物、洗漱用品、手机充电器、零食。给宝宝：回家穿的衣服、小手套、包被。医院会提供大部分必需品——也请查看医院的清单。"],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "返回孕晚期", "hint": "" }]
+    },
+    "birth-plan": {
+      "title": "您的分娩计划",
+      "intro": "记录您偏好的指南——保持灵活。",
+      "illustration": "/illustrations/n-birth-plan.webp",
+      "body": ["写下您对镇痛方式、陪产人选以及产后护理的偏好，然后与您的医护人员详细沟通。计划可能在当天有所变化，这也没关系。"],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "返回孕晚期", "hint": "" }]
+    },
+    "gbs": {
+      "title": "GBS拭子检查",
+      "intro": "一项快速的常规检查。",
+      "illustration": "/illustrations/n-gbs.webp",
+      "body": ["在约第35–37周，通过一次简单的拭子采样检查B族链球菌（Group B Strep），这是一种常见细菌，若存在，可在分娩期间轻松处理。"],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "返回孕晚期", "hint": "" }]
+    },
+    "labour": {
+      "title": "分娩与生产",
+      "intro": "了解这些征兆有助于您感到有所准备。",
+      "illustration": "/illustrations/n-labour.webp",
+      "options": [
+        { "to": "signs", "em": "⏰", "label": "临产征兆", "hint": "何时前往医院" },
+        { "to": "admission", "em": "🏥", "label": "办理住院", "hint": "会发生什么" },
+        { "to": "after-birth", "em": "🍼", "label": "分娩后的第一时间", "hint": "最初几个小时" }
+      ]
+    },
+    "signs": {
+      "title": "临产征兆",
+      "intro": "出现这些征兆时，请致电您的医院或医生。",
+      "illustration": "/illustrations/n-signs.webp",
+      "body": ["规律且逐渐加强、间隔越来越近的宫缩；破水；或“见红”（少量黏液栓）。如果宫缩强烈而规律，或您破水了，请联系您的医院。"],
+      "tip": "如果出现大量出血或胎动减少，请<b>立即</b>联系您的医护人员。",
+      "options": [{ "to": "labour", "em": "↩️", "label": "返回分娩与生产", "hint": "" }]
+    },
+    "admission": {
+      "title": "办理住院",
+      "intro": "在医院会经历什么。",
+      "illustration": "/illustrations/n-admission.webp",
+      "body": ["医护人员会检查您的宫缩和宝宝情况，可能检查产程进展，并安排您进入产房。请带上您的待产包和证件文件。"],
+      "options": [{ "to": "labour", "em": "↩️", "label": "返回分娩与生产", "hint": "" }]
+    },
+    "after-birth": {
+      "title": "分娩后的第一时间",
+      "intro": "最初的黄金几小时。",
+      "illustration": "/illustrations/n-after-birth.webp",
+      "body": ["肌肤接触、第一次哺乳，以及为宝宝进行的初步检查。如果您需要帮助，新加坡大多数医院都提供哺乳支持。"],
+      "options": [{ "to": "labour", "em": "↩️", "label": "返回分娩与生产", "hint": "" }]
+    },
+    "first-year": {
+      "celebrate": "🎉 恭喜——欢迎步入为人父母的旅程！",
+      "title": "第一年与新生儿",
+      "intro": "第一年是一段充满喜悦又疲惫的适应期。以下是需要照顾好的事项。",
+      "illustration": "/illustrations/n-first-year.webp",
+      "options": [
+        { "to": "admin-checklist", "em": "📋", "label": "宝宝出生后：行政事务", "hint": "出生登记、Baby Bonus、补助金" },
+        { "to": "confinement", "em": "🍲", "label": "坐月子——规划与费用", "hint": "月嫂、月子中心或自行安排" },
+        { "to": "newborn-care", "em": "🌙", "label": "新生儿护理基础", "hint": "喂养、睡眠、何时该就医" },
+        { "to": "vaccinations", "em": "💉", "label": "儿童疫苗接种", "hint": "NCIS疫苗时间表" },
+        { "to": "postnatal-support", "em": "💜", "label": "康复与支持", "hint": "您的健康同样重要" },
+        { "to": "childcare", "em": "🧸", "label": "婴儿托管与补贴", "hint": "尽早规划——有候补名单" }
+      ]
+    },
+    "admin-checklist": {
+      "title": "宝宝出生后：行政事务",
+      "intro": "出生后头几周的一些重要事项。",
+      "illustration": "/illustrations/n-admin-checklist.webp",
+      "body": [
+        "在14天内办理出生登记（在医院或通过LifeSG／ICA）——由此获得出生证明。",
+        "加入Baby Bonus Scheme（婴儿花红计划）以领取现金礼金（Cash Gift）并开设儿童培育户头（Child Development Account，CDA）。",
+        "5,000新元的新生儿MediSave补助金（MediSave Grant for Newborns）会在出生时自动存入，您的宝宝从第一天起便受MediShield Life保障。",
+        "为您的新生儿申请第一本护照？申请费用可获豁免。"
+      ],
+      "sources": [{ "label": "LifeSG — 迎接您的新生儿", "url": "https://www.life.gov.sg/family-parenting/when-your-child-is-born" }],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "返回第一年", "hint": "" }]
+    },
+    "confinement": {
+      "title": "坐月子——规划与费用",
+      "intro": "传统上28–40天的恢复期，以及相关费用。",
+      "illustration": "/illustrations/n-confinement.webp",
+      "body": [
+        "坐月子是产后休息与恢复的一段时期，重点在于康复、哺乳与调适。各家庭会选择不同程度的支持——住家月嫂、月子中心、送餐服务，或亲戚的帮忙。",
+        "这是产后最大的开支之一，而MediSave并不涵盖——因此请单独做好预算。"
+      ],
+      "priceTable": {
+        "caption": "新加坡坐月子费用（2026，仅供参考）",
+        "rows": [
+          { "item": "月嫂（28天）", "where": "MOM持牌中介", "price": "$3,500–$5,500", "notes": "农历新年期间$6,000以上；红包另计" },
+          { "item": "月子中心", "where": "酒店式中心", "price": "$8,000–$20,000+", "notes": "住宿＋护理" },
+          { "item": "月子餐送餐", "where": "各类餐饮供应商", "price": "$1,500–$3,000", "notes": "约28天" },
+          { "item": "产后按摩", "where": "上门／工作室", "price": "$300–$800", "notes": "疗程套餐" },
+          { "item": "哺乳顾问", "where": "私人IBCLC", "price": "$150–$400", "notes": "每次" }
+        ],
+        "note": "2026年参考价格区间——MediSave不涵盖坐月子费用。请向服务提供者确认。"
+      },
+      "sources": [
+        { "label": "坐月子费用指南（2026）", "url": "https://www.bankingcredit.com.sg/confinement-cost-singapore/" },
+        { "label": "月嫂价格（2026）", "url": "https://newbubs.sg/blog/confinement-nanny-price-singapore-2026-full-cost-breakdown/" }
+      ],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "返回第一年", "hint": "" }]
+    },
+    "newborn-care": {
+      "title": "新生儿护理基础",
+      "intro": "最初几周——喂养、睡眠，以及什么属于正常。",
+      "illustration": "/illustrations/n-newborn-care.webp",
+      "body": [
+        "新生儿进食频繁（大约每2–3小时一次）、每次睡得短，并会用掉很多尿布——这些在最初几周都很正常。",
+        "轻微黄疸在出生头几天很常见；您的医院或医生会为此进行检查。",
+        "如果宝宝发烧、进食不佳、非常嗜睡或难以唤醒，或您担心他的呼吸，请及时联系医生。"
+      ],
+      "tip": "相信您的直觉——对宝宝有任何疑虑时，随时联系儿科医生或医院都是可以的。",
+      "sources": [{ "label": "HealthHub — 新生儿护理", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "nc-feeding", "em": "🍼", "label": "喂养", "hint": "母乳、奶瓶及频率" },
+        { "to": "nc-sleep", "em": "😴", "label": "安全睡眠", "hint": "宝宝在哪里、如何睡" },
+        { "to": "nc-bathing", "em": "🛁", "label": "洗澡与脐带护理", "hint": "基础知识" },
+        { "to": "nc-signs", "em": "🚨", "label": "何时该联系医生", "hint": "危险信号" },
+        { "to": "first-year", "em": "↩️", "label": "返回第一年", "hint": "" }
+      ]
+    },
+    "nc-feeding": {
+      "title": "喂养您的新生儿",
+      "intro": "母乳、奶瓶，以及喂养频率。",
+      "body": [
+        "新生儿少量多次进食——大约每2–3小时一次，或每天8–12次，按需喂养。",
+        "在条件允许时建议母乳喂养；配方奶是安全的替代选择，许多家庭会两者结合。",
+        "宝宝吃饱的迹象：第一周后每天有6块或更多湿尿布、体重稳定增长，以及喂奶后能安静下来。"
+      ],
+      "tip": "在衔乳或奶量方面遇到困难？哺乳顾问或您医院的门诊可以提供帮助——请查看“康复与支持”页面。",
+      "sources": [{ "label": "HealthHub — 母乳喂养", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "返回新生儿护理", "hint": "" }]
+    },
+    "nc-sleep": {
+      "title": "安全睡眠",
+      "intro": "让宝宝安全的简单原则。",
+      "body": [
+        "始终让宝宝仰卧睡觉，睡在自己的婴儿床或摇篮里。",
+        "保持婴儿床整洁——不放松散的被褥、枕头、床围或软玩具——并避免宝宝过热。",
+        "新生儿无论白天黑夜都是短时间地睡；随着成长，睡眠时间会逐渐延长。"
+      ],
+      "tip": "建议在最初几个月同房不同床（宝宝的婴儿床放在您的房间里）；不建议同床睡。",
+      "sources": [{ "label": "HealthHub — 安全睡眠", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "返回新生儿护理", "hint": "" }]
+    },
+    "nc-bathing": {
+      "title": "洗澡与脐带护理",
+      "intro": "在最初的日子里保持宝宝清洁。",
+      "body": [
+        "在脐带残端脱落之前（通常为1–2周），请用海绵擦浴，并保持脐带清洁干燥。",
+        "对新生儿来说，一周洗几次澡就足够了；其余时间擦洗关键部位（脸、手、臀部）即可。",
+        "始终托住宝宝的头部和颈部，绝不让宝宝独自留在水中——哪怕只是片刻。"
+      ],
+      "sources": [{ "label": "HealthHub — 新生儿护理", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "返回新生儿护理", "hint": "" }]
+    },
+    "nc-signs": {
+      "title": "何时该联系医生",
+      "intro": "相信您的直觉——以下情况需要及时处理。",
+      "body": [
+        "如果新生儿发烧、进食不佳、非常嗜睡或难以唤醒，或您担心他的呼吸，请联系医生或前往儿童急诊。",
+        "如果湿尿布比平常少、黄疸加重（发黄范围扩大或颜色加深），或持续呕吐，也请及时咨询。",
+        "当感觉不对劲时，随时求助都是可以的——您最了解自己的宝宝。"
+      ],
+      "tip": "KKH及其他医院设有24小时儿童急诊服务。",
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }, { "label": "KKH", "url": "https://www.kkh.com.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "返回新生儿护理", "hint": "" }]
+    },
+    "vaccinations": {
+      "title": "儿童疫苗接种",
+      "intro": "新加坡国家儿童免疫接种时间表（National Childhood Immunisation Schedule，NCIS）。",
+      "illustration": "/illustrations/n-vaccinations.webp",
+      "body": [
+        "出生时：卡介苗（BCG）和第一针乙型肝炎疫苗，通常在医院接种。",
+        "在头18个月里：分多次接种六合一疫苗（白喉、破伤风、百日咳、脊髓灰质炎、Hib、乙肝）、肺炎球菌疫苗（PCV）、麻腮风疫苗（MMR）和水痘疫苗。",
+        "在新加坡，白喉和麻疹疫苗接种是法律规定的。",
+        "对于公民，在综合诊所（polyclinic）接种大多数疫苗在补贴后约需$10–$30，且可用宝宝的MediSave补助金支付。"
+      ],
+      "sources": [
+        { "label": "HealthHub — 儿童疫苗接种", "url": "https://www.healthhub.sg" },
+        { "label": "HPB", "url": "https://www.hpb.gov.sg" }
+      ],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "返回第一年", "hint": "" }]
+    },
+    "postnatal-support": {
+      "title": "康复与支持",
+      "intro": "您的身心健康同样重要。您并不孤单。",
+      "illustration": "/illustrations/n-postnatal-support.webp",
+      "body": [
+        "您的身体需要时间恢复，产后最初几周在情绪上可能格外起伏。感到低落、焦虑或不堪重负都很常见——而且您可以获得支持。",
+        "KKH／NUH的社区护士可在最初几周上门探访；哺乳顾问可协助喂养；医院的社工可帮您对接更多支持。"
+      ],
+      "tip": "如果您持续感到悲伤、焦虑或无法应对，请主动寻求帮助——以下热线免费且保密。",
+      "sources": [
+        { "label": "AWARE妇女求助热线 — 1800-777-5555", "url": "https://www.aware.org.sg" },
+        { "label": "IMH求助热线 — 6389 2222", "url": "https://www.imh.com.sg" },
+        { "label": "新加坡援人协会（Samaritans of Singapore，SOS） — 1767", "url": "https://www.sos.org.sg" }
+      ],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "返回第一年", "hint": "" }]
+    },
+    "childcare": {
+      "title": "婴儿托管与补贴",
+      "intro": "尽早规划——好的托管中心都有候补名单。",
+      "illustration": "/illustrations/n-childcare.webp",
+      "body": [
+        "婴儿托管（2–18个月）和幼儿托管的名额很早就会满，因此值得在您重返工作岗位之前尽早登记意向。",
+        "在职妈妈的婴儿托管最高可获得每月约$1,710的补贴（按收入分级），能大幅降低费用。",
+        "低收入家庭还可能符合资格，获得如KidSTART等额外支持。"
+      ],
+      "sources": [{ "label": "LifeSG — 学前教育与托管", "url": "https://www.life.gov.sg/family-parenting" }],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "返回第一年", "hint": "" }]
+    }
+  }
+}

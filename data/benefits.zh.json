@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "description": "新加坡育儿福利 — 2026。数据已于 2026-07-01 对照官方政府来源核实。每次发布前请重新核实；多项数据已于 1 Apr 2025 及 1 Apr 2026 更新。",
+    "lastVerified": "2026-07-01",
+    "verifiedBy": "人工（发布任何更改前须经人工审核）",
+    "authoritativeSources": [
+      "https://www.mom.gov.sg/employment-practices/leave/paternity-leave",
+      "https://www.mom.gov.sg/employment-practices/leave/shared-parental-leave",
+      "https://www.profamilyleave.msf.gov.sg",
+      "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme",
+      "https://www.madeforfamilies.gov.sg",
+      "https://www.life.gov.sg/family-parenting/benefits-support/large-families-scheme",
+      "https://www.cpf.gov.sg"
+    ],
+    "warning": "请勿自动发布对此文件的更改。向家长提供的财务指引必须通过人工审核。请参阅 docs/RISK-AND-FEASIBILITY.md。"
+  },
+  "babyBonusCashGift": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 11000, "2": 11000, "3plus": 13000 },
+    "confidence": "high",
+    "source": "MSF Baby Bonus Scheme（发布前请在 MSF 官方页面确认当前确切的发放明细）",
+    "note": "提示中的数字（$11K / $13K）一致。"
+  },
+  "cdaFirstStepGrant": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 5000, "3plus": 10000 },
+    "confidence": "high",
+    "source": "Large Families Scheme — Made for Families / LifeSG",
+    "note": "第 3 名及以上、于 18 Feb 2025 或之后出生的孩子，金额提高至 $10,000（Large Families Scheme）。"
+  },
+  "cdaCoMatchingCap": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 6000, "2": 6000, "3-4": 12000, "5plus": 18000 },
+    "confidence": "medium",
+    "source": "第三方汇总来源与 2023 年后的提升一致；发布前请在 MSF Baby Bonus 官方页面确认。",
+    "correctionFromPrompt": "提示中列出 $4K/$7K/$9K/$15K — 已过时。当前明细为 $6K/$12K/$18K。"
+  },
+  "medisaveGrantForNewborns": {
+    "currency": "SGD",
+    "amount": 5000,
+    "priorAmount": 4000,
+    "effectiveFrom": "2025-04-01",
+    "confidence": "high",
+    "source": "HealthHub — Marriage and Parenthood Schemes（官方）",
+    "correctionFromPrompt": "提示中列出 $4,000 — 已过时。于 1 Apr 2025 或之后出生的婴儿已提高至 $5,000。"
+  },
+  "largeFamiliesScheme": {
+    "appliesTo": "于 2025-02-18 或之后出生的第 3 名或后续新加坡公民孩子",
+    "totalUpTo": 16000,
+    "currency": "SGD",
+    "components": {
+      "cdaFirstStepGrantIncrease": 5000,
+      "largeFamilyMedisaveGrant": 5000,
+      "largeFamilyLifeSgCredits": { "perYear": 1000, "years": "孩子 1 至 6 岁", "total": 6000 }
+    },
+    "confidence": "high",
+    "source": "Made for Families / LifeSG / CNA Budget 2025（官方）"
+  },
+  "leave": {
+    "maternityLeaveWeeks": { "value": 16, "confidence": "high", "source": "GPML — MOM" },
+    "paternityLeaveWeeks": {
+      "value": 4,
+      "confidence": "high",
+      "source": "GPPL — MOM（官方）",
+      "correctionFromPrompt": "提示中列出 2 周 — 已过时。Government-Paid Paternity Leave 为 4 周。"
+    },
+    "sharedParentalLeaveWeeks": {
+      "byChildDob": {
+        "2025-04-01_to_2026-03-31": 6,
+        "on_or_after_2026-04-01": 10
+      },
+      "govPayCapPerWeek": 2500,
+      "confidence": "high",
+      "source": "MOM + MSF ProFamilyLeave（官方）",
+      "correctionFromPrompt": "提示中列出 6 周（2025 年）。当前权益为 10 周，适用于 1 Apr 2026 或之后出生的孩子。"
+    },
+    "childcareLeaveDaysPerYear": { "value": 6, "condition": "孩子未满 7 岁", "confidence": "medium", "source": "发布前请在 MOM 确认" }
+  },
+  "medisaveMaternityPackage": {
+    "effectiveFrom": "2025-04-01",
+    "currency": "SGD",
+    "preDeliveryLimit": 900,
+    "hospitalisationPerDay": { "days1to2": 1130, "day3plus": 400 },
+    "deliveryProcedureSurgicalLimitRange": [1120, 2770],
+    "deliveryExamples": {
+      "normalVaginal": 750,
+      "assistedVaginal": 1250,
+      "caesareanStandard": 2150,
+      "caesareanWithTubalLigation": 2600,
+      "caesareanWithHysterectomy": 3950
+    },
+    "confidence": "high",
+    "source": "HealthHub / CPFB / Made for Families（官方）",
+    "correctionFromPrompt": "提示混淆了标签：它把 $2,150 称为‘辅助’（实为标准剖腹产），把 $3,950 称为‘剖腹产’（实为剖腹产并子宫切除术）。辅助阴道分娩为 $1,250。"
+  },
+  "parenthoodTaxRebate": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 10000, "3plus": 20000 },
+    "confidence": "medium",
+    "source": "IRAS — 发布前请确认当前明细"
+  },
+  "workingMothersChildRelief": {
+    "basis": "对于 1 Jan 2024 或之后出生/领养的孩子采用固定金额（较大孩子此前按收入的 % 计算）。",
+    "byBirthOrder": { "1": 8000, "2": 10000, "3plus": 12000 },
+    "confidence": "high",
+    "source": "IRAS（已于 2026-07 核实）"
+  },
+  "firstYearsSupport": {
+    "_note": "出生之后的持续支持。已于 2026 年对照 IRAS + Made for Families 核实。税务减免对 1 Jan 2024 或之后出生/领养的孩子采用固定金额。",
+    "taxReliefs": [
+      { "name": "Working Mother's Child Relief (WMCR)", "amount": "$8,000 / $10,000 / $12,000", "who": "在职母亲 · 第 1 / 第 2 / 第 3+ 名孩子（≥ 1 Jan 2024 出生）" },
+      { "name": "Qualifying Child Relief (QCR)", "amount": "$4,000 / 年", "who": "父母任一方，每名孩子（残障者为 $7,500）" },
+      { "name": "Parenthood Tax Rebate (PTR)", "amount": "$5,000 / $10,000 / $20,000", "who": "一次性 · 第 1 / 第 2 / 第 3+ 名 · 未用余额可结转" },
+      { "name": "Grandparent Caregiver Relief (GCR)", "amount": "$3,000 / 年", "who": "在职母亲 · 祖父母照顾 ≤ 12 岁的孩子" },
+      { "name": "Foreign Domestic Worker Levy Relief", "amount": "~$7,200 / 年", "who": "聘请女佣的在职母亲（税项的 2×）" }
+    ],
+    "childcare": [
+      { "name": "婴儿托育津贴（2–18 个月）", "amount": "最高约 $1,710/月", "who": "在职母亲（按收入分级）；基本 $600" },
+      { "name": "托儿津贴（18 个月至小一）", "amount": "按收入分级", "who": "所有人可享基本津贴；在职者更多" },
+      { "name": "Child LifeSG Credits", "amount": "$1,000 / 年（1–6 岁）", "who": "第 3+ 名孩子（Large Families Scheme）" },
+      { "name": "KidSTART", "amount": "家访 + 支持", "who": "低收入家庭" }
+    ],
+    "notes": [
+      "Baby Bonus Cash Gift 以分期方式发放，直至孩子 6.5 岁。",
+      "CDA 在孩子 12 岁时关闭；未使用的资金将转入 Post-Secondary Education Account (PSEA)。",
+      "QCR + WMCR 合计每名孩子上限为 $50,000；税务减免总额每年上限为 $80,000。"
+    ],
+    "sources": [
+      { "label": "IRAS — 税务减免", "url": "https://www.iras.gov.sg" },
+      { "label": "Made for Families — 税务减免与回扣", "url": "https://www.madeforfamilies.gov.sg/support-measures/child-raising/financial-support/tax-relief-and-rebates" },
+      { "label": "LifeSG — 学前教育与托育", "url": "https://www.life.gov.sg/family-parenting" }
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "description": "提供2026年参考分娩费用的新加坡产科医院。数据为参考指南，来源于MOH账单基准以及公开/汇总的医院收费（最新可得，~Q2 2026）——并非报价。费用因病房等级、分娩方式、医生、住院时长和并发症而异。请务必向各医院自己的账单估算工具确认。",
+    "lastVerified": "2026-06",
+    "verificationStatus": "referenced",
+    "priceRefreshCadence": "每季度更新，由人工对照MOH基准审核",
+    "currency": "SGD",
+    "pricingSources": [
+      { "label": "MOH — 医院账单与收费基准（SI836U 顺产，SI834U 剖腹产）", "url": "https://www.moh.gov.sg/managing-expenses/bills-and-fee-benchmarks/hospital-bills-and-fee-benchmarks/", "updated": "2026-07-02" },
+      { "label": "MOH 各病房分娩账单中位数（汇编）", "url": "https://www.fussymama.sg/tools/delivery-cost-calculator", "updated": "2026-06" },
+      { "label": "私立医院套餐价格区间（汇总）", "url": "https://halfhalfparenting.com/articles/hospital-delivery-cost-singapore", "updated": "2026-01" },
+      { "label": "KKH 官方账单估算工具", "url": "https://www.kkh.com.sg/patient-services/finance/bill-estimator" }
+    ],
+    "mohMedianBillsByWard_2026": {
+      "basis": "MOH账单中位数（典型区间），新加坡公民，公立病房补贴之后、动用MediSave/保险之前。婴儿的住院费用另行结算。",
+      "wardC": { "normal": "1,346 (1,078–1,757)", "caesarean": "3,004 (2,237–4,698)" },
+      "wardB2": { "normal": "1,350 (994–1,757)", "caesarean": "2,582 (1,966–3,656)" },
+      "wardB1": { "normal": "4,463 (4,037–5,183)", "caesarean": "8,490 (7,405–9,649)" },
+      "wardA": { "normal": "6,024 (5,333–6,882)", "caesarean": "9,839 (8,709–11,457)" },
+      "privateHospital": { "normal": "10,815 (9,073–12,547)", "caesarean": "15,805 (13,722–18,563)" }
+    }
+  },
+  "hospitals": [
+    {
+      "id": "kkh", "name": "KK Women's and Children's Hospital (KKH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["高危妊娠", "多胎转诊中心", "三级新生儿重症监护病房（NICU）", "围产期丧亲支持"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "补贴的B2/C（新加坡公民，补贴之后；MOH中位数约$1,350）。未补贴的A/B1：约$4,500–$6,900。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "无并发症，补贴的B2/C。未补贴的A/B1：约$8,500–$11,500。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "nuh", "name": "National University Hospital (NUH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["高危妊娠", "新生儿重症监护病房（NICU）"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "补贴的B2/C（MOH基准，适用于所有公立医院）。未补贴的A/B1：约$4,500–$6,900。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "无并发症，补贴的B2/C。未补贴的A/B1：约$8,500–$11,500。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "sgh", "name": "Singapore General Hospital (SGH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["产科", "高危转诊"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "补贴的B2/C（MOH基准）。未补贴的A/B1：约$4,500–$6,900。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "无并发症，补贴的B2/C。未补贴的A/B1：约$8,500–$11,500。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "thomson-medical", "name": "Thomson Medical Centre", "type": "private",
+      "wardOptions": ["4-bed", "2-bed", "Single", "Suite"],
+      "capabilities": ["产科", "产前课程"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$18,000", "basis": "按房型（4-bed → suite）。MOH私立中位数约$10,800。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$30,000", "basis": "按房型。MOH私立中位数约$15,800。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-elizabeth-orchard", "name": "Mount Elizabeth Hospital (Orchard)", "type": "private",
+      "wardOptions": ["Single", "Deluxe", "Suite"],
+      "capabilities": ["产科"],
+      "packages": {
+        "normalDelivery": { "range": "$12,000–$22,000", "basis": "高端；standard single → deluxe suite。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$18,000–$35,000", "basis": "高端；按房型。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-elizabeth-novena", "name": "Mount Elizabeth Novena Hospital", "type": "private",
+      "wardOptions": ["Single", "Suite"],
+      "capabilities": ["产科"],
+      "packages": {
+        "normalDelivery": { "range": "$12,000–$22,000", "basis": "高端；single → suite。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$18,000–$35,000", "basis": "高端；按房型。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "gleneagles", "name": "Gleneagles Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["产科"],
+      "packages": {
+        "normalDelivery": { "range": "$9,000–$18,000", "basis": "私立医院基准（MOH中位数约$10,800）；请向医院确认套餐。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$14,000–$28,000", "basis": "私立基准（MOH中位数约$15,800）；请向医院确认。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "raffles-hospital", "name": "Raffles Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["产科"],
+      "packages": {
+        "normalDelivery": { "range": "$9,000–$16,000", "basis": "私立医院基准（MOH中位数约$10,800）；请向医院确认套餐。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$14,000–$25,000", "basis": "私立基准（MOH中位数约$15,800）；请向医院确认。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-alvernia", "name": "Mount Alvernia Hospital", "type": "private",
+      "wardOptions": ["Single", "4-bed", "Suite"],
+      "capabilities": ["产科"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$15,000", "basis": "中端私立；请向医院确认套餐。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$22,000", "basis": "中端私立；请向医院确认。", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "parkway-east", "name": "Parkway East Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed"],
+      "capabilities": ["产科"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$14,000", "basis": "中端私立；请向医院确认套餐。", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$20,000", "basis": "中端私立；请向医院确认。", "verificationStatus": "referenced" }
+      }
+    }
+  ]
+}

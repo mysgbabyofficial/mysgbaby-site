@@ -1,5 +1,6 @@
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import timeline from '@/data/timeline.json';
+import { getTimeline } from '@/lib/content';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 import AdviseMeButton from '@/components/AdviseMeButton';
 
@@ -12,9 +13,10 @@ const OFFICIAL = [
 ];
 
 export default async function StagePage({ params }: { params: Promise<{ locale: string; week: string }> }) {
-  const { week: weekParam } = await params;
+  const { locale, week: weekParam } = await params;
+  const t = await getTranslations({ locale, namespace: 'stagePage' });
   const week = Number(weekParam);
-  const stages = timeline.stages;
+  const stages = getTimeline(locale).stages;
   const idx = stages.findIndex((s) => s.weekRange && week >= s.weekRange[0] && week <= s.weekRange[1]);
   const stage = idx >= 0 ? stages[idx] : null;
   const next = idx >= 0 && idx < stages.length - 1 ? stages[idx + 1] : null;
@@ -23,40 +25,38 @@ export default async function StagePage({ params }: { params: Promise<{ locale: 
     <div className="space-y-6">
       <header>
         <p className="font-accent text-lg text-trust">
-          {Number.isFinite(week) ? `Week ${week}` : 'Your stage'}
+          {Number.isFinite(week) ? t('week', { week }) : t('yourStage')}
         </p>
-        <h1 className="text-3xl font-extrabold">{stage ? stage.title : 'Pregnancy stages'}</h1>
+        <h1 className="text-3xl font-extrabold">{stage ? stage.title : t('pregnancyStages')}</h1>
       </header>
 
       <MedicalDisclaimer lastChecked="2026-07-01" />
 
       {stage ? (
         <section className="rounded-2xl border border-primary/30 bg-surface p-6">
-          <h2 className="font-heading text-lg font-bold">What typically happens now</h2>
+          <h2 className="font-heading text-lg font-bold">{t('whatHappens')}</h2>
           <ul className="mt-3 list-inside list-disc text-ink/80">
             {stage.milestones.map((m) => (
               <li key={m}>{m}</li>
             ))}
           </ul>
-          <p className="mt-3 text-sm text-ink/70">
-            Timings are typical, not prescriptive — your gynae will guide what applies to you.
-          </p>
+          <p className="mt-3 text-sm text-ink/70">{t('timingsNote')}</p>
           <div className="mt-4">
             <AdviseMeButton stageTitle={stage.title} />
           </div>
         </section>
       ) : (
         <p className="text-ink/80">
-          Enter a week between 1 and 42 to see that stage, or start with the{' '}
+          {t('enterWeek')}{' '}
           <Link href="/onboarding" className="underline">
-            quick setup
+            {t('quickSetup')}
           </Link>
           .
         </p>
       )}
 
       <section className="rounded-xl border border-trust/30 bg-trust/5 p-4 text-sm">
-        <h2 className="font-semibold">Official sources</h2>
+        <h2 className="font-semibold">{t('officialSources')}</h2>
         <ul className="mt-2 space-y-1">
           {OFFICIAL.map((s) => (
             <li key={s.url}>
@@ -73,7 +73,7 @@ export default async function StagePage({ params }: { params: Promise<{ locale: 
           href={next.weekRange ? `/stage/${next.weekRange[0]}` : '/benefits'}
           className="inline-block rounded-xl bg-accent px-5 py-2.5 font-semibold text-ink"
         >
-          What&apos;s next? {next.title} →
+          {t('whatsNext')} {next.title} →
         </Link>
       )}
     </div>

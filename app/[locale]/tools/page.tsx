@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import PageHeader from '@/components/PageHeader';
 import KickCounter from '@/components/KickCounter';
 import ContractionTimer from '@/components/ContractionTimer';
@@ -11,37 +12,39 @@ export const metadata = {
   description: 'A kick counter and contraction timer for expecting parents in Singapore.',
 };
 
-export default function ToolsPage() {
+export default async function ToolsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'toolsPage' });
   return (
     <div className="space-y-6">
       <PageHeader
-        eyebrow="Handy tools"
-        title="Parent tools"
-        subtitle="Simple trackers for the everyday moments — count your baby's kicks, and time contractions when the day comes. Saved to your device."
+        eyebrow={t('eyebrow')}
+        title={t('title')}
+        subtitle={t('subtitle')}
       />
       <MedicalDisclaimer lastChecked="2026-07-01" />
       <div>
-        <h2 className="mb-2 text-xl font-extrabold">📅 Due date calculator</h2>
+        <h2 className="mb-2 text-xl font-extrabold">{t('dueDateHeading')}</h2>
         <DueDateCalculator />
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
-          <h2 className="mb-2 text-xl font-extrabold">🦶 Kick counter</h2>
+          <h2 className="mb-2 text-xl font-extrabold">{t('kickCounterHeading')}</h2>
           <KickCounter />
         </div>
         <div>
-          <h2 className="mb-2 text-xl font-extrabold">⏱️ Contraction timer</h2>
+          <h2 className="mb-2 text-xl font-extrabold">{t('contractionTimerHeading')}</h2>
           <ContractionTimer />
         </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
-          <h2 className="mb-2 text-xl font-extrabold">👶 After baby&apos;s here — daily log</h2>
+          <h2 className="mb-2 text-xl font-extrabold">{t('babyLogHeading')}</h2>
           <BabyLog />
         </div>
         <div>
-          <h2 className="mb-2 text-xl font-extrabold">🌟 Milestone tracker</h2>
+          <h2 className="mb-2 text-xl font-extrabold">{t('milestoneHeading')}</h2>
           <MilestoneTracker />
         </div>
       </div>

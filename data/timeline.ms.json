@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "description": "Peringkat garis masa kehamilan dan pencapaian tipikal di Singapura. Kandungan klinikal — MEMERLUKAN semakan oleh doktor berdaftar di Singapura sebelum diterbitkan. Minggu adalah tipikal, bukan preskriptif.",
+    "clinicalReviewStatus": "pending",
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "stages": [
+    {
+      "id": "pre-conception",
+      "title": "Prakonsepsi & Ujian Kehamilan",
+      "weekRange": null,
+      "milestones": ["Asid folik (mula sebelum konsepsi)", "Ujian kehamilan", "Pilih GP/pakar sakit puan"],
+      "adviseMe": true
+    },
+    {
+      "id": "first-trimester",
+      "title": "Trimester Pertama (Minggu 1–12)",
+      "weekRange": [1, 12],
+      "milestones": ["Lawatan pertama pakar sakit puan", "Imbasan penentuan tarikh", "Saringan OSCAR / NIPT", "Asid folik hingga ~Minggu 12"],
+      "adviseMeWeeks": [6, 8, 12]
+    },
+    {
+      "id": "second-trimester",
+      "title": "Trimester Kedua (Minggu 13–27)",
+      "weekRange": [13, 27],
+      "milestones": ["Imbasan anomali (~Minggu 18–22)", "Ujian toleransi glukosa", "Mula menjejaki tendangan", "Tdap (Minggu 27–36)"],
+      "adviseMeWeeks": [20, 24]
+    },
+    {
+      "id": "third-trimester",
+      "title": "Trimester Ketiga (Minggu 28–40)",
+      "weekRange": [28, 40],
+      "milestones": ["Imbasan pertumbuhan", "Swab GBS (~Minggu 35–37)", "Beg hospital", "Pelan kelahiran"],
+      "adviseMeWeeks": [28, 36]
+    },
+    {
+      "id": "labour-delivery",
+      "title": "Bersalin & Kelahiran",
+      "weekRange": [40, 42],
+      "milestones": ["Tanda-tanda bersalin", "Kemasukan", "Kelahiran", "Pascakelahiran & penyusuan"],
+      "adviseMeWeeks": [40]
+    }
+  ]
+}

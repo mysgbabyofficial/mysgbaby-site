@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 // Interactive confinement budget planner. 2026 reference ranges (indicative) —
 // sources: bankingcredit.com.sg, newbubs.sg. MediSave does NOT cover confinement.
@@ -13,6 +14,7 @@ const fmt = (n: number) => `$${n.toLocaleString('en-SG')}`;
 const KEY = 'mysgbaby_confinement';
 
 export default function ConfinementCalculator() {
+  const t = useTranslations('confinement');
   const [support, setSupport] = useState<Support>('nanny');
   const [cny, setCny] = useState(false);
   const [meals, setMeals] = useState(true);
@@ -36,14 +38,14 @@ export default function ConfinementCalculator() {
 
   const lines: { label: string; lo: number; hi: number }[] = [];
   if (support === 'nanny') {
-    lines.push({ label: 'Confinement nanny (28 days)', lo: R.nanny[0], hi: R.nanny[1] });
-    if (cny) lines.push({ label: 'Festive (CNY) surcharge', lo: R.cny[0], hi: R.cny[1] });
+    lines.push({ label: t('line_nanny'), lo: R.nanny[0], hi: R.nanny[1] });
+    if (cny) lines.push({ label: t('line_cnySurcharge'), lo: R.cny[0], hi: R.cny[1] });
   }
-  if (support === 'centre') lines.push({ label: 'Confinement centre', lo: R.centre[0], hi: R.centre[1] });
-  if (meals) lines.push({ label: 'Confinement meal delivery', lo: R.meals[0], hi: R.meals[1] });
-  if (massage) lines.push({ label: 'Postnatal massage', lo: R.massage[0], hi: R.massage[1] });
-  if (lactation > 0) lines.push({ label: `Lactation consultant × ${lactation}`, lo: R.lactation[0] * lactation, hi: R.lactation[1] * lactation });
-  if (essentials) lines.push({ label: 'Baby essentials', lo: R.essentials[0], hi: R.essentials[1] });
+  if (support === 'centre') lines.push({ label: t('line_centre'), lo: R.centre[0], hi: R.centre[1] });
+  if (meals) lines.push({ label: t('line_meals'), lo: R.meals[0], hi: R.meals[1] });
+  if (massage) lines.push({ label: t('line_massage'), lo: R.massage[0], hi: R.massage[1] });
+  if (lactation > 0) lines.push({ label: t('line_lactation', { count: lactation }), lo: R.lactation[0] * lactation, hi: R.lactation[1] * lactation });
+  if (essentials) lines.push({ label: t('line_essentials'), lo: R.essentials[0], hi: R.essentials[1] });
   const lo = lines.reduce((s, l) => s + l.lo, 0);
   const hi = lines.reduce((s, l) => s + l.hi, 0);
 
@@ -52,18 +54,18 @@ export default function ConfinementCalculator() {
 
   return (
     <section className="rounded-2xl border border-primary/30 bg-surface p-6">
-      <p className="mb-2 text-sm font-semibold text-ink/70">Who&apos;s supporting your recovery?</p>
+      <p className="mb-2 text-sm font-semibold text-ink/70">{t('supportQuestion')}</p>
       <div className="grid gap-3 sm:grid-cols-3">
         <button className={chip(support === 'none')} onClick={() => setSupport('none')}>
-          <span className="block font-bold">Family / DIY</span>
+          <span className="block font-bold">{t('supportNone')}</span>
           <span className="text-ink/60">$0</span>
         </button>
         <button className={chip(support === 'nanny')} onClick={() => setSupport('nanny')}>
-          <span className="block font-bold">Confinement nanny</span>
+          <span className="block font-bold">{t('supportNanny')}</span>
           <span className="text-ink/60">$3,500–$5,500</span>
         </button>
         <button className={chip(support === 'centre')} onClick={() => setSupport('centre')}>
-          <span className="block font-bold">Confinement centre</span>
+          <span className="block font-bold">{t('supportCentre')}</span>
           <span className="text-ink/60">$8,000–$20,000</span>
         </button>
       </div>
@@ -71,25 +73,25 @@ export default function ConfinementCalculator() {
       {support === 'nanny' && (
         <label className="mt-3 flex items-center gap-2 text-sm">
           <input type="checkbox" checked={cny} onChange={(e) => setCny(e.target.checked)} />
-          Due around Chinese New Year (nanny surcharge +$500–$1,000)
+          {t('cnyLabel')}
         </label>
       )}
 
-      <p className="mb-2 mt-5 text-sm font-semibold text-ink/70">Add-ons</p>
+      <p className="mb-2 mt-5 text-sm font-semibold text-ink/70">{t('addOns')}</p>
       <div className="grid gap-3 sm:grid-cols-3">
         <button className={chip(meals)} onClick={() => setMeals(!meals)}>
-          <span className="block font-bold">Meal delivery</span><span className="text-ink/60">$1,500–$3,000</span>
+          <span className="block font-bold">{t('addonMeals')}</span><span className="text-ink/60">$1,500–$3,000</span>
         </button>
         <button className={chip(massage)} onClick={() => setMassage(!massage)}>
-          <span className="block font-bold">Postnatal massage</span><span className="text-ink/60">$300–$800</span>
+          <span className="block font-bold">{t('addonMassage')}</span><span className="text-ink/60">$300–$800</span>
         </button>
         <button className={chip(essentials)} onClick={() => setEssentials(!essentials)}>
-          <span className="block font-bold">Baby essentials</span><span className="text-ink/60">$1,000–$3,000</span>
+          <span className="block font-bold">{t('addonEssentials')}</span><span className="text-ink/60">$1,000–$3,000</span>
         </button>
       </div>
 
       <div className="mt-4 flex items-center justify-between rounded-xl border border-primary/30 px-4 py-3 text-sm">
-        <span className="font-semibold">Lactation consultant sessions ($150–$400 each)</span>
+        <span className="font-semibold">{t('lactationLabel')}</span>
         <span className="flex items-center gap-3">
           <button onClick={() => setLactation(Math.max(0, lactation - 1))} className="h-7 w-7 rounded-full bg-primary/15 font-bold">−</button>
           <b>{lactation}</b>
@@ -111,15 +113,15 @@ export default function ConfinementCalculator() {
       )}
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-primary/15 px-4 py-3">
-        <span className="font-bold">Estimated confinement budget</span>
+        <span className="font-bold">{t('estimatedBudget')}</span>
         <span className="text-lg font-extrabold text-primary">{fmt(lo)} – {fmt(hi)}</span>
       </div>
 
       <div className="mt-3 rounded-lg border border-trust/40 bg-trust/10 p-3 text-xs text-ink/70">
-        <strong>MediSave does not cover confinement</strong> — budget for it separately. 2026 indicative ranges; prices rise over festive periods and vary by provider. Saved to this device only.
+        {t.rich('medisaveNote', { strong: (chunks) => <strong>{chunks}</strong> })}
       </div>
       <p className="mt-2 text-xs text-ink/50">
-        Sources: confinement cost guides (bankingcredit.com.sg, newbubs.sg, 2026).
+        {t('sources')}
       </p>
     </section>
   );

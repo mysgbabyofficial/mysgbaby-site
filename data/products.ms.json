@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "Keperluan asas bayi yang dipilih mengikut peringkat. Harga adalah anggaran (SGD, 2026) dan berbeza mengikut penjual. Pautan item membuka carian Shopee mengikut kata kunci; tambahkan tag afiliasi anda dalam site.config.ts untuk memperoleh komisen. Pastikan pendedahan afiliasi kekal kelihatan.",
+    "affiliateDisclosure": "Sesetengah pautan ialah pautan afiliasi — kami mungkin memperoleh sedikit komisen tanpa sebarang kos tambahan kepada anda. Ia tidak pernah mengubah apa yang kami syorkan."
+  },
+  "categories": [
+    {
+      "id": "early", "title": "Merancang & Trimester Pertama", "emoji": "🌱",
+      "items": [
+        { "name": "Kit ujian kehamilan", "price": "$8–$35", "keyword": "pregnancy test kit clearblue" },
+        { "name": "Vitamin pranatal (dengan folat)", "price": "$20–$45", "keyword": "prenatal vitamins folate" },
+        { "name": "Bantal bersalin / kehamilan", "price": "$40–$120", "keyword": "maternity pregnancy pillow" }
+      ]
+    },
+    {
+      "id": "mid", "title": "Trimester Kedua", "emoji": "🎧",
+      "items": [
+        { "name": "Pakaian bersalin", "price": "$20–$80", "keyword": "maternity dress wear" },
+        { "name": "Krim tanda regangan", "price": "$20–$60", "keyword": "stretch mark cream pregnancy" },
+        { "name": "Tali penyokong perut", "price": "$20–$50", "keyword": "pregnancy belly support band" }
+      ]
+    },
+    {
+      "id": "late", "title": "Trimester Ketiga", "emoji": "🧸",
+      "items": [
+        { "name": "Keperluan asas beg hospital", "price": "$50–$150", "keyword": "hospital bag maternity" },
+        { "name": "Pam susu", "price": "$150–$600", "keyword": "breast pump electric" },
+        { "name": "Coli penyusuan", "price": "$20–$60", "keyword": "nursing bra" },
+        { "name": "Kerusi keselamatan kereta bayi", "price": "$150–$800", "keyword": "infant car seat" }
+      ]
+    },
+    {
+      "id": "newborn", "title": "Bayi Baru Lahir", "emoji": "🍼",
+      "items": [
+        { "name": "Pakaian & bedung bayi baru lahir", "price": "$30–$120", "keyword": "newborn clothes swaddle" },
+        { "name": "Lampin (bayi baru lahir)", "price": "$15–$40", "keyword": "newborn diapers" },
+        { "name": "Botol & pensteril", "price": "$40–$200", "keyword": "baby bottle steriliser" },
+        { "name": "Katil / buaian bayi", "price": "$150–$800", "keyword": "baby cot crib" },
+        { "name": "Monitor bayi", "price": "$60–$300", "keyword": "baby monitor" }
+      ]
+    }
+  ]
+}

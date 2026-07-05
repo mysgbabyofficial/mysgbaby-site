@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import explorer from '@/data/explorer.json';
+import { useLocale, useTranslations } from 'next-intl';
+import { getExplorer } from '@/lib/content';
 
 type Option = { to: string; em: string; label: string; hint?: string; cta?: boolean };
 type PriceRow = { item: string; where: string; price: string; notes: string };
@@ -17,9 +18,6 @@ type Node = {
   options?: Option[];
 };
 
-const NODES = explorer.nodes as Record<string, Node>;
-const crumb = (id: string) => (NODES[id]?.title || id).replace(/\s*\(.*$/, '');
-
 function weekToNode(week: number) {
   if (week >= 1 && week <= 12) return 'first-tri';
   if (week >= 13 && week <= 27) return 'second-tri';
@@ -29,6 +27,12 @@ function weekToNode(week: number) {
 }
 
 export default function StageExplorer() {
+  const locale = useLocale();
+  const t = useTranslations('explorer');
+  const explorer = getExplorer(locale);
+  const NODES = explorer.nodes as Record<string, Node>;
+  const crumb = (id: string) => (NODES[id]?.title || id).replace(/\s*\(.*$/, '');
+
   const [stack, setStack] = useState<string[]>(['home']);
   const [week, setWeek] = useState<number | null>(null);
 
@@ -59,12 +63,12 @@ export default function StageExplorer() {
     <div>
       {stack.length === 1 && week && (
         <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl bg-gradient-to-r from-accent/40 to-primary/30 p-4">
-          <span className="font-heading font-bold">🎉 Congratulations on your week-{week} journey!</span>
+          <span className="font-heading font-bold">🎉 {t('congrats', { week })}</span>
           <button
             onClick={() => setStack(['home', weekToNode(week)])}
             className="rounded-lg bg-primary px-4 py-1.5 text-sm font-semibold text-ink"
           >
-            Jump to my stage →
+            {t('jumpToStage')} →
           </button>
         </div>
       )}
@@ -101,7 +105,7 @@ export default function StageExplorer() {
         <div className="p-6 md:p-8">
           {stack.length > 1 && (
             <button onClick={() => setStack((s) => s.slice(0, -1))} className="mb-2 text-sm font-bold text-primary">
-              ‹ Back
+              ‹ {t('back')}
             </button>
           )}
           <h2 className="text-2xl font-extrabold md:text-3xl">{n.title}</h2>
@@ -120,10 +124,10 @@ export default function StageExplorer() {
                 <caption className="mb-1 text-left font-heading font-bold">{n.priceTable.caption}</caption>
                 <thead>
                   <tr className="bg-primary/10 text-xs uppercase text-primary">
-                    <th className="p-2 text-left">Item</th>
-                    <th className="p-2 text-left">Where</th>
-                    <th className="p-2 text-left">Price</th>
-                    <th className="p-2 text-left">Notes</th>
+                    <th className="p-2 text-left">{t('thItem')}</th>
+                    <th className="p-2 text-left">{t('thWhere')}</th>
+                    <th className="p-2 text-left">{t('thPrice')}</th>
+                    <th className="p-2 text-left">{t('thNotes')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -150,7 +154,7 @@ export default function StageExplorer() {
 
           {n.sources && (
             <div className="mt-4 rounded-xl border border-secondary/40 bg-secondary/10 p-3 text-sm">
-              <span className="font-semibold">Official sources: </span>
+              <span className="font-semibold">{t('officialSources')} </span>
               {n.sources.map((s, i) => (
                 <span key={i}>
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline">
@@ -185,7 +189,7 @@ export default function StageExplorer() {
         </div>
 
         <div className="border-t border-primary/10 px-6 py-3 text-xs text-ink/50">
-          Informational only, not medical advice · prices are reference figures · confirm with your healthcare provider.
+          {t('disclaimer')}
         </div>
       </article>
     </div>

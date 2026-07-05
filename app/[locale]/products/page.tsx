@@ -1,6 +1,7 @@
+import { getTranslations } from 'next-intl/server';
 import PageHeader from '@/components/PageHeader';
 import { Link } from '@/i18n/routing';
-import products from '@/data/products.json';
+import { getProducts } from '@/lib/content';
 
 // Links open a marketplace search. Add your Shopee/Lazada/Amazon affiliate tag in
 // site.config.ts to monetise — keep the disclosure banner below visible either way.
@@ -11,20 +12,19 @@ export const metadata = {
   description: 'A curated baby-essentials checklist by pregnancy stage, with indicative Singapore prices.',
 };
 
-export default function ProductsPage() {
+export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'productsPage' });
+  const products = getProducts(locale);
+
   return (
     <div className="space-y-8">
-      <PageHeader
-        eyebrow="What you'll actually need"
-        title="Baby essentials by stage"
-        subtitle="A curated starter list with indicative 2026 prices — so you buy what matters, when it matters."
-      />
+      <PageHeader eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
       <div className="rounded-xl border border-gold bg-[#fff7e6] p-3 text-sm">
-        💛 Some links are affiliate links — we may earn a small commission at no extra cost to you. It
-        never changes what we recommend. See our{' '}
+        💛 {t('affiliate')}{' '}
         <Link href="/terms" className="underline">
-          Terms
+          {t('terms')}
         </Link>
         .
       </div>
@@ -45,17 +45,14 @@ export default function ProductsPage() {
               >
                 <h3 className="font-heading font-bold">{it.name}</h3>
                 <p className="mt-1 font-semibold text-primary">{it.price}</p>
-                <span className="mt-1 inline-block text-sm font-semibold text-primary">Shop →</span>
+                <span className="mt-1 inline-block text-sm font-semibold text-primary">{t('shop')} →</span>
               </a>
             ))}
           </div>
         </section>
       ))}
 
-      <p className="text-xs text-ink/50">
-        Prices are indicative (SGD, 2026) and vary by seller. Links open a Shopee search; add your
-        affiliate tag in <code>site.config.ts</code> to earn commission.
-      </p>
+      <p className="text-xs text-ink/50">{t('footnote')}</p>
     </div>
   );
 }

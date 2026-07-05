@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 type Entry = { t: number; type: string; emoji: string };
 const KEY = 'mysgbaby_babylog';
@@ -12,6 +13,8 @@ const TYPES = [
 ];
 
 export default function BabyLog() {
+  const t = useTranslations('babyLog');
+  const label = (type: string) => t(`type_${type.toLowerCase()}`);
   const [log, setLog] = useState<Entry[]>([]);
   const [now, setNow] = useState(0);
 
@@ -52,7 +55,7 @@ export default function BabyLog() {
             className="rounded-2xl bg-gradient-to-br from-primary/15 to-accent/20 py-4 text-center font-bold shadow-sm transition hover:-translate-y-0.5 active:scale-95"
           >
             <div className="text-3xl">{x.emoji}</div>
-            <div className="mt-1 text-sm">{x.type}</div>
+            <div className="mt-1 text-sm">{label(x.type)}</div>
           </button>
         ))}
       </div>
@@ -60,12 +63,12 @@ export default function BabyLog() {
       {now > 0 && (
         <>
           <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm text-ink/70">
-            <span>Today: 🍼 {count('Feed')}</span>
+            <span>{t('today')} 🍼 {count('Feed')}</span>
             <span>😴 {count('Sleep')}</span>
             <span>💧 {count('Wet')}</span>
             <span>💩 {count('Dirty')}</span>
           </div>
-          {lastFeed && <p className="mt-1 text-center text-sm font-semibold text-primary">Last feed: {since(lastFeed.t)}</p>}
+          {lastFeed && <p className="mt-1 text-center text-sm font-semibold text-primary">{t('lastFeed', { time: since(lastFeed.t) })}</p>}
         </>
       )}
 
@@ -73,7 +76,7 @@ export default function BabyLog() {
         <ul className="mt-4 divide-y divide-primary/10 text-sm">
           {recent.map((e, i) => (
             <li key={`${e.t}-${i}`} className="flex justify-between py-1.5">
-              <span>{e.emoji} {e.type}</span>
+              <span>{e.emoji} {label(e.type)}</span>
               <span className="text-ink/50">{fmtTime(e.t)}</span>
             </li>
           ))}
@@ -82,10 +85,10 @@ export default function BabyLog() {
 
       {log.length > 0 && (
         <button onClick={clear} className="mt-3 text-sm font-semibold text-primary underline">
-          Clear log
+          {t('clearLog')}
         </button>
       )}
-      <p className="mt-3 text-xs text-ink/50">Saved to this device only. A handy log, not medical monitoring.</p>
+      <p className="mt-3 text-xs text-ink/50">{t('footnote')}</p>
     </section>
   );
 }

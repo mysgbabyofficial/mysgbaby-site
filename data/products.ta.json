@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "கட்டம் வாரியாக தேர்ந்தெடுக்கப்பட்ட குழந்தைக்கான அத்தியாவசியப் பொருட்கள். விலைகள் அனுமானமானவை (SGD, 2026) மற்றும் விற்பனையாளருக்கு ஏற்ப மாறுபடும். பொருள் இணைப்புகள் முக்கிய வார்த்தையின்படி Shopee தேடலைத் திறக்கும்; கமிஷன் சம்பாதிக்க உங்கள் அஃபிலியேட் குறிச்சொல்லை site.config.ts இல் சேர்க்கவும். அஃபிலியேட் வெளிப்பாட்டைக் காணும்படி வைத்திருங்கள்.",
+    "affiliateDisclosure": "சில இணைப்புகள் அஃபிலியேட் இணைப்புகள் — உங்களுக்கு எந்தக் கூடுதல் செலவும் இல்லாமல் நாங்கள் சிறிய கமிஷன் சம்பாதிக்கலாம். இது நாங்கள் பரிந்துரைப்பதை ஒருபோதும் மாற்றாது."
+  },
+  "categories": [
+    {
+      "id": "early", "title": "முயற்சி & முதல் மூன்று மாதங்கள்", "emoji": "🌱",
+      "items": [
+        { "name": "கர்ப்பப் பரிசோதனைக் கருவி", "price": "$8–$35", "keyword": "pregnancy test kit clearblue" },
+        { "name": "கர்ப்பகால வைட்டமின்கள் (ஃபோலேட் உடன்)", "price": "$20–$45", "keyword": "prenatal vitamins folate" },
+        { "name": "கர்ப்பகால / மகப்பேறு தலையணை", "price": "$40–$120", "keyword": "maternity pregnancy pillow" }
+      ]
+    },
+    {
+      "id": "mid", "title": "இரண்டாவது மூன்று மாதங்கள்", "emoji": "🎧",
+      "items": [
+        { "name": "மகப்பேறு ஆடை", "price": "$20–$80", "keyword": "maternity dress wear" },
+        { "name": "கீற்றுத் தழும்பு களிம்பு", "price": "$20–$60", "keyword": "stretch mark cream pregnancy" },
+        { "name": "வயிற்று ஆதரவுப் பட்டை", "price": "$20–$50", "keyword": "pregnancy belly support band" }
+      ]
+    },
+    {
+      "id": "late", "title": "மூன்றாவது மூன்று மாதங்கள்", "emoji": "🧸",
+      "items": [
+        { "name": "மருத்துவமனைப் பை அத்தியாவசியப் பொருட்கள்", "price": "$50–$150", "keyword": "hospital bag maternity" },
+        { "name": "மார்பகப் பம்ப்", "price": "$150–$600", "keyword": "breast pump electric" },
+        { "name": "பாலூட்டும் மார்பகச்சட்டை", "price": "$20–$60", "keyword": "nursing bra" },
+        { "name": "குழந்தை கார் இருக்கை", "price": "$150–$800", "keyword": "infant car seat" }
+      ]
+    },
+    {
+      "id": "newborn", "title": "புதிதாகப் பிறந்த குழந்தை", "emoji": "🍼",
+      "items": [
+        { "name": "பிறந்த குழந்தை ஆடைகள் & போர்வைகள்", "price": "$30–$120", "keyword": "newborn clothes swaddle" },
+        { "name": "டயப்பர்கள் (பிறந்த குழந்தை)", "price": "$15–$40", "keyword": "newborn diapers" },
+        { "name": "பாட்டில்கள் & கிருமிநீக்கி", "price": "$40–$200", "keyword": "baby bottle steriliser" },
+        { "name": "குழந்தை தொட்டில்", "price": "$150–$800", "keyword": "baby cot crib" },
+        { "name": "குழந்தை கண்காணிப்பான்", "price": "$60–$300", "keyword": "baby monitor" }
+      ]
+    }
+  ]
+}

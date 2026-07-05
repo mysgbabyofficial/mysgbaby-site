@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "description": "Hospital bersalin di Singapura dengan kos bersalin RUJUKAN 2026. Angka-angka ini adalah panduan yang diambil daripada Penanda Aras Bil MOH + kadar hospital yang diterbitkan/dikumpulkan (terkini yang tersedia, ~Q2 2026) — BUKAN sebut harga. Kos berbeza mengikut kelas wad, jenis bersalin, doktor, tempoh penginapan dan komplikasi. Sentiasa sahkan dengan penganggar bil hospital masing-masing.",
+    "lastVerified": "2026-06",
+    "verificationStatus": "referenced",
+    "priceRefreshCadence": "suku tahunan, disemak oleh manusia berbanding penanda aras MOH",
+    "currency": "SGD",
+    "pricingSources": [
+      { "label": "MOH — Penanda Aras Bil & Yuran Hospital (SI836U bersalin normal, SI834U pembedahan caesarean)", "url": "https://www.moh.gov.sg/managing-expenses/bills-and-fee-benchmarks/hospital-bills-and-fee-benchmarks/", "updated": "2026-07-02" },
+      { "label": "Bil bersalin median MOH mengikut wad (dikumpulkan)", "url": "https://www.fussymama.sg/tools/delivery-cost-calculator", "updated": "2026-06" },
+      { "label": "Julat pakej hospital swasta (dikumpulkan)", "url": "https://halfhalfparenting.com/articles/hospital-delivery-cost-singapore", "updated": "2026-01" },
+      { "label": "Penganggar bil rasmi KKH", "url": "https://www.kkh.com.sg/patient-services/finance/bill-estimator" }
+    ],
+    "mohMedianBillsByWard_2026": {
+      "basis": "Bil median MOH (julat biasa), Warganegara Singapura, SELEPAS subsidi di wad awam, SEBELUM MediSave/insurans. Penginapan bayi dibilkan secara berasingan.",
+      "wardC": { "normal": "1,346 (1,078–1,757)", "caesarean": "3,004 (2,237–4,698)" },
+      "wardB2": { "normal": "1,350 (994–1,757)", "caesarean": "2,582 (1,966–3,656)" },
+      "wardB1": { "normal": "4,463 (4,037–5,183)", "caesarean": "8,490 (7,405–9,649)" },
+      "wardA": { "normal": "6,024 (5,333–6,882)", "caesarean": "9,839 (8,709–11,457)" },
+      "privateHospital": { "normal": "10,815 (9,073–12,547)", "caesarean": "15,805 (13,722–18,563)" }
+    }
+  },
+  "hospitals": [
+    {
+      "id": "kkh", "name": "KK Women's and Children's Hospital (KKH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["kehamilan berisiko tinggi", "pusat rujukan kehamilan kembar", "NICU Tahap III", "sokongan kehilangan perinatal"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "B2/C bersubsidi (warganegara SG, selepas subsidi; median MOH ~$1,350). A/B1 tanpa subsidi: ~$4,500–$6,900.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "Tanpa komplikasi, B2/C bersubsidi. A/B1 tanpa subsidi: ~$8,500–$11,500.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "nuh", "name": "National University Hospital (NUH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["kehamilan berisiko tinggi", "NICU"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "B2/C bersubsidi (penanda aras MOH, terpakai di semua hospital awam). A/B1 tanpa subsidi: ~$4,500–$6,900.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "Tanpa komplikasi, B2/C bersubsidi. A/B1 tanpa subsidi: ~$8,500–$11,500.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "sgh", "name": "Singapore General Hospital (SGH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["obstetrik", "rujukan berisiko tinggi"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "B2/C bersubsidi (penanda aras MOH). A/B1 tanpa subsidi: ~$4,500–$6,900.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "Tanpa komplikasi, B2/C bersubsidi. A/B1 tanpa subsidi: ~$8,500–$11,500.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "thomson-medical", "name": "Thomson Medical Centre", "type": "private",
+      "wardOptions": ["4-bed", "2-bed", "Single", "Suite"],
+      "capabilities": ["obstetrik", "program pranatal"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$18,000", "basis": "Mengikut jenis bilik (4-bed → suite). Median swasta MOH ~$10,800.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$30,000", "basis": "Mengikut jenis bilik. Median swasta MOH ~$15,800.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-elizabeth-orchard", "name": "Mount Elizabeth Hospital (Orchard)", "type": "private",
+      "wardOptions": ["Single", "Deluxe", "Suite"],
+      "capabilities": ["obstetrik"],
+      "packages": {
+        "normalDelivery": { "range": "$12,000–$22,000", "basis": "Premium; standard single → deluxe suite.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$18,000–$35,000", "basis": "Premium; mengikut jenis bilik.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-elizabeth-novena", "name": "Mount Elizabeth Novena Hospital", "type": "private",
+      "wardOptions": ["Single", "Suite"],
+      "capabilities": ["obstetrik"],
+      "packages": {
+        "normalDelivery": { "range": "$12,000–$22,000", "basis": "Premium; single → suite.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$18,000–$35,000", "basis": "Premium; mengikut jenis bilik.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "gleneagles", "name": "Gleneagles Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["obstetrik"],
+      "packages": {
+        "normalDelivery": { "range": "$9,000–$18,000", "basis": "Penanda aras hospital swasta (median MOH ~$10,800); sahkan pakej dengan hospital.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$14,000–$28,000", "basis": "Penanda aras swasta (median MOH ~$15,800); sahkan dengan hospital.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "raffles-hospital", "name": "Raffles Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["obstetrik"],
+      "packages": {
+        "normalDelivery": { "range": "$9,000–$16,000", "basis": "Penanda aras hospital swasta (median MOH ~$10,800); sahkan pakej dengan hospital.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$14,000–$25,000", "basis": "Penanda aras swasta (median MOH ~$15,800); sahkan dengan hospital.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-alvernia", "name": "Mount Alvernia Hospital", "type": "private",
+      "wardOptions": ["Single", "4-bed", "Suite"],
+      "capabilities": ["obstetrik"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$15,000", "basis": "Swasta pertengahan; sahkan pakej dengan hospital.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$22,000", "basis": "Swasta pertengahan; sahkan dengan hospital.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "parkway-east", "name": "Parkway East Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed"],
+      "capabilities": ["obstetrik"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$14,000", "basis": "Swasta pertengahan; sahkan pakej dengan hospital.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$20,000", "basis": "Swasta pertengahan; sahkan dengan hospital.", "verificationStatus": "referenced" }
+      }
+    }
+  ]
+}

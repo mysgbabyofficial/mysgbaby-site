@@ -1,0 +1,475 @@
+{
+  "_meta": {
+    "description": "Pokok kandungan Penjelajah Peringkat Interaktif. Untuk maklumat sahaja, bukan nasihat perubatan; harga ialah angka rujukan 2026, sahkan dengan penyedia.",
+    "start": "home"
+  },
+  "nodes": {
+    "home": {
+      "title": "Di manakah anda dalam perjalanan anda?",
+      "intro": "Ketik satu peringkat untuk meneroka. Setiap langkah membuka lebih banyak butiran, harga dan panduan — dan anda sentiasa boleh kembali.",
+      "options": [
+        { "to": "preconception", "em": "🌱", "label": "Pra-kehamilan & Ujian", "hint": "Sedang mencuba, atau rasa anda mungkin hamil?" },
+        { "to": "first-tri", "em": "🌙", "label": "Trimester Pertama", "hint": "Minggu 1–12" },
+        { "to": "second-tri", "em": "🎧", "label": "Trimester Kedua", "hint": "Minggu 13–27" },
+        { "to": "third-tri", "em": "🧸", "label": "Trimester Ketiga", "hint": "Minggu 28–40" },
+        { "to": "labour", "em": "🍼", "label": "Bersalin & Kelahiran", "hint": "Hari penting itu" },
+        { "to": "first-year", "em": "👶", "label": "Tahun Pertama & Bayi Baru Lahir", "hint": "Kehidupan selepas kelahiran" }
+      ]
+    },
+    "preconception": {
+      "title": "Pra-kehamilan & Ujian",
+      "intro": "Baru bermula, atau rasa anda mungkin hamil? Mulakan di sini.",
+      "illustration": "/illustrations/n-preconception.webp",
+      "body": ["Sama ada anda merancang lebih awal atau menunggu untuk membuat ujian, beberapa langkah mudah menyiapkan anda dengan baik untuk permulaan yang sihat."],
+      "options": [
+        { "to": "test-kits", "em": "🧪", "label": "Kit ujian kehamilan", "hint": "Di mana untuk membeli, harga & cara membandingkan" },
+        { "to": "folic-acid", "em": "🌿", "label": "Mulakan asid folik", "hint": "Apa, bila dan di mana untuk mendapatkannya" },
+        { "to": "choose-gynae", "em": "🩺", "label": "Memilih doktor / hospital", "hint": "GP vs O&G, awam vs swasta" }
+      ]
+    },
+    "test-kits": {
+      "title": "Kit ujian kehamilan di rumah",
+      "intro": "Cara ia berfungsi, bila untuk membuat ujian, dan berapa kosnya di Singapura.",
+      "illustration": "/illustrations/illus-test-kit.webp",
+      "body": [
+        "Ujian kehamilan di rumah memeriksa air kencing anda untuk hormon hCG, yang meningkat selepas telur yang disenyawakan tertanam.",
+        "Kebanyakan kit paling boleh dipercayai bermula pada hari pertama haid anda terlewat; sesetengah kit 'awal' dapat mengesan beberapa hari lebih awal."
+      ],
+      "priceTable": {
+        "caption": "Kit ujian yang biasa di Singapura (anggaran)",
+        "rows": [
+          { "item": "Jenama sendiri Watsons / Guardian", "where": "Watsons, Guardian", "price": "$8–$15", "notes": "Jalur jimat atau aliran tengah" },
+          { "item": "Clearblue (ujian garisan)", "where": "Guardian, Watsons, NTUC, Shopee", "price": "$15–$25", "notes": "Popular, mudah dibaca" },
+          { "item": "Clearblue Digital", "where": "Guardian, Watsons, Shopee", "price": "$22–$35", "notes": "Menunjukkan 'Hamil'; sesetengah menunjukkan minggu" },
+          { "item": "First Response Early Result", "where": "Guardian, Shopee, iHerb", "price": "$18–$30", "notes": "Pengesanan awal" }
+        ],
+        "note": "Julat anggaran — sahkan harga semasa di Watsons, Guardian, NTUC FairPrice, Shopee.sg atau Lazada.sg."
+      },
+      "tip": "Untuk ketepatan terbaik, buat ujian dengan <b>air kencing pertama pada waktu pagi</b>, apabila hCG paling pekat.",
+      "sources": [{ "label": "HealthHub — Kehamilan", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "how-to-test", "em": "📋", "label": "Cara menggunakan kit ujian", "hint": "Langkah demi langkah" },
+        { "to": "test-results", "em": "🔎", "label": "Memahami keputusan anda", "hint": "Positif, negatif atau tidak jelas" }
+      ]
+    },
+    "how-to-test": {
+      "title": "Cara menggunakan kit ujian",
+      "intro": "Beberapa langkah mudah untuk keputusan yang boleh dipercayai.",
+      "illustration": "/illustrations/n-how-to-test.webp",
+      "body": [
+        "1. Baca risalah yang disertakan dengan kit anda — jenama berbeza sedikit.",
+        "2. Gunakan air kencing pertama pada waktu pagi untuk ketepatan terbaik.",
+        "3. Sama ada pegang batang itu dalam aliran air kencing anda atau celupkannya, seperti yang diarahkan oleh kit.",
+        "4. Letakkannya rata dan tunggu masa yang dinyatakan (selalunya 3–5 minit).",
+        "5. Baca keputusan dalam tempoh masa yang ditetapkan — garisan yang muncul jauh kemudian boleh mengelirukan."
+      ],
+      "tip": "Dua garisan (atau 'Hamil') = positif; satu garisan (atau 'Tidak Hamil') = negatif — walaupun garisan kedua yang <b>samar</b> biasanya dikira sebagai positif.",
+      "options": [{ "to": "test-results", "em": "🔎", "label": "Sekarang semak keputusan anda", "hint": "Apa yang ditunjukkannya?" }]
+    },
+    "test-results": {
+      "title": "Memahami keputusan anda",
+      "intro": "Apa yang ditunjukkan oleh ujian anda? Ketik yang sepadan.",
+      "options": [
+        { "to": "result-positive", "em": "➕", "label": "Positif (hamil)", "hint": "Dua garisan / 'Hamil'" },
+        { "to": "result-negative", "em": "➖", "label": "Negatif (tidak hamil)", "hint": "Satu garisan / 'Tidak Hamil'" },
+        { "to": "result-unclear", "em": "❓", "label": "Garisan samar atau tidak jelas", "hint": "Tidak pasti apa yang saya lihat" }
+      ]
+    },
+    "result-positive": {
+      "celebrate": "🎉 Tahniah! Keputusan positif ialah permulaan perjalanan yang luar biasa.",
+      "illustration": "/illustrations/illus-positive.webp",
+      "title": "Anda hamil — apa sekarang?",
+      "intro": "Berikut ialah langkah-langkah pertama anda yang lembut.",
+      "body": ["Ujian di rumah yang positif biasanya tepat. Langkah seterusnya ialah mengesahkannya dan memulakan penjagaan awal supaya anda dan bayi anda mendapat permulaan yang terbaik."],
+      "tip": "Tempah <b>temu janji pertama anda dengan GP atau O&G</b> — mereka akan mengesahkan kehamilan dan membimbing anda dari sini.",
+      "sources": [
+        { "label": "HealthHub — Kehamilan awal", "url": "https://www.healthhub.sg" },
+        { "label": "KK Women's & Children's Hospital", "url": "https://www.kkh.com.sg" }
+      ],
+      "options": [
+        { "to": "first-visit", "em": "🩺", "label": "Tempah lawatan pranatal pertama anda", "hint": "Biasanya sekitar 6–8 minggu" },
+        { "to": "folic-acid", "em": "🌿", "label": "Mulakan (atau teruskan) asid folik", "hint": "Menyokong perkembangan awal yang sihat" },
+        { "to": "dating-scan", "em": "📅", "label": "Apa yang dijangka pada imbasan penetapan tarikh", "hint": "Mengesahkan tarikh jangkaan anda" },
+        { "to": "first-tri", "em": "🌙", "label": "Teruskan ke Trimester Pertama", "hint": "Semua untuk minggu 1–12", "cta": true }
+      ]
+    },
+    "result-negative": {
+      "title": "Keputusan negatif",
+      "intro": "Bukan penghujung jalan — masa memainkan peranan.",
+      "illustration": "/illustrations/n-result-negative.webp",
+      "body": [
+        "Negatif boleh bermaksud ia terlalu awal dan hCG belum cukup tinggi untuk dikesan lagi.",
+        "Jika haid anda tidak datang, uji semula dalam 2–3 hari dengan air kencing pertama pada waktu pagi.",
+        "Jika kitaran anda tidak teratur, atau anda telah mencuba untuk seketika, adalah baik untuk berbincang dengan doktor."
+      ],
+      "options": [
+        { "to": "test-kits", "em": "🧪", "label": "Kembali ke kit ujian", "hint": "Uji semula atau cuba kit yang lebih sensitif" },
+        { "to": "choose-gynae", "em": "🩺", "label": "Berbincang dengan doktor", "hint": "GP atau klinik kesuburan" }
+      ]
+    },
+    "result-unclear": {
+      "title": "Garisan samar atau keputusan tidak jelas",
+      "intro": "Sangat biasa — ini maksudnya biasanya.",
+      "illustration": "/illustrations/n-result-unclear.webp",
+      "body": [
+        "Garisan kedua yang samar selalunya positif awal, apabila hCG masih rendah.",
+        "Uji semula dalam 48 jam dengan air kencing pertama pada waktu pagi — garisan biasanya menjadi lebih jelas jika anda hamil.",
+        "Untuk kepastian, klinik boleh membuat ujian darah, yang mengesan kehamilan lebih awal dan lebih tepat."
+      ],
+      "options": [
+        { "to": "how-to-test", "em": "📋", "label": "Semak semula cara membuat ujian", "hint": "Pastikan masanya betul" },
+        { "to": "choose-gynae", "em": "🩺", "label": "Jumpa klinik untuk ujian darah", "hint": "Paling tepat" }
+      ]
+    },
+    "first-visit": {
+      "title": "Lawatan pranatal pertama anda",
+      "intro": "Apa yang berlaku, dan apa yang perlu dibawa.",
+      "illustration": "/illustrations/n-first-visit.webp",
+      "body": [
+        "Biasanya sekitar 6–8 minggu. Doktor mengesahkan kehamilan, menyemak sejarah kesihatan anda, mungkin membuat ujian air kencing dan imbasan awal, serta menganggarkan tarikh jangkaan anda.",
+        "Bawa NRIC/kad pengenalan anda dan senarai sebarang ubat atau suplemen yang anda ambil."
+      ],
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "dating-scan", "em": "📅", "label": "Imbasan penetapan tarikh", "hint": "Apa yang diperiksanya" },
+        { "to": "choose-gynae", "em": "🏥", "label": "Ke mana untuk pergi", "hint": "Bandingkan hospital & klinik" }
+      ]
+    },
+    "dating-scan": {
+      "title": "Imbasan penetapan tarikh",
+      "intro": "Pandangan pertama anda pada bayi anda.",
+      "illustration": "/illustrations/n-dating-scan.webp",
+      "body": ["Biasanya 6–10 minggu. Ia mengesahkan kehamilan berada dalam rahim dan sedang berkembang, memeriksa degupan jantung, dan memberikan tarikh jangkaan yang tepat berdasarkan saiz bayi."],
+      "options": [{ "to": "first-tri", "em": "🌙", "label": "Teruskan ke Trimester Pertama", "hint": "Minggu 1–12", "cta": true }]
+    },
+    "folic-acid": {
+      "title": "Asid folik",
+      "intro": "Langkah harian kecil dengan kesan yang besar.",
+      "illustration": "/illustrations/n-folic-acid.webp",
+      "body": ["WHO dan Health Promotion Board Singapura (Lembaga Promosi Kesihatan) mengesyorkan asid folik dari pra-kehamilan sehingga sekitar minggu 12 untuk menyokong perkembangan saraf yang sihat. Multivitamin pranatal biasanya mengandunginya."],
+      "priceTable": {
+        "caption": "Di mana untuk mendapatkannya (anggaran)",
+        "rows": [
+          { "item": "Tablet asid folik", "where": "Watsons, Guardian, Unity, klinik", "price": "$5–$15", "notes": "Suplemen asas" },
+          { "item": "Multivitamin pranatal (dengan folat)", "where": "Farmasi, Shopee", "price": "$20–$45", "notes": "Folat + zat besi, DHA dll." }
+        ],
+        "note": "Anggaran — tanya doktor atau ahli farmasi anda apa yang sesuai untuk anda."
+      },
+      "sources": [
+        { "label": "HPB Singapore", "url": "https://www.hpb.gov.sg" },
+        { "label": "WHO", "url": "https://www.who.int" }
+      ],
+      "options": [{ "to": "choose-gynae", "em": "🩺", "label": "Berbincang dengan doktor", "hint": "Nasihat yang diperibadikan" }]
+    },
+    "choose-gynae": {
+      "title": "Memilih doktor atau hospital",
+      "intro": "Awam atau swasta, GP atau O&G — inilah intinya.",
+      "illustration": "/illustrations/n-choose-gynae.webp",
+      "body": [
+        "Anda boleh bermula dengan GP, atau terus berjumpa O&G (pakar obstetrik-ginekologi).",
+        "Hospital awam (KKH, NUH, SGH) secara amnya lebih murah dan boleh mengendalikan penjagaan berisiko tinggi; penjagaan swasta menawarkan kesinambungan dengan satu doktor dan waktu yang lebih fleksibel.",
+        "Perbandingan penuh — pakej dan anggaran kos — ada di halaman Hospital di laman ini."
+      ],
+      "options": [{ "to": "preconception", "em": "↩️", "label": "Kembali ke permulaan", "hint": "Teroka pilihan lain" }]
+    },
+    "first-tri": {
+      "celebrate": "Tahniah atas si kecil anda! 🌙",
+      "title": "Trimester Pertama (Minggu 1–12)",
+      "intro": "Inilah yang perlu diberi perhatian dalam minggu-minggu awal ini.",
+      "illustration": "/illustrations/n-first-tri.webp",
+      "body": ["Perkara besar sedang berlaku walaupun masih sedikit yang kelihatan. Ini ialah pencapaian penting dan pemeriksaan utama."],
+      "options": [
+        { "to": "first-visit", "em": "🩺", "label": "Lawatan pranatal pertama", "hint": "~6–8 minggu" },
+        { "to": "screening", "em": "🧬", "label": "Saringan (OSCAR / NIPT)", "hint": "~11–14 minggu" },
+        { "to": "symptoms", "em": "🤢", "label": "Gejala awal yang biasa", "hint": "Apa yang normal, bila untuk menghubungi" },
+        { "to": "folic-acid", "em": "🌿", "label": "Suplemen", "hint": "Asid folik & vitamin pranatal" }
+      ]
+    },
+    "screening": {
+      "title": "Saringan trimester pertama",
+      "intro": "OSCAR dan NIPT — apakah ia.",
+      "illustration": "/illustrations/n-screening.webp",
+      "body": [
+        "OSCAR (~11–14 minggu) menggabungkan ultrasound dengan ujian darah untuk menilai kemungkinan keadaan tertentu.",
+        "NIPT ialah ujian darah yang lebih baharu dan lebih tepat yang boleh dilakukan dari sekitar 10 minggu. Doktor anda akan membantu anda memutuskan yang mana sesuai untuk anda."
+      ],
+      "priceTable": {
+        "caption": "Kos saringan rujukan (2026)",
+        "rows": [
+          { "item": "OSCAR", "where": "Kebanyakan hospital/klinik", "price": "$300–$400", "notes": "Imbasan + ujian darah" },
+          { "item": "NIPT", "where": "Hospital/klinik", "price": "$1,200–$1,400", "notes": "Ujian darah yang lebih tepat" }
+        ],
+        "note": "Rujukan 2026 (penanda aras MOH / kadar penyedia) — sesetengah kos boleh dituntut MediSave. Sahkan dengan penyedia anda."
+      },
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "first-tri", "em": "↩️", "label": "Kembali ke Trimester Pertama", "hint": "" }]
+    },
+    "symptoms": {
+      "title": "Gejala awal yang biasa",
+      "intro": "Kebanyakannya normal — tetapi ketahui tanda-tanda amaran.",
+      "illustration": "/illustrations/n-symptoms.webp",
+      "body": [
+        "Loya, keletihan, payudara yang sakit dan kerap membuang air kecil adalah biasa dan biasanya reda.",
+        "Hubungi doktor anda dengan segera jika anda mengalami pendarahan yang banyak, sakit yang teruk atau berterusan, atau muntah yang teruk sehingga anda tidak dapat menahan cecair."
+      ],
+      "tip": "Percayai naluri anda — jika sesuatu terasa tidak kena, sentiasa OK untuk menghubungi penyedia penjagaan anda.",
+      "options": [{ "to": "first-tri", "em": "↩️", "label": "Kembali ke Trimester Pertama", "hint": "" }]
+    },
+    "second-tri": {
+      "title": "Trimester Kedua (Minggu 13–27)",
+      "intro": "Selalunya tempoh yang paling selesa.",
+      "illustration": "/illustrations/n-second-tri.webp",
+      "options": [
+        { "to": "anomaly-scan", "em": "🩻", "label": "Imbasan anomali", "hint": "~18–22 minggu" },
+        { "to": "glucose-test", "em": "🩸", "label": "Ujian toleransi glukosa", "hint": "~24–28 minggu" },
+        { "to": "kicks", "em": "👣", "label": "Merasai tendangan", "hint": "Bila dan apa yang perlu diperhatikan" }
+      ]
+    },
+    "anomaly-scan": {
+      "title": "Imbasan anomali",
+      "intro": "Pemeriksaan terperinci tentang perkembangan bayi anda.",
+      "illustration": "/illustrations/n-anomaly-scan.webp",
+      "body": ["Sekitar 18–22 minggu, imbasan ini memeriksa organ dan pertumbuhan bayi. Jika anda mahu, anda biasanya boleh mengetahui jantinanya."],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "Kembali ke Trimester Kedua", "hint": "" }]
+    },
+    "glucose-test": {
+      "title": "Ujian toleransi glukosa (GTT)",
+      "intro": "Saringan untuk diabetes semasa hamil.",
+      "illustration": "/illustrations/n-glucose-test.webp",
+      "body": ["Sekitar 24–28 minggu, anda meminum larutan bergula dan darah diambil untuk memeriksa cara badan anda mengendalikan glukosa."],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "Kembali ke Trimester Kedua", "hint": "" }]
+    },
+    "kicks": {
+      "title": "Merasai tendangan",
+      "intro": "Salah satu pencapaian yang paling indah.",
+      "illustration": "/illustrations/n-kicks.webp",
+      "body": ["Ramai yang mula merasai pergerakan sekitar 18–24 minggu. Kemudian, mengenali corak bayi anda membantu anda perasan perubahan."],
+      "options": [{ "to": "second-tri", "em": "↩️", "label": "Kembali ke Trimester Kedua", "hint": "" }]
+    },
+    "third-tri": {
+      "title": "Trimester Ketiga (Minggu 28–40)",
+      "intro": "Peringkat akhir — masa untuk bersiap sedia.",
+      "illustration": "/illustrations/n-third-tri.webp",
+      "options": [
+        { "to": "hospital-bag", "em": "🎒", "label": "Senarai semak beg hospital", "hint": "Apa yang perlu dikemas" },
+        { "to": "birth-plan", "em": "📝", "label": "Pelan kelahiran anda", "hint": "Pilihan anda" },
+        { "to": "gbs", "em": "🧫", "label": "Calitan GBS", "hint": "~35–37 minggu" }
+      ]
+    },
+    "hospital-bag": {
+      "title": "Senarai semak beg hospital",
+      "intro": "Kemas dari sekitar minggu 36.",
+      "illustration": "/illustrations/n-hospital-bag.webp",
+      "body": ["Untuk anda: kad pengenalan & dokumen, pakaian selesa, barangan mandian, pengecas telefon, snek. Untuk bayi: pakaian pulang, sarung tangan, bedung. Hospital anda menyediakan kebanyakan keperluan asas — semak senarainya juga."],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "Kembali ke Trimester Ketiga", "hint": "" }]
+    },
+    "birth-plan": {
+      "title": "Pelan kelahiran anda",
+      "intro": "Panduan kepada pilihan anda — dikekalkan fleksibel.",
+      "illustration": "/illustrations/n-birth-plan.webp",
+      "body": ["Catatkan pilihan untuk melegakan kesakitan, siapa yang bersama anda, dan penjagaan selepas kelahiran, kemudian bincangkannya dengan penyedia penjagaan anda. Pelan boleh berubah pada hari itu, dan itu tidak mengapa."],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "Kembali ke Trimester Ketiga", "hint": "" }]
+    },
+    "gbs": {
+      "title": "Calitan GBS",
+      "intro": "Pemeriksaan rutin yang pantas.",
+      "illustration": "/illustrations/n-gbs.webp",
+      "body": ["Sekitar 35–37 minggu, satu calitan mudah memeriksa Group B Strep, bakteria biasa yang boleh diuruskan dengan mudah semasa bersalin jika ada."],
+      "options": [{ "to": "third-tri", "em": "↩️", "label": "Kembali ke Trimester Ketiga", "hint": "" }]
+    },
+    "labour": {
+      "title": "Bersalin & Kelahiran",
+      "intro": "Mengetahui tanda-tandanya membantu anda berasa bersedia.",
+      "illustration": "/illustrations/n-labour.webp",
+      "options": [
+        { "to": "signs", "em": "⏰", "label": "Tanda-tanda bersalin", "hint": "Bila untuk masuk hospital" },
+        { "to": "admission", "em": "🏥", "label": "Dimasukkan ke wad", "hint": "Apa yang berlaku" },
+        { "to": "after-birth", "em": "🍼", "label": "Sebaik selepas kelahiran", "hint": "Jam-jam pertama" }
+      ]
+    },
+    "signs": {
+      "title": "Tanda-tanda bersalin",
+      "intro": "Hubungi hospital atau doktor anda apabila ini bermula.",
+      "illustration": "/illustrations/n-signs.webp",
+      "body": ["Kontraksi yang teratur dan menegang yang semakin rapat; ketuban pecah; atau 'show' (sedikit palam lendir). Jika kontraksi kuat dan teratur, atau ketuban anda pecah, hubungi hospital anda."],
+      "tip": "Jika anda mengalami pendarahan yang banyak atau pergerakan bayi berkurangan, hubungi penyedia penjagaan anda <b>dengan serta-merta</b>.",
+      "options": [{ "to": "labour", "em": "↩️", "label": "Kembali ke Bersalin & Kelahiran", "hint": "" }]
+    },
+    "admission": {
+      "title": "Dimasukkan ke wad",
+      "intro": "Apa yang dijangka di hospital.",
+      "illustration": "/illustrations/n-admission.webp",
+      "body": ["Kakitangan memeriksa kontraksi anda dan bayi, mungkin memeriksa sejauh mana proses bersalin telah berkembang, dan menempatkan anda ke wad bersalin. Bawa beg hospital dan dokumen anda."],
+      "options": [{ "to": "labour", "em": "↩️", "label": "Kembali ke Bersalin & Kelahiran", "hint": "" }]
+    },
+    "after-birth": {
+      "title": "Sebaik selepas kelahiran",
+      "intro": "Jam-jam emas yang pertama.",
+      "illustration": "/illustrations/n-after-birth.webp",
+      "body": ["Sentuhan kulit-ke-kulit, penyusuan pertama, dan pemeriksaan awal untuk bayi anda. Sokongan penyusuan tersedia di kebanyakan hospital di Singapura jika anda mahukan bantuan."],
+      "options": [{ "to": "labour", "em": "↩️", "label": "Kembali ke Bersalin & Kelahiran", "hint": "" }]
+    },
+    "first-year": {
+      "celebrate": "🎉 Tahniah — selamat datang ke alam keibubapaan!",
+      "title": "Tahun Pertama & Bayi Baru Lahir",
+      "intro": "Tahun pertama ialah penyesuaian yang menggembirakan namun meletihkan. Inilah perkara yang perlu dijaga.",
+      "illustration": "/illustrations/n-first-year.webp",
+      "options": [
+        { "to": "admin-checklist", "em": "📋", "label": "Selepas bayi tiba: urusan pentadbiran", "hint": "Pendaftaran, Baby Bonus, geran" },
+        { "to": "confinement", "em": "🍲", "label": "Pantang — perancangan & kos", "hint": "Pengasuh, pusat atau buat sendiri" },
+        { "to": "newborn-care", "em": "🌙", "label": "Asas penjagaan bayi baru lahir", "hint": "Penyusuan, tidur, bila untuk menghubungi" },
+        { "to": "vaccinations", "em": "💉", "label": "Vaksinasi kanak-kanak", "hint": "Jadual NCIS" },
+        { "to": "postnatal-support", "em": "💜", "label": "Pemulihan & sokongan", "hint": "Kesihatan anda juga penting" },
+        { "to": "childcare", "em": "🧸", "label": "Penjagaan bayi & subsidi", "hint": "Rancang awal — senarai menunggu" }
+      ]
+    },
+    "admin-checklist": {
+      "title": "Selepas bayi tiba: urusan pentadbiran",
+      "intro": "Beberapa tugas penting dalam minggu-minggu pertama.",
+      "illustration": "/illustrations/n-admin-checklist.webp",
+      "body": [
+        "Daftarkan kelahiran dalam masa 14 hari (di hospital atau melalui LifeSG / ICA) — ini memberikan anda sijil kelahiran.",
+        "Daftar dalam Baby Bonus Scheme untuk menerima Cash Gift dan membuka Child Development Account (CDA).",
+        "MediSave Grant for Newborns sebanyak $5,000 dikreditkan secara automatik semasa kelahiran, dan bayi anda dilindungi oleh MediShield Life dari hari pertama.",
+        "Memohon pasport pertama bayi baru lahir anda? Yuran permohonan dikecualikan."
+      ],
+      "sources": [{ "label": "LifeSG — Mengalu-alukan bayi baru lahir anda", "url": "https://www.life.gov.sg/family-parenting/when-your-child-is-born" }],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "Kembali ke Tahun Pertama", "hint": "" }]
+    },
+    "confinement": {
+      "title": "Pantang — perancangan & kos",
+      "intro": "Tempoh pemulihan tradisional 28–40 hari, dan berapa kosnya.",
+      "illustration": "/illustrations/n-confinement.webp",
+      "body": [
+        "Pantang ialah tempoh rehat-dan-pemulihan selepas kelahiran, tertumpu pada pemulihan, penyusuan dan penyesuaian. Keluarga memilih tahap sokongan yang berbeza — pengasuh yang menginap, pusat pantang, penghantaran makanan, atau bantuan daripada saudara-mara.",
+        "Ia salah satu kos terbesar selepas kelahiran, dan MediSave tidak menanggungnya — jadi peruntukkan bajet untuknya secara berasingan."
+      ],
+      "priceTable": {
+        "caption": "Kos pantang di Singapura (2026, anggaran)",
+        "rows": [
+          { "item": "Pengasuh pantang (28 hari)", "where": "Agensi berlesen MOM", "price": "$3,500–$5,500", "notes": "$6,000+ semasa Tahun Baru Cina; ang bao tambahan" },
+          { "item": "Pusat pantang", "where": "Pusat bergaya hotel", "price": "$8,000–$20,000+", "notes": "Penginapan + penjagaan" },
+          { "item": "Penghantaran makanan pantang", "where": "Pelbagai penyedia katering", "price": "$1,500–$3,000", "notes": "Kira-kira 28 hari" },
+          { "item": "Urut selepas bersalin", "where": "Rumah / studio", "price": "$300–$800", "notes": "Pakej beberapa sesi" },
+          { "item": "Perunding laktasi", "where": "IBCLC swasta", "price": "$150–$400", "notes": "Setiap lawatan" }
+        ],
+        "note": "Julat anggaran 2026 — MediSave TIDAK menanggung pantang. Sahkan dengan penyedia."
+      },
+      "sources": [
+        { "label": "Panduan kos pantang (2026)", "url": "https://www.bankingcredit.com.sg/confinement-cost-singapore/" },
+        { "label": "Harga pengasuh pantang (2026)", "url": "https://newbubs.sg/blog/confinement-nanny-price-singapore-2026-full-cost-breakdown/" }
+      ],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "Kembali ke Tahun Pertama", "hint": "" }]
+    },
+    "newborn-care": {
+      "title": "Asas penjagaan bayi baru lahir",
+      "intro": "Minggu-minggu pertama — penyusuan, tidur, dan apa yang normal.",
+      "illustration": "/illustrations/n-newborn-care.webp",
+      "body": [
+        "Bayi baru lahir menyusu kerap (kira-kira setiap 2–3 jam), tidur dalam tempoh yang singkat, dan menggunakan banyak lampin — semuanya normal dalam minggu-minggu awal.",
+        "Jaundis ringan adalah biasa pada hari-hari pertama; hospital atau doktor anda akan memeriksanya.",
+        "Hubungi doktor anda dengan segera jika bayi anda demam, kurang menyusu, terlalu mengantuk atau sukar dikejutkan, atau anda bimbang tentang pernafasannya."
+      ],
+      "tip": "Percayai naluri anda — apabila ragu tentang bayi anda, sentiasa OK untuk menghubungi pakar pediatrik atau hospital anda.",
+      "sources": [{ "label": "HealthHub — Penjagaan bayi baru lahir", "url": "https://www.healthhub.sg" }],
+      "options": [
+        { "to": "nc-feeding", "em": "🍼", "label": "Penyusuan", "hint": "Susu ibu, botol & seberapa kerap" },
+        { "to": "nc-sleep", "em": "😴", "label": "Tidur selamat", "hint": "Di mana & bagaimana bayi tidur" },
+        { "to": "nc-bathing", "em": "🛁", "label": "Mandi & penjagaan tali pusat", "hint": "Asasnya" },
+        { "to": "nc-signs", "em": "🚨", "label": "Bila untuk menghubungi doktor", "hint": "Tanda-tanda amaran" },
+        { "to": "first-year", "em": "↩️", "label": "Kembali ke Tahun Pertama", "hint": "" }
+      ]
+    },
+    "nc-feeding": {
+      "title": "Menyusukan bayi baru lahir anda",
+      "intro": "Susu ibu, botol, dan seberapa kerap.",
+      "body": [
+        "Bayi baru lahir menyusu sedikit dan kerap — kira-kira setiap 2–3 jam, atau 8–12 kali sehari, mengikut permintaan.",
+        "Susu ibu disyorkan jika boleh; susu formula ialah alternatif yang selamat, dan ramai keluarga menggabungkan kedua-duanya.",
+        "Tanda bayi mendapat cukup: 6 atau lebih lampin basah sehari selepas minggu pertama, kenaikan berat yang stabil, dan tenang selepas menyusu."
+      ],
+      "tip": "Bergelut dengan penyusuan atau bekalan susu? Perunding laktasi atau klinik hospital anda boleh membantu — lihat skrin Pemulihan & sokongan.",
+      "sources": [{ "label": "HealthHub — Penyusuan susu ibu", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Kembali ke penjagaan bayi baru lahir", "hint": "" }]
+    },
+    "nc-sleep": {
+      "title": "Tidur selamat",
+      "intro": "Peraturan mudah yang memastikan bayi selamat.",
+      "body": [
+        "Sentiasa baringkan bayi menelentang untuk tidur, dalam katil bayi atau buaian mereka sendiri.",
+        "Pastikan katil bayi kosong — tiada alas tidur longgar, bantal, pelapik atau mainan lembut — dan jangan biarkan bayi terlalu panas.",
+        "Bayi baru lahir tidur dalam tempoh yang singkat, siang dan malam; tempoh yang lebih panjang datang dengan masa."
+      ],
+      "tip": "Berkongsi bilik (katil bayi di dalam bilik anda) untuk bulan-bulan pertama disyorkan; berkongsi katil tidak digalakkan.",
+      "sources": [{ "label": "HealthHub — Tidur selamat", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Kembali ke penjagaan bayi baru lahir", "hint": "" }]
+    },
+    "nc-bathing": {
+      "title": "Mandi & penjagaan tali pusat",
+      "intro": "Memastikan bayi bersih pada hari-hari awal.",
+      "body": [
+        "Sehingga puntung tali pusat tertanggal (biasanya 1–2 minggu), berikan mandi span dan pastikan tali pusat bersih dan kering.",
+        "Beberapa kali mandi seminggu sudah memadai untuk bayi baru lahir; bersihkan bahagian penting (muka, tangan, punggung) di antaranya.",
+        "Sokong kepala dan leher pada setiap masa, dan jangan sekali-kali biarkan bayi keseorangan dalam air — walaupun seketika."
+      ],
+      "sources": [{ "label": "HealthHub — Penjagaan bayi baru lahir", "url": "https://www.healthhub.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Kembali ke penjagaan bayi baru lahir", "hint": "" }]
+    },
+    "nc-signs": {
+      "title": "Bila untuk menghubungi doktor",
+      "intro": "Percayai naluri anda — ini memerlukan perhatian segera.",
+      "body": [
+        "Hubungi doktor anda atau pergi ke perkhidmatan kecemasan kanak-kanak jika bayi baru lahir anda demam, kurang menyusu, terlalu mengantuk atau sukar dikejutkan, atau anda bimbang tentang pernafasannya.",
+        "Dapatkan juga nasihat untuk lampin basah yang kurang daripada biasa, jaundis yang bertambah teruk (kekuningan merebak atau bertambah pekat), atau muntah yang berterusan.",
+        "Apabila sesuatu terasa tidak kena, sentiasa OK untuk menghubungi — anda paling mengenali bayi anda."
+      ],
+      "tip": "KKH dan hospital lain mempunyai perkhidmatan kecemasan kanak-kanak 24 jam.",
+      "sources": [{ "label": "HealthHub", "url": "https://www.healthhub.sg" }, { "label": "KKH", "url": "https://www.kkh.com.sg" }],
+      "options": [{ "to": "newborn-care", "em": "↩️", "label": "Kembali ke penjagaan bayi baru lahir", "hint": "" }]
+    },
+    "vaccinations": {
+      "title": "Vaksinasi kanak-kanak",
+      "intro": "Jadual Imunisasi Kanak-kanak Kebangsaan Singapura (National Childhood Immunisation Schedule, NCIS).",
+      "illustration": "/illustrations/n-vaccinations.webp",
+      "body": [
+        "Semasa kelahiran: BCG dan suntikan Hepatitis B yang pertama, biasanya diberikan di hospital.",
+        "Sepanjang 18 bulan pertama: 6-dalam-1 (difteria, tetanus, batuk kokol, polio, Hib, Hep B), pneumokokal (PCV), MMR dan cacar air, merentasi beberapa lawatan.",
+        "Vaksinasi difteria dan campak diwajibkan oleh undang-undang di Singapura.",
+        "Kebanyakan vaksin berharga kira-kira $10–$30 di poliklinik untuk warganegara selepas subsidi, dan boleh dibayar daripada geran MediSave bayi."
+      ],
+      "sources": [
+        { "label": "HealthHub — Vaksinasi kanak-kanak", "url": "https://www.healthhub.sg" },
+        { "label": "HPB", "url": "https://www.hpb.gov.sg" }
+      ],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "Kembali ke Tahun Pertama", "hint": "" }]
+    },
+    "postnatal-support": {
+      "title": "Pemulihan & sokongan",
+      "intro": "Kesejahteraan anda sama pentingnya. Anda tidak keseorangan.",
+      "illustration": "/illustrations/n-postnatal-support.webp",
+      "body": [
+        "Badan anda memerlukan masa untuk pulih, dan minggu-minggu awal boleh menjadi emosi yang mendalam. Berasa sedih, cemas atau tertekan adalah biasa — dan sokongan tersedia.",
+        "Jururawat komuniti dari KKH/NUH boleh melawat anda di rumah dalam minggu-minggu pertama; perunding laktasi boleh membantu dengan penyusuan; dan pekerja sosial hospital boleh menghubungkan anda dengan sokongan lanjut."
+      ],
+      "tip": "Jika anda berasa sedih, cemas atau tidak mampu menghadapinya secara berterusan, sila hubungi — talian ini adalah percuma dan sulit.",
+      "sources": [
+        { "label": "Talian Bantuan Wanita AWARE — 1800-777-5555", "url": "https://www.aware.org.sg" },
+        { "label": "Talian Bantuan IMH — 6389 2222", "url": "https://www.imh.com.sg" },
+        { "label": "Samaritans of Singapore (SOS) — 1767", "url": "https://www.sos.org.sg" }
+      ],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "Kembali ke Tahun Pertama", "hint": "" }]
+    },
+    "childcare": {
+      "title": "Penjagaan bayi & subsidi",
+      "intro": "Rancang awal — pusat yang baik mempunyai senarai menunggu.",
+      "illustration": "/illustrations/n-childcare.webp",
+      "body": [
+        "Tempat penjagaan bayi (2–18 bulan) dan penjagaan kanak-kanak cepat penuh, jadi berbaloi untuk mendaftar minat lebih awal sebelum anda kembali bekerja.",
+        "Ibu yang bekerja boleh menerima subsidi sehingga kira-kira $1,710/bulan untuk penjagaan bayi (berperingkat mengikut pendapatan), yang mengurangkan yuran dengan ketara.",
+        "Keluarga berpendapatan rendah juga mungkin layak untuk sokongan tambahan seperti KidSTART."
+      ],
+      "sources": [{ "label": "LifeSG — Prasekolah & penjagaan kanak-kanak", "url": "https://www.life.gov.sg/family-parenting" }],
+      "options": [{ "to": "first-year", "em": "↩️", "label": "Kembali ke Tahun Pertama", "hint": "" }]
+    }
+  }
+}

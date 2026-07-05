@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "description": "怀孕时间线阶段及新加坡常见里程碑。临床内容——发布前需经新加坡注册医生审核。周数为典型值，非强制规定。",
+    "clinicalReviewStatus": "pending",
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "stages": [
+    {
+      "id": "pre-conception",
+      "title": "孕前准备与验孕",
+      "weekRange": null,
+      "milestones": ["叶酸（孕前开始服用）", "验孕", "选择全科医生/妇产科医生"],
+      "adviseMe": true
+    },
+    {
+      "id": "first-trimester",
+      "title": "孕早期（第1–12周）",
+      "weekRange": [1, 12],
+      "milestones": ["首次产检", "孕周确认超声检查", "OSCAR / NIPT 筛查", "叶酸服用至约第12周"],
+      "adviseMeWeeks": [6, 8, 12]
+    },
+    {
+      "id": "second-trimester",
+      "title": "孕中期（第13–27周）",
+      "weekRange": [13, 27],
+      "milestones": ["胎儿畸形筛查超声（约第18–22周）", "葡萄糖耐量试验", "开始记录胎动", "Tdap 疫苗（第27–36周）"],
+      "adviseMeWeeks": [20, 24]
+    },
+    {
+      "id": "third-trimester",
+      "title": "孕晚期（第28–40周）",
+      "weekRange": [28, 40],
+      "milestones": ["生长发育超声检查", "GBS 拭子检测（约第35–37周）", "待产包", "分娩计划"],
+      "adviseMeWeeks": [28, 36]
+    },
+    {
+      "id": "labour-delivery",
+      "title": "分娩与生产",
+      "weekRange": [40, 42],
+      "milestones": ["临产征兆", "入院", "分娩", "产后护理与哺乳"],
+      "adviseMeWeeks": [40]
+    }
+  ]
+}

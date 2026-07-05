@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "description": "சிங்கப்பூர் பெற்றோர் சலுகைகள் — 2026. புள்ளிவிவரங்கள் 2026-07-01 அன்று அதிகாரப்பூர்வ அரசு ஆதாரங்களுடன் சரிபார்க்கப்பட்டன. ஒவ்வொரு வெளியீட்டிற்கும் முன் மீண்டும் சரிபார்க்கவும்; பல புள்ளிவிவரங்கள் 1 Apr 2025 மற்றும் 1 Apr 2026 அன்று மாற்றப்பட்டன.",
+    "lastVerified": "2026-07-01",
+    "verifiedBy": "manual (எந்த மாற்றத்தையும் வெளியிடுவதற்கு முன் மனித மறுஆய்வு தேவை)",
+    "authoritativeSources": [
+      "https://www.mom.gov.sg/employment-practices/leave/paternity-leave",
+      "https://www.mom.gov.sg/employment-practices/leave/shared-parental-leave",
+      "https://www.profamilyleave.msf.gov.sg",
+      "https://www.healthhub.sg/support-and-tools/costs-and-financing/marriage_parenthood_scheme",
+      "https://www.madeforfamilies.gov.sg",
+      "https://www.life.gov.sg/family-parenting/benefits-support/large-families-scheme",
+      "https://www.cpf.gov.sg"
+    ],
+    "warning": "இந்தக் கோப்பில் மாற்றங்களைத் தானாகவே வெளியிட வேண்டாம். பெற்றோருக்கு வழங்கப்படும் நிதி வழிகாட்டல் மனித மறுஆய்வில் நிறைவேற வேண்டும். docs/RISK-AND-FEASIBILITY.md ஐப் பார்க்கவும்."
+  },
+  "babyBonusCashGift": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 11000, "2": 11000, "3plus": 13000 },
+    "confidence": "high",
+    "source": "MSF Baby Bonus Scheme (வெளியீட்டிற்கு முன் MSF அதிகாரப்பூர்வ பக்கத்தில் தற்போதைய சரியான அட்டவணையை உறுதிப்படுத்தவும்)",
+    "note": "தூண்டுதலில் உள்ள எண்ணிக்கை ($11K / $13K) பொருந்துகிறது."
+  },
+  "cdaFirstStepGrant": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 5000, "3plus": 10000 },
+    "confidence": "high",
+    "source": "Large Families Scheme — Made for Families / LifeSG",
+    "note": "3வது மற்றும் அதற்கு மேற்பட்ட, 18 Feb 2025 அன்று அல்லது அதற்குப் பிறகு பிறந்த குழந்தைகளுக்கு $10,000 ஆக உயர்த்தப்பட்டது (Large Families Scheme)."
+  },
+  "cdaCoMatchingCap": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 6000, "2": 6000, "3-4": 12000, "5plus": 18000 },
+    "confidence": "medium",
+    "source": "இரண்டாம்நிலை திரட்டு ஆதாரங்கள் 2023-க்குப் பிந்தைய மேம்பாட்டுடன் ஒத்துப்போகின்றன; வெளியிடுவதற்கு முன் MSF Baby Bonus அதிகாரப்பூர்வ பக்கத்தில் உறுதிப்படுத்தவும்.",
+    "correctionFromPrompt": "தூண்டுதல் $4K/$7K/$9K/$15K எனக் குறிப்பிட்டது — காலாவதியானது. தற்போதைய அட்டவணை $6K/$12K/$18K."
+  },
+  "medisaveGrantForNewborns": {
+    "currency": "SGD",
+    "amount": 5000,
+    "priorAmount": 4000,
+    "effectiveFrom": "2025-04-01",
+    "confidence": "high",
+    "source": "HealthHub — Marriage and Parenthood Schemes (அதிகாரப்பூர்வம்)",
+    "correctionFromPrompt": "தூண்டுதல் $4,000 எனக் குறிப்பிட்டது — காலாவதியானது. 1 Apr 2025 அன்று அல்லது அதற்குப் பிறகு பிறப்புகளுக்கு $5,000 ஆக மேம்படுத்தப்பட்டது."
+  },
+  "largeFamiliesScheme": {
+    "appliesTo": "2025-02-18 அன்று அல்லது அதற்குப் பிறகு பிறந்த 3வது அல்லது அடுத்தடுத்த சிங்கப்பூர் குடிமகன் குழந்தை",
+    "totalUpTo": 16000,
+    "currency": "SGD",
+    "components": {
+      "cdaFirstStepGrantIncrease": 5000,
+      "largeFamilyMedisaveGrant": 5000,
+      "largeFamilyLifeSgCredits": { "perYear": 1000, "years": "குழந்தை வயது 1 முதல் 6 வரை", "total": 6000 }
+    },
+    "confidence": "high",
+    "source": "Made for Families / LifeSG / CNA Budget 2025 (அதிகாரப்பூர்வம்)"
+  },
+  "leave": {
+    "maternityLeaveWeeks": { "value": 16, "confidence": "high", "source": "GPML — MOM" },
+    "paternityLeaveWeeks": {
+      "value": 4,
+      "confidence": "high",
+      "source": "GPPL — MOM (அதிகாரப்பூர்வம்)",
+      "correctionFromPrompt": "தூண்டுதல் 2 வாரங்கள் எனக் குறிப்பிட்டது — காலாவதியானது. Government-Paid Paternity Leave 4 வாரங்கள்."
+    },
+    "sharedParentalLeaveWeeks": {
+      "byChildDob": {
+        "2025-04-01_to_2026-03-31": 6,
+        "on_or_after_2026-04-01": 10
+      },
+      "govPayCapPerWeek": 2500,
+      "confidence": "high",
+      "source": "MOM + MSF ProFamilyLeave (அதிகாரப்பூர்வம்)",
+      "correctionFromPrompt": "தூண்டுதல் 6 வாரங்கள் (2025) எனக் குறிப்பிட்டது. தற்போதைய உரிமை 10 வாரங்கள், 1 Apr 2026 அன்று அல்லது அதற்குப் பிறகு பிறந்த குழந்தைகளுக்கு."
+    },
+    "childcareLeaveDaysPerYear": { "value": 6, "condition": "7 வயதுக்குட்பட்ட குழந்தை", "confidence": "medium", "source": "வெளியீட்டிற்கு முன் MOM இல் உறுதிப்படுத்தவும்" }
+  },
+  "medisaveMaternityPackage": {
+    "effectiveFrom": "2025-04-01",
+    "currency": "SGD",
+    "preDeliveryLimit": 900,
+    "hospitalisationPerDay": { "days1to2": 1130, "day3plus": 400 },
+    "deliveryProcedureSurgicalLimitRange": [1120, 2770],
+    "deliveryExamples": {
+      "normalVaginal": 750,
+      "assistedVaginal": 1250,
+      "caesareanStandard": 2150,
+      "caesareanWithTubalLigation": 2600,
+      "caesareanWithHysterectomy": 3950
+    },
+    "confidence": "high",
+    "source": "HealthHub / CPFB / Made for Families (அதிகாரப்பூர்வம்)",
+    "correctionFromPrompt": "தூண்டுதல் லேபிள்களைக் குழப்பியது: அது $2,150 ஐ 'assisted' என்று அழைத்தது (இது நிலையான சிசேரியன்) மற்றும் $3,950 ஐ 'C-section' என்று அழைத்தது (இது கருப்பை அகற்றுதலுடன் கூடிய சிசேரியன்). உதவியுடன் கூடிய யோனி பிரசவம் $1,250."
+  },
+  "parenthoodTaxRebate": {
+    "currency": "SGD",
+    "byBirthOrder": { "1": 5000, "2": 10000, "3plus": 20000 },
+    "confidence": "medium",
+    "source": "IRAS — வெளியீட்டிற்கு முன் தற்போதைய அட்டவணையை உறுதிப்படுத்தவும்"
+  },
+  "workingMothersChildRelief": {
+    "basis": "1 Jan 2024 அன்று அல்லது அதற்குப் பிறகு பிறந்த/தத்தெடுக்கப்பட்ட குழந்தைகளுக்கு நிலையான தொகை (பழைய குழந்தைகளுக்கு முன்பு வருமானத்தின் % ஆக இருந்தது).",
+    "byBirthOrder": { "1": 8000, "2": 10000, "3plus": 12000 },
+    "confidence": "high",
+    "source": "IRAS (2026-07 இல் சரிபார்க்கப்பட்டது)"
+  },
+  "firstYearsSupport": {
+    "_note": "பிறப்புக்குப் பிறகான தொடர் ஆதரவு. 2026 இல் IRAS + Made for Families உடன் சரிபார்க்கப்பட்டது. வரி விலக்குகள் 1 Jan 2024 அன்று அல்லது அதற்குப் பிறகு பிறந்த/தத்தெடுக்கப்பட்ட குழந்தைகளுக்கு நிலையான தொகைகளைப் பயன்படுத்துகின்றன.",
+    "taxReliefs": [
+      { "name": "Working Mother's Child Relief (WMCR)", "amount": "$8,000 / $10,000 / $12,000", "who": "வேலை செய்யும் தாய்மார்கள் · 1வது / 2வது / 3வது+ குழந்தை (≥ 1 Jan 2024 பிறந்த)" },
+      { "name": "Qualifying Child Relief (QCR)", "amount": "$4,000 / ஆண்டு", "who": "பெற்றோரில் எவரும், ஒரு குழந்தைக்கு (ஊனமுற்றால் $7,500)" },
+      { "name": "Parenthood Tax Rebate (PTR)", "amount": "$5,000 / $10,000 / $20,000", "who": "ஒருமுறை · 1வது / 2வது / 3வது+ · பயன்படுத்தாத தொகையை முன்கொண்டு செல்லலாம்" },
+      { "name": "Grandparent Caregiver Relief (GCR)", "amount": "$3,000 / ஆண்டு", "who": "வேலை செய்யும் தாய் · தாத்தா/பாட்டி ≤ 12 வயது குழந்தையைக் கவனிக்கிறார்" },
+      { "name": "Foreign Domestic Worker Levy Relief", "amount": "~$7,200 / ஆண்டு", "who": "உதவியாளரை வேலைக்கு அமர்த்தும் வேலை செய்யும் தாய் (வரியின் 2×)" }
+    ],
+    "childcare": [
+      { "name": "குழந்தை பராமரிப்பு மானியம் (2–18 மாதங்கள்)", "amount": "அதிகபட்சம் ~$1,710/மாதம்", "who": "வேலை செய்யும் தாய்மார்கள் (வருமான அடிப்படையில்); அடிப்படை $600" },
+      { "name": "சிறுவர் பராமரிப்பு மானியம் (18 மாதங்கள்–தரம் 1)", "amount": "வருமான அடிப்படையில் தரப்படுத்தப்பட்டது", "who": "அனைவருக்கும் அடிப்படை மானியம்; வேலை செய்தால் அதிகம்" },
+      { "name": "Child LifeSG Credits", "amount": "$1,000 / ஆண்டு (வயது 1–6)", "who": "3வது+ குழந்தை (Large Families Scheme)" },
+      { "name": "KidSTART", "amount": "வீட்டு வருகைகள் + ஆதரவு", "who": "குறைந்த வருமான குடும்பங்கள்" }
+    ],
+    "notes": [
+      "Baby Bonus Cash Gift உங்கள் குழந்தைக்கு 6.5 வயது வரை தவணைகளாக வழங்கப்படுகிறது.",
+      "CDA 12 வயதில் மூடப்படுகிறது; பயன்படுத்தாத நிதி Post-Secondary Education Account (PSEA) க்கு மாற்றப்படுகிறது.",
+      "QCR + WMCR இணைந்து ஒரு குழந்தைக்கு $50,000 ஆக வரம்பிடப்பட்டுள்ளது; மொத்த வரி விலக்குகள் ஆண்டுக்கு $80,000 ஆக வரம்பிடப்பட்டுள்ளன."
+    ],
+    "sources": [
+      { "label": "IRAS — வரி விலக்குகள்", "url": "https://www.iras.gov.sg" },
+      { "label": "Made for Families — வரி விலக்குகள் & தள்ளுபடிகள்", "url": "https://www.madeforfamilies.gov.sg/support-measures/child-raising/financial-support/tax-relief-and-rebates" },
+      { "label": "LifeSG — முன்பள்ளி & சிறுவர் பராமரிப்பு", "url": "https://www.life.gov.sg/family-parenting" }
+    ]
+  }
+}

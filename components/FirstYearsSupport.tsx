@@ -1,4 +1,5 @@
-import benefits from '@/data/benefits.json';
+import { getTranslations } from 'next-intl/server';
+import { getBenefits } from '@/lib/content';
 
 type Row = { name: string; amount: string; who: string };
 
@@ -23,8 +24,9 @@ function Table({ title, rows }: { title: string; rows: Row[] }) {
   );
 }
 
-export default function FirstYearsSupport() {
-  const d = (benefits as { firstYearsSupport?: {
+export default async function FirstYearsSupport({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: 'firstYears' });
+  const d = (getBenefits(locale) as { firstYearsSupport?: {
     taxReliefs: Row[]; childcare: Row[]; notes: string[]; sources: { label: string; url: string }[];
   } }).firstYearsSupport;
   if (!d) return null;
@@ -32,25 +34,23 @@ export default function FirstYearsSupport() {
   return (
     <section className="space-y-4">
       <div>
-        <p className="font-accent text-lg text-primary">Beyond birth</p>
-        <h2 className="text-2xl font-extrabold">Support through the first years</h2>
-        <p className="text-ink/70">
-          Government help doesn&apos;t stop at birth — here&apos;s what continues as your child grows.
-        </p>
+        <p className="font-accent text-lg text-primary">{t('eyebrow')}</p>
+        <h2 className="text-2xl font-extrabold">{t('title')}</h2>
+        <p className="text-ink/70">{t('intro')}</p>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        <Table title="💸 Tax reliefs & rebates" rows={d.taxReliefs} />
-        <Table title="🧸 Childcare & ongoing" rows={d.childcare} />
+        <Table title={t('taxTitle')} rows={d.taxReliefs} />
+        <Table title={t('childcareTitle')} rows={d.childcare} />
       </div>
       <div className="rounded-xl border border-trust/30 bg-trust/5 p-4 text-sm">
-        <p className="font-semibold">Good to know</p>
+        <p className="font-semibold">{t('goodToKnow')}</p>
         <ul className="mt-1 list-inside list-disc text-ink/70">
           {d.notes.map((n, i) => (
             <li key={i}>{n}</li>
           ))}
         </ul>
         <p className="mt-2 text-xs text-ink/50">
-          Sources:{' '}
+          {t('sources')}{' '}
           {d.sources.map((s, i) => (
             <span key={i}>
               <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline">
@@ -59,7 +59,7 @@ export default function FirstYearsSupport() {
               {i < d.sources.length - 1 ? ' · ' : ''}
             </span>
           ))}
-          . Verified 2026 — confirm on IRAS / ECDA before relying on figures.
+          . {t('sourcesNote')}
         </p>
       </div>
     </section>

@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "description": "2026 குறிப்பு பிரசவச் செலவுகளுடன் கூடிய சிங்கப்பூர் மகப்பேறு மருத்துவமனைகள். இந்த எண்ணிக்கைகள் MOH மசோதா அளவுகோல்கள் + வெளியிடப்பட்ட/திரட்டப்பட்ட மருத்துவமனைக் கட்டணங்களிலிருந்து (சமீபத்தில் கிடைக்கக்கூடியவை, ~Q2 2026) பெறப்பட்ட வழிகாட்டிகள் — மேற்கோள்கள் அல்ல. செலவுகள் வார்டு வகுப்பு, பிரசவ வகை, மருத்துவர், தங்கியிருக்கும் காலம் மற்றும் சிக்கல்களைப் பொறுத்து மாறுபடும். எப்போதும் ஒவ்வொரு மருத்துவமனையின் சொந்த மசோதா மதிப்பீட்டாளருடன் உறுதிப்படுத்தவும்.",
+    "lastVerified": "2026-06",
+    "verificationStatus": "referenced",
+    "priceRefreshCadence": "காலாண்டுக்கு ஒருமுறை, MOH அளவுகோல்களுக்கு எதிராக மனிதரால் மதிப்பாய்வு செய்யப்படுகிறது",
+    "currency": "SGD",
+    "pricingSources": [
+      { "label": "MOH — மருத்துவமனை மசோதாக்கள் & கட்டண அளவுகோல்கள் (SI836U சாதாரண பிரசவம், SI834U சிசேரியன்)", "url": "https://www.moh.gov.sg/managing-expenses/bills-and-fee-benchmarks/hospital-bills-and-fee-benchmarks/", "updated": "2026-07-02" },
+      { "label": "வார்டு வாரியாக MOH சராசரி பிரசவ மசோதாக்கள் (தொகுக்கப்பட்டது)", "url": "https://www.fussymama.sg/tools/delivery-cost-calculator", "updated": "2026-06" },
+      { "label": "தனியார் மருத்துவமனை தொகுப்பு வரம்புகள் (திரட்டப்பட்டது)", "url": "https://halfhalfparenting.com/articles/hospital-delivery-cost-singapore", "updated": "2026-01" },
+      { "label": "KKH அதிகாரப்பூர்வ மசோதா மதிப்பீட்டாளர்", "url": "https://www.kkh.com.sg/patient-services/finance/bill-estimator" }
+    ],
+    "mohMedianBillsByWard_2026": {
+      "basis": "MOH சராசரி மசோதா (வழக்கமான வரம்பு), சிங்கப்பூர் குடிமகன், பொது வார்டுகளில் மானியத்திற்குப் பிறகு, MediSave/காப்பீட்டிற்கு முன். குழந்தையின் தங்குதல் தனியாக பட்டியலிடப்படுகிறது.",
+      "wardC": { "normal": "1,346 (1,078–1,757)", "caesarean": "3,004 (2,237–4,698)" },
+      "wardB2": { "normal": "1,350 (994–1,757)", "caesarean": "2,582 (1,966–3,656)" },
+      "wardB1": { "normal": "4,463 (4,037–5,183)", "caesarean": "8,490 (7,405–9,649)" },
+      "wardA": { "normal": "6,024 (5,333–6,882)", "caesarean": "9,839 (8,709–11,457)" },
+      "privateHospital": { "normal": "10,815 (9,073–12,547)", "caesarean": "15,805 (13,722–18,563)" }
+    }
+  },
+  "hospitals": [
+    {
+      "id": "kkh", "name": "KK Women's and Children's Hospital (KKH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["அதிக ஆபத்துள்ள கர்ப்பம்", "இரட்டை/பல கருத்தரிப்பு பரிந்துரை மையம்", "நிலை III NICU (புதிதாய்ப் பிறந்த குழந்தைகள் தீவிர சிகிச்சைப் பிரிவு)", "பெரிநேட்டல் இழப்பு ஆதரவு"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "மானியம் பெற்ற B2/C (SG குடிமகன், மானியத்திற்குப் பிறகு; MOH சராசரி ~$1,350). மானியமில்லாத A/B1: ~$4,500–$6,900.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "சிக்கல்கள் இல்லாத, மானியம் பெற்ற B2/C. மானியமில்லாத A/B1: ~$8,500–$11,500.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "nuh", "name": "National University Hospital (NUH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["அதிக ஆபத்துள்ள கர்ப்பம்", "NICU (புதிதாய்ப் பிறந்த குழந்தைகள் தீவிர சிகிச்சைப் பிரிவு)"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "மானியம் பெற்ற B2/C (MOH அளவுகோல், அனைத்து பொது மருத்துவமனைகளுக்கும் பொருந்தும்). மானியமில்லாத A/B1: ~$4,500–$6,900.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "சிக்கல்கள் இல்லாத, மானியம் பெற்ற B2/C. மானியமில்லாத A/B1: ~$8,500–$11,500.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "sgh", "name": "Singapore General Hospital (SGH)", "type": "public",
+      "wardOptions": ["A", "B1", "B2", "C"],
+      "capabilities": ["மகப்பேறியல்", "அதிக ஆபத்து பரிந்துரை"],
+      "packages": {
+        "normalDelivery": { "range": "$1,000–$1,800", "basis": "மானியம் பெற்ற B2/C (MOH அளவுகோல்). மானியமில்லாத A/B1: ~$4,500–$6,900.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$2,000–$4,700", "basis": "சிக்கல்கள் இல்லாத, மானியம் பெற்ற B2/C. மானியமில்லாத A/B1: ~$8,500–$11,500.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "thomson-medical", "name": "Thomson Medical Centre", "type": "private",
+      "wardOptions": ["4-bed", "2-bed", "Single", "Suite"],
+      "capabilities": ["மகப்பேறியல்", "பிறப்புக்கு முந்தைய திட்டங்கள்"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$18,000", "basis": "அறை வகையைப் பொறுத்து (4-bed → suite). MOH தனியார் சராசரி ~$10,800.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$30,000", "basis": "அறை வகையைப் பொறுத்து. MOH தனியார் சராசரி ~$15,800.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-elizabeth-orchard", "name": "Mount Elizabeth Hospital (Orchard)", "type": "private",
+      "wardOptions": ["Single", "Deluxe", "Suite"],
+      "capabilities": ["மகப்பேறியல்"],
+      "packages": {
+        "normalDelivery": { "range": "$12,000–$22,000", "basis": "பிரீமியம்; standard single → deluxe suite.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$18,000–$35,000", "basis": "பிரீமியம்; அறை வகையைப் பொறுத்து.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-elizabeth-novena", "name": "Mount Elizabeth Novena Hospital", "type": "private",
+      "wardOptions": ["Single", "Suite"],
+      "capabilities": ["மகப்பேறியல்"],
+      "packages": {
+        "normalDelivery": { "range": "$12,000–$22,000", "basis": "பிரீமியம்; single → suite.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$18,000–$35,000", "basis": "பிரீமியம்; அறை வகையைப் பொறுத்து.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "gleneagles", "name": "Gleneagles Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["மகப்பேறியல்"],
+      "packages": {
+        "normalDelivery": { "range": "$9,000–$18,000", "basis": "தனியார் மருத்துவமனை அளவுகோல் (MOH சராசரி ~$10,800); மருத்துவமனையுடன் தொகுப்பை உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$14,000–$28,000", "basis": "தனியார் அளவுகோல் (MOH சராசரி ~$15,800); மருத்துவமனையுடன் உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "raffles-hospital", "name": "Raffles Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed", "Suite"],
+      "capabilities": ["மகப்பேறியல்"],
+      "packages": {
+        "normalDelivery": { "range": "$9,000–$16,000", "basis": "தனியார் மருத்துவமனை அளவுகோல் (MOH சராசரி ~$10,800); மருத்துவமனையுடன் தொகுப்பை உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$14,000–$25,000", "basis": "தனியார் அளவுகோல் (MOH சராசரி ~$15,800); மருத்துவமனையுடன் உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "mount-alvernia", "name": "Mount Alvernia Hospital", "type": "private",
+      "wardOptions": ["Single", "4-bed", "Suite"],
+      "capabilities": ["மகப்பேறியல்"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$15,000", "basis": "நடுத்தர தனியார்; மருத்துவமனையுடன் தொகுப்பை உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$22,000", "basis": "நடுத்தர தனியார்; மருத்துவமனையுடன் உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" }
+      }
+    },
+    {
+      "id": "parkway-east", "name": "Parkway East Hospital", "type": "private",
+      "wardOptions": ["Single", "2-bed"],
+      "capabilities": ["மகப்பேறியல்"],
+      "packages": {
+        "normalDelivery": { "range": "$8,000–$14,000", "basis": "நடுத்தர தனியார்; மருத்துவமனையுடன் தொகுப்பை உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" },
+        "cSection": { "range": "$13,000–$20,000", "basis": "நடுத்தர தனியார்; மருத்துவமனையுடன் உறுதிப்படுத்தவும்.", "verificationStatus": "referenced" }
+      }
+    }
+  ]
+}

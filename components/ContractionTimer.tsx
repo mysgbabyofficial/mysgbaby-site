@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 type C = { s: number; e: number };
 const KEY = 'mysgbaby_contractions';
@@ -10,6 +11,7 @@ const dur = (ms: number) => {
 };
 
 export default function ContractionTimer() {
+  const t = useTranslations('contraction');
   const [list, setList] = useState<C[]>([]);
   const [current, setCurrent] = useState<number | null>(null);
   const [now, setNow] = useState(0);
@@ -45,10 +47,10 @@ export default function ContractionTimer() {
   return (
     <section className="rounded-2xl border border-primary/30 bg-surface p-6 text-center">
       <p className="text-sm text-ink/70">
-        Tap <b>Start</b> when a contraction begins, <b>Stop</b> when it ends.
+        {t.rich('intro', { b: (chunks) => <b>{chunks}</b> })}
       </p>
       <div className="my-3 font-heading text-3xl font-extrabold text-primary">
-        {current !== null ? dur(now - current) : list.length ? 'Ready' : '—'}
+        {current !== null ? dur(now - current) : list.length ? t('ready') : '—'}
       </div>
       <button
         onClick={toggle}
@@ -56,15 +58,15 @@ export default function ContractionTimer() {
           current !== null ? 'bg-brand' : 'bg-gradient-to-br from-primary to-[#6a49bd]'
         }`}
       >
-        {current !== null ? '■ Stop' : '▶ Start contraction'}
+        {current !== null ? `■ ${t('stop')}` : `▶ ${t('startContraction')}`}
       </button>
 
       {recent.length > 0 && (
         <table className="mt-4 w-full text-sm">
           <thead>
             <tr className="text-xs uppercase text-ink/50">
-              <th className="text-left">Length</th>
-              <th className="text-right">Apart</th>
+              <th className="text-left">{t('thLength')}</th>
+              <th className="text-right">{t('thApart')}</th>
             </tr>
           </thead>
           <tbody>
@@ -84,12 +86,11 @@ export default function ContractionTimer() {
       )}
       {list.length > 0 && (
         <button onClick={clear} className="mt-3 text-sm font-semibold text-primary underline">
-          Clear
+          {t('clear')}
         </button>
       )}
       <p className="mt-3 rounded-lg bg-trust/10 p-2 text-xs text-ink/70">
-        <b>5-1-1 guide:</b> when contractions are ~5 min apart, last ~1 min, for 1 hour, it&apos;s
-        usually time to head in. When in doubt, call your hospital.
+        {t.rich('guide', { b: (chunks) => <b>{chunks}</b> })}
       </p>
     </section>
   );

@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "按阶段精选的婴儿必需品。价格为参考价（新元，2026 年），因卖家而异。商品链接会按关键词打开 Shopee 搜索；在 site.config.ts 中添加您的联盟标签即可赚取佣金。请保持联盟披露声明可见。",
+    "affiliateDisclosure": "部分链接为联盟链接——我们可能会赚取少量佣金，您无需支付任何额外费用。这绝不会改变我们的推荐内容。"
+  },
+  "categories": [
+    {
+      "id": "early", "title": "备孕与孕早期", "emoji": "🌱",
+      "items": [
+        { "name": "验孕棒", "price": "$8–$35", "keyword": "pregnancy test kit clearblue" },
+        { "name": "孕期维生素（含叶酸）", "price": "$20–$45", "keyword": "prenatal vitamins folate" },
+        { "name": "孕妇枕", "price": "$40–$120", "keyword": "maternity pregnancy pillow" }
+      ]
+    },
+    {
+      "id": "mid", "title": "孕中期", "emoji": "🎧",
+      "items": [
+        { "name": "孕妇装", "price": "$20–$80", "keyword": "maternity dress wear" },
+        { "name": "妊娠纹霜", "price": "$20–$60", "keyword": "stretch mark cream pregnancy" },
+        { "name": "托腹带", "price": "$20–$50", "keyword": "pregnancy belly support band" }
+      ]
+    },
+    {
+      "id": "late", "title": "孕晚期", "emoji": "🧸",
+      "items": [
+        { "name": "待产包必需品", "price": "$50–$150", "keyword": "hospital bag maternity" },
+        { "name": "吸奶器", "price": "$150–$600", "keyword": "breast pump electric" },
+        { "name": "哺乳内衣", "price": "$20–$60", "keyword": "nursing bra" },
+        { "name": "婴儿汽车安全座椅", "price": "$150–$800", "keyword": "infant car seat" }
+      ]
+    },
+    {
+      "id": "newborn", "title": "新生儿", "emoji": "🍼",
+      "items": [
+        { "name": "新生儿衣物与包巾", "price": "$30–$120", "keyword": "newborn clothes swaddle" },
+        { "name": "纸尿裤（新生儿）", "price": "$15–$40", "keyword": "newborn diapers" },
+        { "name": "奶瓶与消毒器", "price": "$40–$200", "keyword": "baby bottle steriliser" },
+        { "name": "婴儿床", "price": "$150–$800", "keyword": "baby cot crib" },
+        { "name": "婴儿监视器", "price": "$60–$300", "keyword": "baby monitor" }
+      ]
+    }
+  ]
+}

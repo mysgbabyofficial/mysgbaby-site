@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
 // First-visit quiz (prompt §2). Stores a profile in localStorage to personalise
@@ -21,6 +22,7 @@ const KEY = 'mysgbaby_profile';
 const field = 'mt-1 w-full rounded-lg border border-primary/40 bg-surface px-3 py-2';
 
 export default function OnboardingQuiz() {
+  const t = useTranslations('onboardingQuiz');
   const [p, setP] = useState<Profile>({
     stage: 'pregnant',
     week: '',
@@ -47,13 +49,13 @@ export default function OnboardingQuiz() {
     const goStage = p.stage === 'pregnant' && p.week !== '';
     return (
       <div className="rounded-2xl border border-secondary/40 bg-secondary/15 p-6">
-        <h2 className="text-xl font-bold">You&apos;re all set 🎉</h2>
-        <p className="mt-2 text-ink/80">We&apos;ll tailor what you see to your journey.</p>
+        <h2 className="text-xl font-bold">{t('allSet')} 🎉</h2>
+        <p className="mt-2 text-ink/80">{t('tailorNote')}</p>
         <Link
           href={goStage ? `/stage/${p.week}` : '/benefits'}
           className="mt-4 inline-block rounded-xl bg-primary px-5 py-2.5 font-semibold text-ink"
         >
-          {goStage ? `Go to Week ${p.week}` : 'See your benefits'}
+          {goStage ? t('goToWeek', { week: p.week }) : t('seeBenefits')}
         </Link>
       </div>
     );
@@ -62,16 +64,16 @@ export default function OnboardingQuiz() {
   return (
     <form onSubmit={submit} className="grid gap-5 rounded-2xl border border-primary/30 bg-surface p-6 md:grid-cols-2">
       <label className="text-sm font-medium">
-        Where are you now?
+        {t('stageLabel')}
         <select className={field} value={p.stage} onChange={(e) => set('stage', e.target.value as Profile['stage'])}>
-          <option value="trying">Trying to conceive</option>
-          <option value="pregnant">Pregnant</option>
-          <option value="postpartum">Postpartum</option>
+          <option value="trying">{t('stageTrying')}</option>
+          <option value="pregnant">{t('stagePregnant')}</option>
+          <option value="postpartum">{t('stagePostpartum')}</option>
         </select>
       </label>
 
       <label className="text-sm font-medium">
-        If pregnant, which week?
+        {t('weekLabel')}
         <input
           type="number"
           min={1}
@@ -79,59 +81,59 @@ export default function OnboardingQuiz() {
           className={field}
           value={p.week}
           onChange={(e) => set('week', e.target.value === '' ? '' : Number(e.target.value))}
-          placeholder="e.g. 12"
+          placeholder={t('weekPlaceholder')}
         />
       </label>
 
       <label className="text-sm font-medium">
-        Birth preference
+        {t('birthLabel')}
         <select className={field} value={p.birth} onChange={(e) => set('birth', e.target.value as Profile['birth'])}>
-          <option value="natural">Natural</option>
-          <option value="csection">C-section</option>
-          <option value="undecided">Undecided</option>
+          <option value="natural">{t('birthNatural')}</option>
+          <option value="csection">{t('birthCsection')}</option>
+          <option value="undecided">{t('undecided')}</option>
         </select>
       </label>
 
       <label className="text-sm font-medium">
-        Hospital preference
+        {t('hospitalLabel')}
         <select className={field} value={p.hospital} onChange={(e) => set('hospital', e.target.value as Profile['hospital'])}>
-          <option value="public">Public</option>
-          <option value="private">Private</option>
-          <option value="undecided">Undecided</option>
+          <option value="public">{t('hospitalPublic')}</option>
+          <option value="private">{t('hospitalPrivate')}</option>
+          <option value="undecided">{t('undecided')}</option>
         </select>
       </label>
 
       <label className="text-sm font-medium">
-        Budget (optional, SGD)
+        {t('budgetLabel')}
         <input
           type="number"
           min={0}
           className={field}
           value={p.budget}
           onChange={(e) => set('budget', e.target.value === '' ? '' : Number(e.target.value))}
-          placeholder="e.g. 8000"
+          placeholder={t('budgetPlaceholder')}
         />
       </label>
 
       <label className="text-sm font-medium">
-        First-time parent?
+        {t('firstTimeLabel')}
         <select className={field} value={p.firstTime} onChange={(e) => set('firstTime', e.target.value as Profile['firstTime'])}>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="yes">{t('yes')}</option>
+          <option value="no">{t('no')}</option>
         </select>
       </label>
 
       <label className="text-sm font-medium">
-        Single or multiples?
+        {t('multiplesLabel')}
         <select className={field} value={p.multiples} onChange={(e) => set('multiples', e.target.value as Profile['multiples'])}>
-          <option value="single">Single baby</option>
-          <option value="multiples">Twins / multiples</option>
-          <option value="unsure">Not sure yet</option>
+          <option value="single">{t('multiplesSingle')}</option>
+          <option value="multiples">{t('multiplesMultiples')}</option>
+          <option value="unsure">{t('multiplesUnsure')}</option>
         </select>
       </label>
 
       <label className="text-sm font-medium">
-        Preferred language
+        {t('languageLabel')}
         <select className={field} value={p.language} onChange={(e) => set('language', e.target.value as Profile['language'])}>
           <option value="en">English</option>
           <option value="zh">简体中文</option>
@@ -142,9 +144,9 @@ export default function OnboardingQuiz() {
 
       <div className="md:col-span-2">
         <button type="submit" className="rounded-xl bg-primary px-6 py-3 font-semibold text-ink shadow">
-          Save &amp; personalise
+          {t('save')}
         </button>
-        <p className="mt-2 text-xs text-ink/60">Saved to this device only. No account needed.</p>
+        <p className="mt-2 text-xs text-ink/60">{t('footnote')}</p>
       </div>
     </form>
   );
