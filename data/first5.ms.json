@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "description": "First 5 Years — Singapore government cost & benefits, year by year. Figures VERIFIED against official sources on 2026-07-07. Fee caps effective 1 Jan 2026. Re-verify before each release; caps/subsidies changed at Budget 2025 and may change again.",
+    "lastVerified": "2026-07-07",
+    "warning": "Do NOT auto-publish. Financial guidance must pass human review. Preschool market (private) fees are indicative market estimates, not official caps."
+  },
+  "ui": {
+    "eyebrow": "Setiap dolar yang negara laburkan untuk anak anda",
+    "title": "5 Tahun Pertama",
+    "subtitle": "Saksikan si manja anda membesar — dan lihat, tahun demi tahun, sokongan kerajaan Singapura serta kos prasekolah yang membesar bersama mereka.",
+    "intro": "Ketik setiap tahun untuk meneroka pemberian tunai, geran dan subsidi yang boleh anda manfaatkan, serta pilihan prasekolah anda dari jagaan bayi hingga tahun-tahun playgroup sebelum Darjah 1. Terus klik untuk menyaksikan anak anda membesar sehingga hari pertama mereka ke sekolah. 💛",
+    "yourChildAt": "Anak anda pada usia",
+    "supportHeading": "Sokongan kerajaan tahun ini",
+    "careHeading": "Pilihan jagaan & prasekolah",
+    "tipHeading": "Petua mesra kami",
+    "keepExploring": "Terus teroka",
+    "back": "Kembali",
+    "publicTag": "Awam / bersubsidi",
+    "privateTag": "Swasta",
+    "commonTag": "Paling biasa",
+    "optionalTag": "Pilihan",
+    "perMonth": "/sebulan",
+    "financeEyebrow": "Gambaran keseluruhan",
+    "financeHeading": "Sebuah negara yang membesar di sisi anak anda",
+    "financeBody": "Untuk anak sulung, pemberian tunai dan geran sahaja boleh berjumlah lebih daripada S$27,000 pada tahun-tahun awal — sebelum sebulan pun subsidi prasekolah atau pelepasan cukai. Anda tidak melalui ini seorang diri.",
+    "tallyLabel": "Pemberian tunai & geran, anak sulung",
+    "tallyValue": "sehingga ~S$27,000",
+    "tallyNote": "Baby Bonus $11,000 + CDA First Step $5,000 + padanan CDA sehingga $6,000 + Geran MediSave Bayi Baru Lahir $5,000. Tidak termasuk subsidi jagaan kanak-kanak bulanan, KiFAS dan pelepasan cukai, yang berjumlah jauh lebih banyak.",
+    "publicVsPrivateHeading": "Awam / bersubsidi berbanding swasta — cara memilih",
+    "publicVsPrivatePublic": "Anchor Operator (cth. PCF Sparkletots, My First Skool), Partner Operator dan Tadika MOE mempunyai had yuran dan layak untuk subsidi kerajaan serta KiFAS. Nilai terbaik, kualiti yang kukuh (bertauliah SPARK), dan selepas subsidi, keluarga berpendapatan dua sering membayar sekitar S$300/sebulan untuk jagaan kanak-kanak sepenuh hari.",
+    "publicVsPrivatePrivate": "Prasekolah swasta dan antarabangsa menetapkan yuran mereka sendiri (lebih tinggi) dan tidak layak untuk KiFAS, tetapi mungkin menawarkan pedagogi tertentu (Montessori, pendedahan dwibahasa, kurikulum antarabangsa), kelas lebih kecil atau lokasi tertentu. Subsidi Asas dan Tambahan jagaan kanak-kanak masih terpakai di mana-mana pusat berlesen ECDA.",
+    "readyHeading": "Bersedia untuk Darjah 1! 🎓",
+    "readyBody": "Dari bayi baru lahir yang dibedung hingga graduan tadika yang berbangga — dan Singapura sentiasa di sisi anda sepanjang perjalanan. Apa pun pilihan anda, anak anda memulakan langkah dengan kukuh dan penuh sokongan.",
+    "sourcesLabel": "Sumber rasmi:",
+    "verifyNote": "Angka anggaran disahkan 7 Jul 2026. Had yuran adalah untuk anak Warganegara Singapura dan tidak termasuk GST; subsidi adalah berdasarkan ujian kemampuan. Yuran prasekolah swasta adalah anggaran pasaran. Sentiasa sahkan jumlah semasa dan kelayakan di laman web rasmi ECDA, LifeSG dan Made for Families sebelum membuat keputusan."
+  },
+  "stages": [
+    {
+      "id": "newborn",
+      "avatar": "grow-0-newborn",
+      "accent": "primary",
+      "yearTitle": "Tahun 0 · Selamat datang, sayang!",
+      "ageLabel": "Bayi baru lahir",
+      "ageRange": "Lahir – 12 bulan",
+      "growth": "Kecil, mengantuk dan membesar dengan pantas — bayi anda menyusu, tidur dan menggandakan berat lahir mereka. Kebanyakan keluarga menghabiskan tahun pertama ini di rumah dengan cuti bergaji, dengan bantuan datuk dan nenek.",
+      "support": [
+        { "icon": "🎁", "name": "Pemberian Tunai Baby Bonus", "amount": "$11,000 – $13,000", "note": "$11,000 untuk anak ke-1 & ke-2 anda, $13,000 untuk anak ke-3 dan seterusnya. Dibayar secara ansuran dari lahir hingga usia 6½." },
+        { "icon": "🏦", "name": "Child Development Account (CDA)", "amount": "$5,000 – $10,000 + padanan", "note": "Geran First Step sebanyak $5,000 ($10,000 untuk anak ke-3 dan seterusnya), serta kerajaan memadankan simpanan anda dolar demi dolar (sehingga $6,000 untuk anak sulung)." },
+        { "icon": "🩺", "name": "Geran MediSave Bayi Baru Lahir", "amount": "$5,000", "note": "Dikreditkan ke akaun CPF MediSave bayi anda untuk membantu perbelanjaan penjagaan kesihatan dan MediShield Life." }
+      ],
+      "care": [
+        { "type": "Jagaan di rumah & keluarga", "tag": "common", "fee": "$0", "note": "Cuti Bersalin Dibayar Kerajaan (16 minggu), Cuti Paterniti (4 minggu) dan Cuti Ibu Bapa Berkongsi bermakna kebanyakan bayi dijaga di rumah pada tahun pertama." },
+        { "type": "Jagaan bayi (dari 2 bulan)", "tag": "optional", "fee": "$1,235 – $1,290", "note": "Had sepenuh hari di Anchor ($1,235) / Partner ($1,290) Operator. Ibu yang bekerja mendapat subsidi asas $600 + sehingga $710 lagi, jadi anda membayar jauh lebih sedikit." }
+      ],
+      "tip": "Anda tidak perlu tergesa-gesa membuat sebarang keputusan tahun ini. Buka CDA lebih awal — setiap dolar yang anda simpan dipadankan, jadi ia adalah geran bernilai terbaik untuk ditindaklanjuti."
+    },
+    {
+      "id": "baby",
+      "avatar": "grow-1-baby",
+      "accent": "accent",
+      "yearTitle": "Tahun 1 · Duduk, ketawa, meneroka",
+      "ageLabel": "1 tahun",
+      "ageRange": "12 – 24 bulan",
+      "growth": "Gigi pertama, patah perkataan pertama, langkah goyah pertama. Sekitar usia 18 bulan, ramai si kecil beralih dari jagaan bayi ke program jagaan kanak-kanak atau playgroup.",
+      "support": [
+        { "icon": "🎁", "name": "Ansuran Baby Bonus", "amount": "berterusan", "note": "Ansuran Pemberian Tunai terus tiba sepanjang tahun untuk membantu kos harian." },
+        { "icon": "🏦", "name": "Padanan bersama CDA", "amount": "sehingga $6,000 dipadankan", "note": "Terus menambah CDA — padanan kerajaan berterusan, dan dana membayar jagaan kanak-kanak serta penjagaan kesihatan yang diluluskan." },
+        { "icon": "💳", "name": "Kredit Child LifeSG", "amount": "$1,000 / setahun", "note": "Untuk anak ke-3 dan seterusnya di bawah Skim Keluarga Besar, dari usia 1 hingga 6 tahun." }
+      ],
+      "care": [
+        { "type": "Jagaan bayi (hingga 18 bulan)", "tag": "public", "fee": "$1,235 – $1,290", "note": "Subsidi asas $600/sebulan untuk ibu yang bekerja, serta sehingga $710 lagi berdasarkan ujian kemampuan." },
+        { "type": "Playgroup / jagaan kanak-kanak (dari 18 bulan)", "tag": "public", "fee": "$610 – $650", "note": "Had jagaan kanak-kanak sepenuh hari di Anchor ($610) / Partner ($650) Operator. Subsidi asas $300 + sehingga $467 lagi." }
+      ],
+      "tip": "Jika kedua-dua ibu bapa bekerja, sertai senarai menunggu pusat lebih awal — pusat Anchor Operator yang popular berhampiran rumah cepat penuh. Subsidi mengikut anak anda ke mana-mana pusat berlesen ECDA."
+    },
+    {
+      "id": "toddler",
+      "avatar": "grow-2-toddler",
+      "accent": "gold",
+      "yearTitle": "Tahun 2 · Langkah pertama, personaliti besar",
+      "ageLabel": "2 tahun",
+      "ageRange": "2 – 3 tahun",
+      "growth": "Berjalan, memanjat dan meniru segala yang anda ucapkan. Ini usia utama untuk playgroup — banyak bermain, menyanyi dan mencari kawan-kawan kecil.",
+      "support": [
+        { "icon": "🏫", "name": "Subsidi asas jagaan kanak-kanak", "amount": "$300 / sebulan", "note": "Untuk setiap ibu yang bekerja dengan anak Warganegara Singapura di pusat berlesen ECDA." },
+        { "icon": "💗", "name": "Subsidi tambahan jagaan kanak-kanak", "amount": "sehingga $467 / sebulan", "note": "Berdasarkan ujian kemampuan — untuk pendapatan isi rumah $12,000/sebulan atau ke bawah." },
+        { "icon": "🏦", "name": "CDA untuk yuran", "amount": "simpanan padanan anda", "note": "Dana CDA boleh membayar yuran pusat yang diluluskan secara terus, menjadikan bajet anda lebih menjimatkan." }
+      ],
+      "care": [
+        { "type": "Playgroup — Anchor / Partner Operator", "tag": "public", "fee": "$610 – $650", "note": "Had yuran sebelum subsidi. Keluarga berpendapatan dua sering membayar sekitar $300/sebulan selepas subsidi asas." },
+        { "type": "Prasekolah swasta / Montessori", "tag": "private", "fee": "$1,000 – $2,500", "note": "Julat pasaran anggaran. Yuran lebih tinggi, kurikulum sendiri; subsidi asas + tambahan masih terpakai, tetapi bukan KiFAS." }
+      ],
+      "tip": "Awam berbanding swasta bukan tentang kualiti — Anchor Operator juga bertauliah SPARK. Pilih berdasarkan kesesuaian: lokasi, waktu, pendedahan bahasa dan bajet anda selepas subsidi."
+    },
+    {
+      "id": "nursery1",
+      "avatar": "grow-3-preschool",
+      "accent": "secondary",
+      "yearTitle": "Tahun 3 · Pelajar kecil yang ingin tahu",
+      "ageLabel": "3 tahun",
+      "ageRange": "3 – 4 tahun",
+      "growth": "Penuh dengan soalan dan imaginasi. Anak anda memulakan Nursery 1 (N1) — literasi awal, numerasi dan banyak permainan kreatif.",
+      "support": [
+        { "icon": "🏫", "name": "Subsidi jagaan kanak-kanak berterusan", "amount": "$300 + sehingga $467", "note": "Subsidi Asas + Tambahan terpakai sepanjang tahun-tahun prasekolah di pusat berlesen ECDA." },
+        { "icon": "💗", "name": "Subsidi penuh untuk berpendapatan rendah", "amount": "yuran hampir $0", "note": "Keluarga yang berpendapatan $6,000/sebulan atau ke bawah (atau PCI $1,500) boleh menerima subsidi jagaan kanak-kanak penuh." },
+        { "icon": "💳", "name": "Kredit Child LifeSG", "amount": "$1,000 / setahun", "note": "Berterusan untuk anak ke-3 dan seterusnya (usia 1–6)." }
+      ],
+      "care": [
+        { "type": "Nursery — Anchor / Partner Operator", "tag": "public", "fee": "$610 – $650", "note": "Had sepenuh hari sebelum subsidi; jauh lebih rendah selepasnya." },
+        { "type": "Prasekolah swasta (N1)", "tag": "private", "fee": "$1,000 – $2,500", "note": "Anggaran. Pilih untuk pedagogi atau kemudahan; subsidi terpakai, KiFAS tidak." }
+      ],
+      "tip": "Lawati dua atau tiga pusat sebelum membuat komitmen. Tanya tentang kadar pertukaran guru, rutin harian dan cara mereka menenangkan si kecil yang gelisah — itu lebih penting daripada kemudahan yang mewah."
+    },
+    {
+      "id": "nursery2",
+      "avatar": "grow-4-nursery",
+      "accent": "trust",
+      "yearTitle": "Tahun 4 · Yakin dan peramah",
+      "ageLabel": "4 tahun",
+      "ageRange": "4 – 5 tahun",
+      "growth": "Memakai pakaian sendiri, mencari kawan, penuh dengan cerita. Anak anda berada di Nursery 2 (N2) atau Kindergarten 1 (K1), membina kesediaan bersekolah.",
+      "support": [
+        { "icon": "🏫", "name": "Subsidi jagaan kanak-kanak", "amount": "$300 + sehingga $467", "note": "Masih tersedia di pusat jagaan kanak-kanak berlesen ECDA." },
+        { "icon": "🎒", "name": "KiFAS (laluan tadika)", "amount": "sehingga ~$161 / sebulan", "note": "Jika di Anchor Operator atau Tadika MOE: bantuan berdasarkan ujian kemampuan untuk pendapatan isi rumah $12,000/sebulan atau ke bawah." },
+        { "icon": "🎈", "name": "Geran Permulaan KiFAS", "amount": "sehingga $240 / setahun", "note": "Membantu keluarga berpendapatan rendah dengan pendaftaran, pakaian seragam dan bahan." }
+      ],
+      "care": [
+        { "type": "Tadika MOE (K1)", "tag": "public", "fee": "$150", "note": "Pilihan awam yang sangat berpatutan (had tadika Anchor). Kurikulum dwibahasa yang kukuh, berasaskan permainan." },
+        { "type": "Jagaan kanak-kanak / prasekolah swasta", "tag": "private", "fee": "$610 – $2,500", "note": "Jagaan kanak-kanak sepenuh hari ($610–$650 dihadkan) atau prasekolah swasta ($1,000–$2,500 anggaran)." }
+      ],
+      "tip": "Inilah tahun untuk memahami cara pendaftaran Darjah 1 berfungsi — Tadika MOE dan sesetengah prasekolah mempunyai kaitan dengan sekolah rendah. Catat fasa-fasa dan tarikh keutamaan anda lebih awal."
+    },
+    {
+      "id": "kindergarten",
+      "avatar": "grow-5-primary",
+      "accent": "primary",
+      "yearTitle": "Tahun 5 · Hampir menjadi anak besar!",
+      "ageLabel": "5 – 6 tahun",
+      "ageRange": "5 – 6 tahun",
+      "growth": "Membaca perkataan mudah, mengira, dan begitu berbangga dengan diri mereka. Kindergarten 2 (K2) ialah landasan penuh keseronokan terakhir sebelum Darjah 1 pada tahun berikutnya.",
+      "support": [
+        { "icon": "🎒", "name": "KiFAS", "amount": "sehingga ~$161 / sebulan", "note": "Berterusan di K2 di Anchor Operator / Tadika MOE untuk keluarga yang layak." },
+        { "icon": "🏫", "name": "Subsidi jagaan kanak-kanak", "amount": "$300 + sehingga $467", "note": "Terpakai sehingga anak anda memasuki Darjah 1, di pusat jagaan kanak-kanak berlesen ECDA." },
+        { "icon": "🏦", "name": "CDA & baki dana", "amount": "boleh digunakan hingga usia 12", "note": "CDA kekal terbuka sehingga usia 12; dana yang tidak digunakan akan dipindahkan ke Akaun Pendidikan Pasca Menengah." }
+      ],
+      "care": [
+        { "type": "Tadika MOE (K2)", "tag": "public", "fee": "$150", "note": "Tadika awam yang berpatutan dan berkualiti tinggi — tahun sebelum Darjah 1." },
+        { "type": "Jagaan kanak-kanak / prasekolah swasta (K2)", "tag": "private", "fee": "$610 – $2,500", "note": "Jagaan sepenuh hari untuk ibu bapa yang bekerja, atau prasekolah swasta atas pilihan." }
+      ],
+      "tip": "Daftar untuk Darjah 1 pada tahun anak anda berusia 6 (untuk kemasukan pada usia 7). Semak fasa keutamaan anda lebih awal — jarak dekat dengan rumah dan kaitan adik-beradik boleh sangat penting."
+    }
+  ],
+  "sources": [
+    { "label": "ECDA — subsidi jagaan bayi & kanak-kanak", "url": "https://www.ecda.gov.sg/parents/preschool-subsidies/infant-and-childcare-subsidy-scheme/overview" },
+    { "label": "ECDA — had yuran Anchor Operator", "url": "https://www.ecda.gov.sg/parents/choosing-a-preschool/aop" },
+    { "label": "ECDA — KiFAS", "url": "https://www.ecda.gov.sg/parents/preschool-subsidies/kindergarten-fee-assistance-scheme-(kifas)/overview" },
+    { "label": "Made for Families — Baby Bonus, CDA, MediSave", "url": "https://www.madeforfamilies.gov.sg" },
+    { "label": "LifeSG — prasekolah & jagaan kanak-kanak", "url": "https://www.life.gov.sg/family-parenting" }
+  ]
+}

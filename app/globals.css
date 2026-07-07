@@ -104,6 +104,47 @@ h1, h2, h3 { font-family: var(--font-heading), system-ui, sans-serif; line-heigh
   100% { transform: translateY(70vh); opacity: 0; }
 }
 
+/* ---- IVF journey: step entrance, progress spark, glowing CTA ---- */
+@keyframes ivf-step-in {
+  0% { opacity: 0; transform: translateY(16px) scale(.985); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes ivf-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(179,160,220,.6); }
+  50% { box-shadow: 0 0 0 8px rgba(179,160,220,0); }
+}
+@keyframes ivf-cta-glow {
+  0%, 100% { box-shadow: 0 6px 18px rgba(231,198,124,.45); transform: translateY(0); }
+  50% { box-shadow: 0 10px 26px rgba(231,198,124,.75); transform: translateY(-1px); }
+}
+
+/* ---- Loss support: gentle rising hearts, soft glow, tender affirmations ---- */
+@keyframes loss-heart {
+  0% { transform: translateY(0) scale(.9); opacity: 0; }
+  15% { opacity: .55; }
+  80% { opacity: .45; }
+  100% { transform: translateY(-260px) scale(1.1); opacity: 0; }
+}
+@keyframes loss-glow {
+  0%, 100% { opacity: .5; transform: translateY(-50%) scale(1); }
+  50% { opacity: .85; transform: translateY(-50%) scale(1.08); }
+}
+@keyframes loss-affirm {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- First 5 Years: growth entrance + gentle float ---- */
+@keyframes growIn {
+  0% { opacity: 0; transform: translateY(14px) scale(.9); }
+  60% { transform: translateY(0) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
 /* Accessibility: respect user motion preference (prompt §18). */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

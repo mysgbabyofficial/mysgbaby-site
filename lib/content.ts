@@ -27,6 +27,11 @@ import timelineZh from '@/data/timeline.zh.json';
 import timelineMs from '@/data/timeline.ms.json';
 import timelineTa from '@/data/timeline.ta.json';
 
+import first5En from '@/data/first5.json';
+import first5Zh from '@/data/first5.zh.json';
+import first5Ms from '@/data/first5.ms.json';
+import first5Ta from '@/data/first5.ta.json';
+
 // Returns a getter typed to the English shape; other locales are cast to it so a
 // tiny structural drift in a translation can never break the type-check / build.
 function localized<T>(en: T, zh: unknown, ms: unknown, ta: unknown) {
@@ -39,3 +44,4 @@ export const getBenefits = localized(benefitsEn, benefitsZh, benefitsMs, benefit
 export const getHospitals = localized(hospitalsEn, hospitalsZh, hospitalsMs, hospitalsTa);
 export const getProducts = localized(productsEn, productsZh, productsMs, productsTa);
 export const getTimeline = localized(timelineEn, timelineZh, timelineMs, timelineTa);
+export const getFirst5 = localized(first5En, first5Zh, first5Ms, first5Ta);

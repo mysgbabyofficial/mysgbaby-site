@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 
 const FEATURES = [
   { href: '/explore', emoji: '🗺️', id: 'explore' },
+  { href: '/first5', emoji: '🌱', id: 'first5' },
   { href: '/benefits', emoji: '💰', id: 'benefits' },
   { href: '/hospitals', emoji: '🏥', id: 'hospitals' },
   { href: '/calculator', emoji: '🧮', id: 'calculator' },

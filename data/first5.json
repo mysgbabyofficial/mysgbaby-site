@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "description": "First 5 Years — Singapore government cost & benefits, year by year. Figures VERIFIED against official sources on 2026-07-07. Fee caps effective 1 Jan 2026. Re-verify before each release; caps/subsidies changed at Budget 2025 and may change again.",
+    "lastVerified": "2026-07-07",
+    "warning": "Do NOT auto-publish. Financial guidance must pass human review. Preschool market (private) fees are indicative market estimates, not official caps."
+  },
+  "ui": {
+    "eyebrow": "Every dollar the nation invests in your child",
+    "title": "The First 5 Years",
+    "subtitle": "Watch your little one grow — and see, year by year, the Singapore government support and preschool costs that grow with them.",
+    "intro": "Tap through each year to explore the cash gifts, grants and subsidies you can tap on, plus your preschool choices from infant care to the playgroup years right before Primary 1. Keep clicking to watch your child grow all the way to their first school day. 💛",
+    "yourChildAt": "Your child at",
+    "supportHeading": "Government support this year",
+    "careHeading": "Care & preschool options",
+    "tipHeading": "Our gentle tip",
+    "keepExploring": "Keep exploring",
+    "back": "Back",
+    "publicTag": "Public / subsidised",
+    "privateTag": "Private",
+    "commonTag": "Most common",
+    "optionalTag": "Optional",
+    "perMonth": "/month",
+    "financeEyebrow": "The big picture",
+    "financeHeading": "A nation growing up beside your child",
+    "financeBody": "For a first child, cash gifts and grants alone can add up to more than S$27,000 in the early years — before a single month of preschool subsidy or tax relief. You are not doing this alone.",
+    "tallyLabel": "Cash gifts & grants, first child",
+    "tallyValue": "up to ~S$27,000",
+    "tallyNote": "Baby Bonus $11,000 + CDA First Step $5,000 + CDA matching up to $6,000 + Newborn MediSave Grant $5,000. Excludes monthly childcare subsidies, KiFAS and tax reliefs, which add up to much more.",
+    "publicVsPrivateHeading": "Public / subsidised vs private — how to choose",
+    "publicVsPrivatePublic": "Anchor Operators (e.g. PCF Sparkletots, My First Skool), Partner Operators and MOE Kindergartens are fee-capped and eligible for government subsidies and KiFAS. Best value, strong quality (SPARK-certified), and after subsidies a dual-income family often pays around S$300/month for full-day childcare.",
+    "publicVsPrivatePrivate": "Private and international preschools set their own (higher) fees and are not KiFAS-eligible, but may offer a specific pedagogy (Montessori, bilingual immersion, international curriculum), smaller classes or particular locations. Basic and Additional childcare subsidies still apply at any ECDA-licensed centre.",
+    "readyHeading": "Ready for Primary 1! 🎓",
+    "readyBody": "From a swaddled newborn to a proud kindergarten graduate — and Singapore has been right beside you the whole way. Whatever you choose, your child has a strong, supported start.",
+    "sourcesLabel": "Official sources:",
+    "verifyNote": "Indicative figures verified 7 Jul 2026. Fee caps are for Singapore Citizen children and exclude GST; subsidies are means-tested. Private-preschool fees are market estimates. Always confirm current amounts and eligibility on the official ECDA, LifeSG and Made for Families websites before deciding."
+  },
+  "stages": [
+    {
+      "id": "newborn",
+      "avatar": "grow-0-newborn",
+      "accent": "primary",
+      "yearTitle": "Year 0 · Welcome, baby!",
+      "ageLabel": "Newborn",
+      "ageRange": "Birth – 12 months",
+      "growth": "Tiny, sleepy and growing fast — your newborn feeds, naps and doubles their birth weight. Most families spend this first year at home on paid leave, with help from grandparents.",
+      "support": [
+        { "icon": "🎁", "name": "Baby Bonus Cash Gift", "amount": "$11,000 – $13,000", "note": "$11,000 for your 1st & 2nd child, $13,000 for the 3rd+. Paid in instalments from birth until age 6½." },
+        { "icon": "🏦", "name": "Child Development Account (CDA)", "amount": "$5,000 – $10,000 + matching", "note": "First Step grant of $5,000 ($10,000 for 3rd+), plus the government matches your savings dollar-for-dollar (up to $6,000 for a 1st child)." },
+        { "icon": "🩺", "name": "Newborn MediSave Grant", "amount": "$5,000", "note": "Credited to your baby's CPF MediSave to help with healthcare and MediShield Life." }
+      ],
+      "care": [
+        { "type": "Home & family care", "tag": "common", "fee": "$0", "note": "Government-Paid Maternity (16 weeks), Paternity (4 weeks) and Shared Parental Leave mean most babies are cared for at home in year one." },
+        { "type": "Infant care (from 2 months)", "tag": "optional", "fee": "$1,235 – $1,290", "note": "Full-day cap at Anchor ($1,235) / Partner ($1,290) Operators. Working mums get a $600 basic subsidy + up to $710 more, so you pay far less." }
+      ],
+      "tip": "You don't need to rush any decisions this year. Open the CDA early — every dollar you save is matched, so it's the single best-value grant to act on."
+    },
+    {
+      "id": "baby",
+      "avatar": "grow-1-baby",
+      "accent": "accent",
+      "yearTitle": "Year 1 · Sitting, giggling, exploring",
+      "ageLabel": "1 year old",
+      "ageRange": "12 – 24 months",
+      "growth": "First tooth, first words, first wobbles. Around 18 months many little ones move from infant care into a childcare or playgroup programme.",
+      "support": [
+        { "icon": "🎁", "name": "Baby Bonus instalments", "amount": "ongoing", "note": "Cash Gift instalments keep arriving through the year to help with daily costs." },
+        { "icon": "🏦", "name": "CDA co-matching", "amount": "up to $6,000 matched", "note": "Keep topping up the CDA — the government match continues, and funds pay for approved childcare and healthcare." },
+        { "icon": "💳", "name": "Child LifeSG Credits", "amount": "$1,000 / year", "note": "For a 3rd+ child under the Large Families Scheme, from age 1 to 6." }
+      ],
+      "care": [
+        { "type": "Infant care (to 18 months)", "tag": "public", "fee": "$1,235 – $1,290", "note": "Basic subsidy $600/mo for working mums, plus up to $710 more means-tested." },
+        { "type": "Playgroup / childcare (from 18 months)", "tag": "public", "fee": "$610 – $650", "note": "Full-day childcare cap at Anchor ($610) / Partner ($650) Operators. Basic subsidy $300 + up to $467 more." }
+      ],
+      "tip": "If both parents work, join a centre's waitlist early — popular Anchor Operator centres near home fill up fast. Subsidies follow your child to any ECDA-licensed centre."
+    },
+    {
+      "id": "toddler",
+      "avatar": "grow-2-toddler",
+      "accent": "gold",
+      "yearTitle": "Year 2 · First steps, big personality",
+      "ageLabel": "2 years old",
+      "ageRange": "2 – 3 years",
+      "growth": "Walking, climbing and copying everything you say. This is prime playgroup age — lots of play, songs and making little friends.",
+      "support": [
+        { "icon": "🏫", "name": "Basic childcare subsidy", "amount": "$300 / month", "note": "For every working mum with a Singapore Citizen child at an ECDA-licensed centre." },
+        { "icon": "💗", "name": "Additional childcare subsidy", "amount": "up to $467 / month", "note": "Means-tested — for household income of $12,000/month or below." },
+        { "icon": "🏦", "name": "CDA for fees", "amount": "your matched savings", "note": "CDA funds can pay approved centre fees directly, stretching your budget further." }
+      ],
+      "care": [
+        { "type": "Playgroup — Anchor / Partner Operator", "tag": "public", "fee": "$610 – $650", "note": "Fee cap before subsidy. A dual-income family often pays around $300/mo after the basic subsidy." },
+        { "type": "Private / Montessori preschool", "tag": "private", "fee": "$1,000 – $2,500", "note": "Indicative market range. Higher fees, own curriculum; basic + additional subsidies still apply, but not KiFAS." }
+      ],
+      "tip": "Public vs private isn't about quality — Anchor Operators are SPARK-certified too. Choose on fit: location, hours, language exposure and your budget after subsidies."
+    },
+    {
+      "id": "nursery1",
+      "avatar": "grow-3-preschool",
+      "accent": "secondary",
+      "yearTitle": "Year 3 · Curious little learner",
+      "ageLabel": "3 years old",
+      "ageRange": "3 – 4 years",
+      "growth": "Full of questions and imagination. Your child starts Nursery 1 (N1) — early literacy, numeracy and lots of creative play.",
+      "support": [
+        { "icon": "🏫", "name": "Childcare subsidies continue", "amount": "$300 + up to $467", "note": "Basic + Additional subsidy apply right through the preschool years at ECDA-licensed centres." },
+        { "icon": "💗", "name": "Full subsidy for lower-income", "amount": "fees near $0", "note": "Families earning $6,000/mo or below (or PCI $1,500) can receive full childcare subsidies." },
+        { "icon": "💳", "name": "Child LifeSG Credits", "amount": "$1,000 / year", "note": "Continues for a 3rd+ child (ages 1–6)." }
+      ],
+      "care": [
+        { "type": "Nursery — Anchor / Partner Operator", "tag": "public", "fee": "$610 – $650", "note": "Full-day cap before subsidy; much less after." },
+        { "type": "Private preschool (N1)", "tag": "private", "fee": "$1,000 – $2,500", "note": "Indicative. Choose for pedagogy or convenience; subsidies apply, KiFAS does not." }
+      ],
+      "tip": "Visit two or three centres before committing. Ask about teacher turnover, the daily routine and how they settle in anxious toddlers — that matters more than glossy facilities."
+    },
+    {
+      "id": "nursery2",
+      "avatar": "grow-4-nursery",
+      "accent": "trust",
+      "yearTitle": "Year 4 · Confident and social",
+      "ageLabel": "4 years old",
+      "ageRange": "4 – 5 years",
+      "growth": "Dressing themselves, making friends, bursting with stories. Your child is in Nursery 2 (N2) or Kindergarten 1 (K1), building school-readiness.",
+      "support": [
+        { "icon": "🏫", "name": "Childcare subsidies", "amount": "$300 + up to $467", "note": "Still available at ECDA-licensed childcare centres." },
+        { "icon": "🎒", "name": "KiFAS (kindergarten route)", "amount": "up to ~$161 / month", "note": "If in an Anchor Operator or MOE Kindergarten: means-tested help for household income $12,000/mo or below." },
+        { "icon": "🎈", "name": "KiFAS Start-Up Grant", "amount": "up to $240 / year", "note": "Helps lower-income families with registration, uniform and materials." }
+      ],
+      "care": [
+        { "type": "MOE Kindergarten (K1)", "tag": "public", "fee": "$150", "note": "Very affordable public option (Anchor kindergarten cap). Strong bilingual, play-based curriculum." },
+        { "type": "Childcare / private preschool", "tag": "private", "fee": "$610 – $2,500", "note": "Full-day childcare ($610–$650 capped) or private preschool ($1,000–$2,500 indicative)." }
+      ],
+      "tip": "This is the year to learn how Primary 1 registration works — MOE Kindergartens and some preschools have links to primary schools. Note the phases and your priority dates early."
+    },
+    {
+      "id": "kindergarten",
+      "avatar": "grow-5-primary",
+      "accent": "primary",
+      "yearTitle": "Year 5 · Almost a big kid!",
+      "ageLabel": "5 – 6 years old",
+      "ageRange": "5 – 6 years",
+      "growth": "Reading simple words, counting, and so proud of themselves. Kindergarten 2 (K2) is the final playful runway before Primary 1 the following year.",
+      "support": [
+        { "icon": "🎒", "name": "KiFAS", "amount": "up to ~$161 / month", "note": "Continues in K2 at Anchor Operator / MOE Kindergartens for eligible families." },
+        { "icon": "🏫", "name": "Childcare subsidies", "amount": "$300 + up to $467", "note": "Apply until your child enters Primary 1, at ECDA-licensed childcare centres." },
+        { "icon": "🏦", "name": "CDA & leftover funds", "amount": "usable to age 12", "note": "CDA stays open until age 12; unused funds roll into the Post-Secondary Education Account." }
+      ],
+      "care": [
+        { "type": "MOE Kindergarten (K2)", "tag": "public", "fee": "$150", "note": "Affordable, high-quality public kindergarten — the year before Primary 1." },
+        { "type": "Childcare / private preschool (K2)", "tag": "private", "fee": "$610 – $2,500", "note": "Full-day care for working parents, or private preschool by choice." }
+      ],
+      "tip": "Register for Primary 1 in the year your child turns 6 (for entry at age 7). Check your priority phase early — proximity to home and sibling links can matter a lot."
+    }
+  ],
+  "sources": [
+    { "label": "ECDA — infant & childcare subsidies", "url": "https://www.ecda.gov.sg/parents/preschool-subsidies/infant-and-childcare-subsidy-scheme/overview" },
+    { "label": "ECDA — Anchor Operator fee caps", "url": "https://www.ecda.gov.sg/parents/choosing-a-preschool/aop" },
+    { "label": "ECDA — KiFAS", "url": "https://www.ecda.gov.sg/parents/preschool-subsidies/kindergarten-fee-assistance-scheme-(kifas)/overview" },
+    { "label": "Made for Families — Baby Bonus, CDA, MediSave", "url": "https://www.madeforfamilies.gov.sg" },
+    { "label": "LifeSG — preschool & childcare", "url": "https://www.life.gov.sg/family-parenting" }
+  ]
+}

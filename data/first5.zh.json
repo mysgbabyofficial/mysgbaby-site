@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "description": "First 5 Years — Singapore government cost & benefits, year by year. Figures VERIFIED against official sources on 2026-07-07. Fee caps effective 1 Jan 2026. Re-verify before each release; caps/subsidies changed at Budget 2025 and may change again.",
+    "lastVerified": "2026-07-07",
+    "warning": "Do NOT auto-publish. Financial guidance must pass human review. Preschool market (private) fees are indicative market estimates, not official caps."
+  },
+  "ui": {
+    "eyebrow": "国家为您孩子投入的每一分钱",
+    "title": "最初五年",
+    "subtitle": "看着您的宝宝一天天长大——并逐年了解与孩子一同成长的新加坡政府津贴与学前教育费用。",
+    "intro": "点击每一年，了解您可以申领的现金奖励、津贴与补助，以及从婴儿托管到小学一年级前游戏班阶段的各种学前教育选择。继续点击，陪伴您的孩子一路成长，直到踏入校园的第一天。💛",
+    "yourChildAt": "您的孩子在",
+    "supportHeading": "本年度政府津贴",
+    "careHeading": "托育与学前教育选择",
+    "tipHeading": "我们的温馨提示",
+    "keepExploring": "继续探索",
+    "back": "返回",
+    "publicTag": "公立／受津贴",
+    "privateTag": "私立",
+    "commonTag": "最常见",
+    "optionalTag": "可选",
+    "perMonth": "／月",
+    "financeEyebrow": "全局视角",
+    "financeHeading": "一个与您孩子共同成长的国家",
+    "financeBody": "对于第一个孩子来说，仅现金奖励与津贴在早期几年就可累计超过 S$27,000——这还没算上任何一个月的学前教育补助或税务减免。这条路，您并不孤单。",
+    "tallyLabel": "现金奖励与津贴（第一个孩子）",
+    "tallyValue": "最高约 S$27,000",
+    "tallyNote": "婴儿花红 $11,000 + 儿童培育户头（CDA）First Step 起步补助 $5,000 + CDA 政府配对补助最高 $6,000 + 新生儿保健储蓄补助 $5,000。不包括每月的托儿补助、幼儿园学费资助计划（KiFAS）及税务减免，这些加起来还要多得多。",
+    "publicVsPrivateHeading": "公立／受津贴 vs 私立——如何选择",
+    "publicVsPrivatePublic": "特选伙伴运营者（例如 PCF Sparkletots、My First Skool）、伙伴运营者与教育部幼儿园都设有收费顶限，并可获得政府津贴及幼儿园学费资助计划（KiFAS）。性价比最高、素质有保障（获 SPARK 认证），在津贴之后，双薪家庭的全日制托儿通常每月仅需约 S$300。",
+    "publicVsPrivatePrivate": "私立与国际学前学校自行制定（较高的）收费，且无法申请 KiFAS，但可能提供特定的教学法（蒙特梭利、双语沉浸式、国际课程）、更小的班级或特定的地点。在任何持有 ECDA 执照的中心，基本与额外托儿补助仍然适用。",
+    "readyHeading": "准备好上小学一年级啦！🎓",
+    "readyBody": "从襁褓中的新生儿到骄傲的幼儿园毕业生——新加坡一路陪伴在您身旁。无论您做出怎样的选择，您的孩子都将拥有一个坚实而有力的起点。",
+    "sourcesLabel": "官方来源：",
+    "verifyNote": "参考数据于 2026 年 7 月 7 日核实。收费顶限适用于新加坡公民孩子且不含消费税（GST）；津贴按家庭收入审核。私立学前学校费用为市场估算。做出决定前，请务必在 ECDA、LifeSG 与 Made for Families 官方网站确认最新金额与申请资格。"
+  },
+  "stages": [
+    {
+      "id": "newborn",
+      "avatar": "grow-0-newborn",
+      "accent": "primary",
+      "yearTitle": "第 0 年 · 欢迎宝宝的到来！",
+      "ageLabel": "新生儿",
+      "ageRange": "出生 – 12 个月",
+      "growth": "娇小、爱睡、成长飞快——您的新生儿吃奶、小睡，出生体重会翻一倍。大多数家庭会在带薪假期中在家度过这第一年，还有祖父母帮忙照顾。",
+      "support": [
+        { "icon": "🎁", "name": "婴儿花红现金奖励", "amount": "$11,000 – $13,000", "note": "第一与第二个孩子 $11,000，第三个及以上 $13,000。从出生起分期发放，直到 6 岁半。" },
+        { "icon": "🏦", "name": "儿童培育户头（CDA）", "amount": "$5,000 – $10,000 + matching", "note": "First Step 起步补助 $5,000（第三个及以上为 $10,000），此外政府按 1:1 比例为您的存款提供配对补助（第一个孩子最高 $6,000）。" },
+        { "icon": "🩺", "name": "新生儿保健储蓄补助", "amount": "$5,000", "note": "存入宝宝的公积金保健储蓄（MediSave）账户，用于支付医疗费用与终身健保（MediShield Life）。" }
+      ],
+      "care": [
+        { "type": "在家与家人照顾", "tag": "common", "fee": "$0", "note": "政府支付的产假（16 weeks）、陪产假（4 weeks）与共享育儿假，意味着大多数宝宝在第一年由家人在家照顾。" },
+        { "type": "婴儿托管（2 个月起）", "tag": "optional", "fee": "$1,235 – $1,290", "note": "全日制收费顶限：特选伙伴运营者（$1,235）／伙伴运营者（$1,290）。在职妈妈可获 $600 基本补助 + 最高额外 $710，因此您实际支付的费用要少得多。" }
+      ],
+      "tip": "今年您不必急着做任何决定。尽早开设 CDA——您存入的每一元都能获得配对补助，因此这是最值得优先行动、性价比最高的一项津贴。"
+    },
+    {
+      "id": "baby",
+      "avatar": "grow-1-baby",
+      "accent": "accent",
+      "yearTitle": "第 1 年 · 会坐、会笑、爱探索",
+      "ageLabel": "1 岁",
+      "ageRange": "12 – 24 个月",
+      "growth": "第一颗牙、第一句话、第一次蹒跚学步。大约 18 个月大时，许多宝宝会从婴儿托管转入托儿或游戏班课程。",
+      "support": [
+        { "icon": "🎁", "name": "婴儿花红分期发放", "amount": "持续发放", "note": "现金奖励分期款项在全年持续发放，帮助分担日常开支。" },
+        { "icon": "🏦", "name": "CDA 政府配对补助", "amount": "最高配对 $6,000", "note": "持续为 CDA 充值——政府配对补助会继续，账户资金可用于支付获批的托育与医疗费用。" },
+        { "icon": "💳", "name": "儿童 LifeSG 补贴", "amount": "$1,000 ／年", "note": "根据大家庭计划（Large Families Scheme），适用于第三个及以上的孩子，从 1 岁到 6 岁。" }
+      ],
+      "care": [
+        { "type": "婴儿托管（至 18 个月）", "tag": "public", "fee": "$1,235 – $1,290", "note": "在职妈妈每月可获 $600 基本补助，另加最高 $710（按家庭收入审核）。" },
+        { "type": "游戏班／托儿（18 个月起）", "tag": "public", "fee": "$610 – $650", "note": "全日制托儿收费顶限：特选伙伴运营者（$610）／伙伴运营者（$650）。基本补助 $300 + 最高额外 $467。" }
+      ],
+      "tip": "如果父母双方都上班，请尽早加入中心的候补名单——住家附近热门的特选伙伴运营者中心很快就会满额。津贴会随您的孩子转到任何持有 ECDA 执照的中心。"
+    },
+    {
+      "id": "toddler",
+      "avatar": "grow-2-toddler",
+      "accent": "gold",
+      "yearTitle": "第 2 年 · 迈出第一步，个性十足",
+      "ageLabel": "2 岁",
+      "ageRange": "2 – 3 岁",
+      "growth": "会走、会爬，还会模仿您说的每一句话。这正是上游戏班的黄金年龄——尽情玩耍、唱歌，结交小伙伴。",
+      "support": [
+        { "icon": "🏫", "name": "基本托儿补助", "amount": "$300 ／月", "note": "适用于每一位孩子为新加坡公民、并在持有 ECDA 执照中心就读的在职妈妈。" },
+        { "icon": "💗", "name": "额外托儿补助", "amount": "最高 $467 ／月", "note": "按家庭收入审核——适用于家庭月收入 $12,000 或以下。" },
+        { "icon": "🏦", "name": "用 CDA 支付学费", "amount": "您获配对的存款", "note": "CDA 账户资金可直接支付获批中心的费用，让您的预算更宽裕。" }
+      ],
+      "care": [
+        { "type": "游戏班——特选伙伴运营者／伙伴运营者", "tag": "public", "fee": "$610 – $650", "note": "补助前的收费顶限。双薪家庭在扣除基本补助后，通常每月约支付 $300。" },
+        { "type": "私立／蒙特梭利学前学校", "tag": "private", "fee": "$1,000 – $2,500", "note": "参考市场价格区间。收费较高、自设课程；基本 + 额外补助仍然适用，但不包括 KiFAS。" }
+      ],
+      "tip": "公立与私立之别不在于素质——特选伙伴运营者同样获得 SPARK 认证。请根据合适度来选择：地点、时间、语言环境，以及扣除津贴后您的预算。"
+    },
+    {
+      "id": "nursery1",
+      "avatar": "grow-3-preschool",
+      "accent": "secondary",
+      "yearTitle": "第 3 年 · 好奇的小小学习者",
+      "ageLabel": "3 岁",
+      "ageRange": "3 – 4 岁",
+      "growth": "满脑子的问题和想象力。您的孩子开始上幼儿班一年级（N1）——早期识字、算术，以及大量富有创意的游戏。",
+      "support": [
+        { "icon": "🏫", "name": "托儿补助持续发放", "amount": "$300 + up to $467", "note": "在持有 ECDA 执照的中心，基本 + 额外补助贯穿整个学前教育阶段。" },
+        { "icon": "💗", "name": "低收入家庭全额补助", "amount": "费用接近 $0", "note": "月收入 $6,000 或以下（或人均收入 PCI $1,500）的家庭可获得全额托儿补助。" },
+        { "icon": "💳", "name": "儿童 LifeSG 补贴", "amount": "$1,000 ／年", "note": "第三个及以上的孩子（1–6 岁）继续享有。" }
+      ],
+      "care": [
+        { "type": "幼儿班——特选伙伴运营者／伙伴运营者", "tag": "public", "fee": "$610 – $650", "note": "补助前的全日制收费顶限；补助后费用大幅降低。" },
+        { "type": "私立学前学校（N1）", "tag": "private", "fee": "$1,000 – $2,500", "note": "参考价格。可为教学法或便利而选择；基本补助适用，但 KiFAS 不适用。" }
+      ],
+      "tip": "在决定之前，先参观两三家中心。询问教师流动率、每日作息，以及他们如何帮助焦虑的孩子适应环境——这些比光鲜的设施更重要。"
+    },
+    {
+      "id": "nursery2",
+      "avatar": "grow-4-nursery",
+      "accent": "trust",
+      "yearTitle": "第 4 年 · 自信又爱社交",
+      "ageLabel": "4 岁",
+      "ageRange": "4 – 5 岁",
+      "growth": "会自己穿衣、结交朋友、满肚子故事。您的孩子正在上幼儿班二年级（N2）或幼儿园一年级（K1），为入学做好准备。",
+      "support": [
+        { "icon": "🏫", "name": "托儿补助", "amount": "$300 + up to $467", "note": "在持有 ECDA 执照的托儿中心仍可申请。" },
+        { "icon": "🎒", "name": "KiFAS（幼儿园途径）", "amount": "up to ~$161 / month", "note": "若就读于特选伙伴运营者或教育部幼儿园：按家庭收入审核，适用于家庭月收入 $12,000 或以下。" },
+        { "icon": "🎈", "name": "KiFAS 起步补助金", "amount": "up to $240 / year", "note": "帮助低收入家庭支付报名费、校服与教材。" }
+      ],
+      "care": [
+        { "type": "教育部幼儿园（K1）", "tag": "public", "fee": "$150", "note": "非常实惠的公立选择（特选运营者幼儿园收费顶限）。优质的双语、游戏式课程。" },
+        { "type": "托儿／私立学前学校", "tag": "private", "fee": "$610 – $2,500", "note": "全日制托儿（收费顶限 $610–$650）或私立学前学校（参考价 $1,000–$2,500）。" }
+      ],
+      "tip": "这一年该好好了解小学一年级报名的流程——教育部幼儿园和一些学前学校与小学有联系。请尽早留意各个报名阶段与您的优先日期。"
+    },
+    {
+      "id": "kindergarten",
+      "avatar": "grow-5-primary",
+      "accent": "primary",
+      "yearTitle": "第 5 年 · 快要成为大孩子啦！",
+      "ageLabel": "5 – 6 岁",
+      "ageRange": "5 – 6 岁",
+      "growth": "会读简单的字词、会数数，还非常为自己感到骄傲。幼儿园二年级（K2）是次年升上小学一年级前，最后一段充满乐趣的准备时光。",
+      "support": [
+        { "icon": "🎒", "name": "幼儿园学费资助计划（KiFAS）", "amount": "up to ~$161 / month", "note": "符合资格的家庭在特选伙伴运营者／教育部幼儿园就读 K2 期间可继续享有。" },
+        { "icon": "🏫", "name": "托儿补助", "amount": "$300 + up to $467", "note": "在持有 ECDA 执照的托儿中心，可申请至您的孩子升入小学一年级为止。" },
+        { "icon": "🏦", "name": "CDA 与剩余资金", "amount": "可用至 12 岁", "note": "CDA 账户保留至孩子 12 岁；未使用的资金将转入中学后教育账户（PSEA）。" }
+      ],
+      "care": [
+        { "type": "教育部幼儿园（K2）", "tag": "public", "fee": "$150", "note": "实惠、高素质的公立幼儿园——升上小学一年级前的一年。" },
+        { "type": "托儿／私立学前学校（K2）", "tag": "private", "fee": "$610 – $2,500", "note": "为在职父母提供的全日制托育，或按个人选择的私立学前学校。" }
+      ],
+      "tip": "在孩子满 6 岁的那一年为其报名小学一年级（7 岁入学）。请尽早查看您的优先报名阶段——住家距离与兄弟姐妹关系可能影响很大。"
+    }
+  ],
+  "sources": [
+    { "label": "ECDA——婴儿与托儿补助计划", "url": "https://www.ecda.gov.sg/parents/preschool-subsidies/infant-and-childcare-subsidy-scheme/overview" },
+    { "label": "ECDA——特选伙伴运营者收费顶限", "url": "https://www.ecda.gov.sg/parents/choosing-a-preschool/aop" },
+    { "label": "ECDA——幼儿园学费资助计划（KiFAS）", "url": "https://www.ecda.gov.sg/parents/preschool-subsidies/kindergarten-fee-assistance-scheme-(kifas)/overview" },
+    { "label": "Made for Families——婴儿花红、CDA、保健储蓄", "url": "https://www.madeforfamilies.gov.sg" },
+    { "label": "LifeSG——学前教育与托儿", "url": "https://www.life.gov.sg/family-parenting" }
+  ]
+}

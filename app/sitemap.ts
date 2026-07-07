@@ -5,6 +5,8 @@ const routes = [
   '',
   '/onboarding',
   '/explore',
+  '/ivf',
+  '/first5',
   '/benefits',
   '/hospitals',
   '/calculator',
